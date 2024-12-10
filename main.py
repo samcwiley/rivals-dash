@@ -6,7 +6,6 @@ import plotly.graph_objects as go
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 import plotly.express as px
-from plotly.subplots import make_subplots
 
 df = pd.read_csv("rivals_spreadsheet.tsv", sep="\t")
 
@@ -31,6 +30,97 @@ winrate_df = (
     .assign(WinRate=lambda x: (x["Wins"] / x["Total_Matches"]) * 100)
     .reset_index()
 )
+
+# Imputing Opponent characters for games 2 & 3
+df["G2 char (if different)"] = df.apply(
+    lambda row: (
+        row["Opponent Char"]
+        if pd.notnull(row["G2 Stage"]) and pd.isnull(row["G2 char (if different)"])
+        else row["G2 char (if different)"]
+    ),
+    axis=1,
+)
+
+df["G3 char (if different)"] = df.apply(
+    lambda row: (
+        row["Opponent Char"]
+        if pd.notnull(row["G3 Stage"]) and pd.isnull(row["G3 char (if different)"])
+        else row["G3 char (if different)"]
+    ),
+    axis=1,
+)
+
+df = df.rename(
+    columns={
+        "Opponent Char": "G1 Char",
+        "G2 char (if different)": "G2 Char",
+        "G3 char (if different)": "G3 Char",
+    }
+)
+
+# calculating longer dataframe for game-by-game statistics
+long_df = df.melt(
+    id_vars=[
+        "Date",
+        "Time",
+        "My ELO",
+        "Opponent ELO",
+    ],
+    value_vars=[
+        "G1 Stage",
+        "G1 Stock Diff",
+        "G1 Char",
+        "G2 Stage",
+        "G2 Stock Diff",
+        "G2 Char",
+        "G3 Stage",
+        "G3 Stock Diff",
+        "G3 Char",
+    ],
+    var_name="Game Info",
+    value_name="Value",
+)
+
+long_df["Game"] = long_df["Game Info"].str.extract(r"(G\d)")
+long_df["Attribute"] = long_df["Game Info"].str.extract(r"(Stage|Stock Diff|Char)")
+long_df = long_df.pivot(
+    index=[
+        "Date",
+        "Time",
+        "My ELO",
+        "Opponent ELO",
+        "Game",
+    ],
+    columns="Attribute",
+    values="Value",
+).reset_index()
+
+long_df.dropna(subset=["Char", "Stage", "Stock Diff"], inplace=True)
+long_df.reset_index(inplace=True, drop=True)
+
+# calculating winrates for stages
+long_df["Win"] = long_df["Stock Diff"] > 0
+winrate_by_stage = long_df.groupby("Stage")["Win"].mean().reset_index()
+winrate_by_stage.columns = ["Stage", "Win Rate"]
+
+stage_winrate_plot = go.Figure()
+stage_winrate_plot.add_trace(
+    go.Bar(
+        x=winrate_by_stage["Stage"],
+        y=winrate_by_stage["Win Rate"],
+        text=winrate_by_stage["Win Rate"].apply(lambda x: f"{x:.1%}"),
+        textposition="auto",
+    )
+)
+
+stage_winrate_plot.update_layout(
+    title="Win Rate by Stage",
+    xaxis_title="Stage",
+    yaxis_title="Win Rate",
+    yaxis_tickformat="%",
+    template="plotly_white",
+)
+
 
 # Calculate regression line and statistics for ELO
 x = df["My ELO"].values.reshape(-1, 1)
@@ -132,6 +222,8 @@ app.layout = html.Div(
         dcc.Graph(id="scatter-plot", figure=elo_scatter),
         # Matchup bar plot
         dcc.Graph(id="character-bar", figure=matchup_bar),
+        # stage winrate plot
+        dcc.Graph(id="stage_winrate_plot", figure=stage_winrate_plot),
     ]
 )
 
