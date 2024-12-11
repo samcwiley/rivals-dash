@@ -6,8 +6,9 @@ import plotly.graph_objects as go
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 import plotly.express as px
+import sys
 
-from game_data import stages, characters, starter_stages, counter_stages
+from game_data import stages, characters, starter_stages, counter_stages, all_stages
 
 
 def add_50_percent_line(fig: go.Figure):
@@ -34,6 +35,33 @@ def parse_spreadsheet(filepath: str) -> pd.DataFrame:
 
     # Killing incomplete rows, this is important for calculating the regression
     df = df.dropna(subset=["My Char", "My ELO", "Opponent ELO"])
+
+    # validating stages and characters to ensure there are only correct values
+    validation_rules = {
+        "Opponent Char": characters,
+        "G1 Stage": all_stages,
+        "G2 Stage": all_stages,
+        "G3 Stage": all_stages + [None, np.nan],
+        "G2 char (if different)": characters + [None, np.nan],
+        "G3 char (if different)": characters + [None, np.nan],
+    }
+
+    valid_rows = pd.Series(True, index=df.index)
+
+    for column, allowed_values in validation_rules.items():
+        invalid_rows = ~df[column].isin(allowed_values)
+
+        if invalid_rows.any():
+            for index, value in df.loc[invalid_rows, column].items():
+                print(
+                    f"Error: Value '{value}' in column '{column}' at row {index} is not allowed. This row will be removed for the current analysis",
+                    file=sys.stderr,
+                )
+                # print(*args, file=sys.stderr, **kwargs)
+
+        valid_rows &= ~invalid_rows
+
+    df = df.loc[valid_rows].reset_index(drop=True)
 
     df["Datetime"] = pd.to_datetime(df["Date"])
     df["Row Index"] = df.index + 1

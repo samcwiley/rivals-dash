@@ -72,6 +72,7 @@ counter_stages = [
     "Rock Wall",
     "Tempest Peak",
 ]
+all_stages = starter_stages + counter_stages
 characters = [
     "Clairen",
     "Fleet",
