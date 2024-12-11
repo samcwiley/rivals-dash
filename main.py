@@ -108,97 +108,135 @@ def parse_spreadsheet(filepath: str) -> pd.DataFrame:
 
 df = parse_spreadsheet("rivals_spreadsheet.tsv")
 
+
 # calculating winrate for each character
-winrate_df = (
-    df.groupby("Main")
-    .agg(
-        Wins=("Win/Loss", lambda x: (x == "W").sum()),
-        Total_Matches=("Win/Loss", "count"),
+def calculate_set_winrates(full_df: pd.DataFrame) -> pd.DataFrame:
+    winrate_df = (
+        full_df.groupby("Main")
+        .agg(
+            Wins=("Win/Loss", lambda x: (x == "W").sum()),
+            Total_Matches=("Win/Loss", "count"),
+        )
+        .assign(WinRate=lambda x: (x["Wins"] / x["Total_Matches"]) * 100)
+        .reset_index()
     )
-    .assign(WinRate=lambda x: (x["Wins"] / x["Total_Matches"]) * 100)
-    .reset_index()
-)
+    return winrate_df
+
+
+winrate_df = calculate_set_winrates(df)
 
 
 # calculating longer dataframe for game-by-game statistics
-long_df = df.melt(
-    id_vars=[
-        "Date",
-        "Time",
-        "My ELO",
-        "Opponent ELO",
-    ],
-    value_vars=[
-        "G1 Stage",
-        "G1 Stock Diff",
-        "G1 Char",
-        "G2 Stage",
-        "G2 Stock Diff",
-        "G2 Char",
-        "G3 Stage",
-        "G3 Stock Diff",
-        "G3 Char",
-    ],
-    var_name="Game Info",
-    value_name="Value",
-)
+def calculate_gamewise_df(full_df: pd.DataFrame) -> pd.DataFrame:
+    long_df = df.melt(
+        id_vars=[
+            "Date",
+            "Time",
+            "My ELO",
+            "Opponent ELO",
+        ],
+        value_vars=[
+            "G1 Stage",
+            "G1 Stock Diff",
+            "G1 Char",
+            "G2 Stage",
+            "G2 Stock Diff",
+            "G2 Char",
+            "G3 Stage",
+            "G3 Stock Diff",
+            "G3 Char",
+        ],
+        var_name="Game Info",
+        value_name="Value",
+    )
 
-long_df["Game"] = long_df["Game Info"].str.extract(r"(G\d)")
-long_df["Attribute"] = long_df["Game Info"].str.extract(r"(Stage|Stock Diff|Char)")
-long_df = long_df.pivot(
-    index=[
-        "Date",
-        "Time",
-        "My ELO",
-        "Opponent ELO",
-        "Game",
-    ],
-    columns="Attribute",
-    values="Value",
-).reset_index()
+    long_df["Game"] = long_df["Game Info"].str.extract(r"(G\d)")
+    long_df["Attribute"] = long_df["Game Info"].str.extract(r"(Stage|Stock Diff|Char)")
+    long_df = long_df.pivot(
+        index=[
+            "Date",
+            "Time",
+            "My ELO",
+            "Opponent ELO",
+            "Game",
+        ],
+        columns="Attribute",
+        values="Value",
+    ).reset_index()
 
-long_df.dropna(subset=["Char", "Stage", "Stock Diff"], inplace=True)
-long_df.reset_index(inplace=True, drop=True)
+    long_df.dropna(subset=["Char", "Stage", "Stock Diff"], inplace=True)
+    long_df.reset_index(inplace=True, drop=True)
 
-# calculating winrates for stages
-long_df["Win"] = long_df["Stock Diff"] > 0
+    # calculating winrates for stages
+    long_df["Win"] = long_df["Stock Diff"] > 0
+    return long_df
+
+
+long_df = calculate_gamewise_df(df)
+
 
 # double bar graph for stages
-
-stage_winrate_df = (
-    long_df.groupby("Stage")
-    .agg(
-        Wins=("Win", lambda x: (x == True).sum()),
-        Total_Matches=("Win", "count"),
+def calculate_stage_winrates(gamewise_df: pd.DataFrame) -> pd.DataFrame:
+    stage_winrate_df = (
+        long_df.groupby("Stage")
+        .agg(
+            Wins=("Win", lambda x: (x == True).sum()),
+            Total_Matches=("Win", "count"),
+        )
+        .assign(WinRate=lambda x: (x["Wins"] / x["Total_Matches"]) * 100)
+        .reset_index()
     )
-    .assign(WinRate=lambda x: (x["Wins"] / x["Total_Matches"]) * 100)
-    .reset_index()
-)
+    return stage_winrate_df
 
-stage_bar = go.Figure(
-    data=[
-        go.Bar(
-            name="Number of Matches",
-            x=stage_winrate_df["Stage"],
-            y=stage_winrate_df["Total_Matches"],
-            yaxis="y",
-            offsetgroup=1,
-        ),
-        go.Bar(
-            name="Winrate",
-            x=stage_winrate_df["Stage"],
-            y=stage_winrate_df["WinRate"],
-            yaxis="y2",
-            offsetgroup=2,
-        ),
-    ],
-    layout={
-        "yaxis": {"title": "Frequency of Stage"},
-        "yaxis2": {"title": "Winrate", "overlaying": "y", "side": "right"},
-    },
+
+stage_winrate_df = calculate_stage_winrates(long_df)
+
+
+def double_bar_plot(
+    x_axis: pd.Series,
+    y1_axis: pd.Series,
+    y1_name: str,
+    y1_axis_label: str,
+    y2_axis: pd.Series,
+    y2_name: str,
+    y2_axis_label: str,
+) -> go.Figure:
+    double_bar = go.Figure(
+        data=[
+            go.Bar(
+                name=y1_name,
+                x=x_axis,
+                y=y1_axis,
+                yaxis="y",
+                offsetgroup=1,
+            ),
+            go.Bar(
+                name=y2_name,
+                x=x_axis,
+                y=y2_axis,
+                yaxis="y2",
+                offsetgroup=2,
+            ),
+        ],
+        layout={
+            "yaxis": {"title": y1_axis_label},
+            "yaxis2": {"title": y2_axis_label, "overlaying": "y", "side": "right"},
+        },
+    )
+    double_bar.update_layout(barmode="group")
+    add_50_percent_line(double_bar)
+    return double_bar
+
+
+stage_bar = double_bar_plot(
+    x_axis=stage_winrate_df["Stage"],
+    y1_axis=stage_winrate_df["Total_Matches"],
+    y1_name="Number of Matches",
+    y1_axis_label="Frequency of Stage",
+    y2_axis=stage_winrate_df["WinRate"],
+    y2_name="Winrate",
+    y2_axis_label="Winrate",
 )
-stage_bar.update_layout(barmode="group")
-add_50_percent_line(stage_bar)
 
 
 # Calculate regression line and statistics for ELO
@@ -268,30 +306,15 @@ stage_scatter.update_layout(
 )
 
 # double bar graph for # matchups and winrate against each character
-matchup_bar = go.Figure(
-    data=[
-        go.Bar(
-            name="Number of Matches",
-            x=winrate_df["Main"],
-            y=winrate_df["Total_Matches"],
-            yaxis="y",
-            offsetgroup=1,
-        ),
-        go.Bar(
-            name="Winrate",
-            x=winrate_df["Main"],
-            y=winrate_df["WinRate"],
-            yaxis="y2",
-            offsetgroup=2,
-        ),
-    ],
-    layout={
-        "yaxis": {"title": "Frequency of Opponent Characters"},
-        "yaxis2": {"title": "Winrate", "overlaying": "y", "side": "right"},
-    },
+matchup_bar = double_bar_plot(
+    x_axis=winrate_df["Main"],
+    y1_axis=winrate_df["Total_Matches"],
+    y1_name="Number of Matches",
+    y1_axis_label="Frequency of Opponent Characters",
+    y2_axis=winrate_df["WinRate"],
+    y2_name="Winrate",
+    y2_axis_label="Winrate",
 )
-matchup_bar.update_layout(barmode="group")
-add_50_percent_line(matchup_bar)
 
 
 app = dash.Dash(__name__)
@@ -314,8 +337,6 @@ app.layout = html.Div(
         dcc.Graph(id="scatter-plot", figure=elo_scatter),
         # Matchup bar plot
         dcc.Graph(id="character-bar", figure=matchup_bar),
-        # stage winrate plot
-        # dcc.Graph(id="stage_winrate_plot", figure=stage_winrate_plot),
         # stage winrate double bar plot
         dcc.Graph(id="stage_winrate_double_plot", figure=stage_bar),
         dcc.Graph(
