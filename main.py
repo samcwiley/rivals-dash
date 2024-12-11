@@ -23,23 +23,66 @@ def add_50_percent_line(fig: go.Figure):
     )
 
 
-# read the csv
-df = pd.read_csv("rivals_spreadsheet.tsv", sep="\t")
+def parse_spreadsheet(filepath: str) -> pd.DataFrame:
+    # read the csv
+    df = pd.read_csv("rivals_spreadsheet.tsv", sep="\t")
 
-# cutting out goals and notes, these are priveleged information!
-if "Notes" in df.columns:
-    df = df.drop(columns=["Notes", "Goal"])
-    df.to_csv("rivals_spreadsheet.tsv", sep="\t", header=True)
+    # cutting out goals and notes, these are priveleged information!
+    if "Notes" in df.columns:
+        df = df.drop(columns=["Notes", "Goal"])
+        df.to_csv("rivals_spreadsheet.tsv", sep="\t", header=True)
 
-# Killing incomplete rows, this is important for calculating the regression
-df = df.dropna(subset=["My Char", "My ELO", "Opponent ELO"])
+    # Killing incomplete rows, this is important for calculating the regression
+    df = df.dropna(subset=["My Char", "My ELO", "Opponent ELO"])
 
-df["Datetime"] = pd.to_datetime(df["Date"])
-df["Row Index"] = df.index + 1
+    df["Datetime"] = pd.to_datetime(df["Date"])
+    df["Row Index"] = df.index + 1
+
+    # Imputing Opponent characters for games 2 & 3
+    df["G2 char (if different)"] = df.apply(
+        lambda row: (
+            row["Opponent Char"]
+            if pd.notnull(row["G2 Stage"]) and pd.isnull(row["G2 char (if different)"])
+            else row["G2 char (if different)"]
+        ),
+        axis=1,
+    )
+
+    df["G3 char (if different)"] = df.apply(
+        lambda row: (
+            row["Opponent Char"]
+            if pd.notnull(row["G3 Stage"]) and pd.isnull(row["G3 char (if different)"])
+            else row["G3 char (if different)"]
+        ),
+        axis=1,
+    )
+
+    df = df.rename(
+        columns={
+            "Opponent Char": "G1 Char",
+            "G2 char (if different)": "G2 Char",
+            "G3 char (if different)": "G3 Char",
+        }
+    )
+
+    df["Main"] = df.apply(
+        lambda row: (
+            row["G1 Char"]
+            if (row["G2 Char"] == row["G1 Char"] and pd.isnull(row["G3 Char"]))
+            or (row["G2 Char"] == row["G1 Char"] and row["G3 Char"] == row["G1 Char"])
+            else "Multiple"
+        ),
+        axis=1,
+    )
+
+    return df
+
+
+df = parse_spreadsheet("rivals_spreadsheet.tsv")
 
 # calculating winrate for each character
 winrate_df = (
-    df.groupby("Opponent Char")
+    df.groupby("Main")
     .agg(
         Wins=("Win/Loss", lambda x: (x == "W").sum()),
         Total_Matches=("Win/Loss", "count"),
@@ -48,32 +91,6 @@ winrate_df = (
     .reset_index()
 )
 
-# Imputing Opponent characters for games 2 & 3
-df["G2 char (if different)"] = df.apply(
-    lambda row: (
-        row["Opponent Char"]
-        if pd.notnull(row["G2 Stage"]) and pd.isnull(row["G2 char (if different)"])
-        else row["G2 char (if different)"]
-    ),
-    axis=1,
-)
-
-df["G3 char (if different)"] = df.apply(
-    lambda row: (
-        row["Opponent Char"]
-        if pd.notnull(row["G3 Stage"]) and pd.isnull(row["G3 char (if different)"])
-        else row["G3 char (if different)"]
-    ),
-    axis=1,
-)
-
-df = df.rename(
-    columns={
-        "Opponent Char": "G1 Char",
-        "G2 char (if different)": "G2 Char",
-        "G3 char (if different)": "G3 Char",
-    }
-)
 
 # calculating longer dataframe for game-by-game statistics
 long_df = df.melt(
@@ -227,14 +244,14 @@ matchup_bar = go.Figure(
     data=[
         go.Bar(
             name="Number of Matches",
-            x=winrate_df["Opponent Char"],
+            x=winrate_df["Main"],
             y=winrate_df["Total_Matches"],
             yaxis="y",
             offsetgroup=1,
         ),
         go.Bar(
             name="Winrate",
-            x=winrate_df["Opponent Char"],
+            x=winrate_df["Main"],
             y=winrate_df["WinRate"],
             yaxis="y2",
             offsetgroup=2,
