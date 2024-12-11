@@ -7,11 +7,93 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 import plotly.express as px
 
+
+# stages
+class Stage:
+    def __init__(self, name, width, side_blast, top_blast, bot_blast):
+        self.name = name
+        self.width = width
+        self.side_blast = side_blast
+        self.top_blast = top_blast
+        self.bot_blast = bot_blast
+
+    def __repr__(self):
+        return (
+            f"Stage(Name='{self.name}', Width={self.width}, "
+            f"Side_Blast={self.side_blast}, Top_Blast={self.top_blast}, Bot_Blast={self.bot_blast})"
+        )
+
+
+stages = {
+    "Aetherean Forest": Stage(
+        name="Aetherean Forest",
+        width=1280,
+        side_blast=1380,
+        top_blast=2180,
+        bot_blast=1315,
+    ),
+    "Godai Delta": Stage(
+        name="Godai Delta", width=1600, side_blast=1680, top_blast=2230, bot_blast=1280
+    ),
+    "Hodojo": Stage(
+        name="Hodojo", width=1460, side_blast=1478, top_blast=2195, bot_blast=1330
+    ),
+    "Julesvale": Stage(
+        name="Julesvale", width=1400, side_blast=1560, top_blast=2170, bot_blast=1360
+    ),
+    "Merchant Port": Stage(
+        name="Merchant Port",
+        width=1630,
+        side_blast=1540,
+        top_blast=2140,
+        bot_blast=1305,
+    ),
+    "Air Armada": Stage(
+        name="Air Armada", width=1900, side_blast=1630, top_blast=2080, bot_blast=1290
+    ),
+    "Fire Capital": Stage(
+        name="Fire Capital", width=2020, side_blast=1814, top_blast=2254, bot_blast=1470
+    ),
+    "Hyperborean Harbor": Stage(
+        name="Hyperborean Harbor",
+        width=1560,
+        side_blast=1840,
+        top_blast=1940,
+        bot_blast=1390,
+    ),
+    "Rock Wall": Stage(
+        name="Rock Wall", width=1860, side_blast=1320, top_blast=2130, bot_blast=1420
+    ),
+    "Tempest Peak": Stage(
+        name="Tempest Peak", width=1250, side_blast=1645, top_blast=2260, bot_blast=1250
+    ),
+}
+starter_stages = [
+    "Aetherean Forest",
+    "Godai Delta",
+    "Hodojo",
+    "Julesvale",
+    "Merchant Port",
+]
+characters = [
+    "Clairen",
+    "Fleet",
+    "Forsburn",
+    "Kragg",
+    "Loxodont",
+    "Maypul",
+    "Orcane",
+    "Ranno",
+    "Wrastor",
+    "Zetterburn",
+]
+
+# read the csv
 df = pd.read_csv("rivals_spreadsheet.tsv", sep="\t")
 
 # cutting out goals and notes, these are priveleged information!
 if "Notes" in df.columns:
-    df = df.drop(columns=["Notes", "Goal", "Achieved?"])
+    df = df.drop(columns=["Notes", "Goal"])
     df.to_csv("rivals_spreadsheet.tsv", sep="\t", header=True)
 
 # Killing incomplete rows, this is important for calculating the regression
@@ -100,25 +182,52 @@ long_df.reset_index(inplace=True, drop=True)
 
 # calculating winrates for stages
 long_df["Win"] = long_df["Stock Diff"] > 0
-winrate_by_stage = long_df.groupby("Stage")["Win"].mean().reset_index()
-winrate_by_stage.columns = ["Stage", "Win Rate"]
 
-stage_winrate_plot = go.Figure()
-stage_winrate_plot.add_trace(
-    go.Bar(
-        x=winrate_by_stage["Stage"],
-        y=winrate_by_stage["Win Rate"],
-        text=winrate_by_stage["Win Rate"].apply(lambda x: f"{x:.1%}"),
-        textposition="auto",
+# double bar graph for stages
+
+stage_winrate_df = (
+    long_df.groupby("Stage")
+    .agg(
+        Wins=("Win", lambda x: (x == True).sum()),
+        Total_Matches=("Win", "count"),
     )
+    .assign(WinRate=lambda x: (x["Wins"] / x["Total_Matches"]) * 100)
+    .reset_index()
 )
 
-stage_winrate_plot.update_layout(
-    title="Win Rate by Stage",
-    xaxis_title="Stage",
-    yaxis_title="Win Rate",
-    yaxis_tickformat="%",
-    template="plotly_white",
+stage_bar = go.Figure(
+    data=[
+        go.Bar(
+            name="Number of Matches",
+            x=stage_winrate_df["Stage"],
+            y=stage_winrate_df["Total_Matches"],
+            yaxis="y",
+            offsetgroup=1,
+        ),
+        go.Bar(
+            name="Winrate",
+            x=stage_winrate_df["Stage"],
+            y=stage_winrate_df["WinRate"],
+            yaxis="y2",
+            offsetgroup=2,
+        ),
+    ],
+    layout={
+        "yaxis": {"title": "Frequency of Stage"},
+        "yaxis2": {"title": "Winrate", "overlaying": "y", "side": "right"},
+    },
+)
+stage_bar.update_layout(barmode="group")
+
+stage_bar.add_shape(
+    type="line",
+    x0=0,
+    x1=1,
+    xref="paper",
+    y0=50,
+    y1=50,
+    yref="y2",
+    line=dict(color="red", width=2, dash="dash"),
 )
 
 
@@ -160,6 +269,30 @@ elo_scatter.update_layout(
     title="My ELO vs. Opponent ELO",
     xaxis_title="My ELO",
     yaxis_title="Opponent ELO",
+    legend_title="Legend",
+    template="plotly_white",
+)
+
+stage_winrate_df["Stage_Width"] = stage_winrate_df["Stage"].map(
+    lambda stage: stages[stage].width
+)
+
+stage_scatter = go.Figure()
+stage_scatter.add_trace(
+    go.Scatter(
+        x=stage_winrate_df["Stage_Width"],
+        y=stage_winrate_df["WinRate"],
+        mode="markers+text",
+        name="Data Points",
+        marker=dict(color="blue", size=8),
+        text=stage_winrate_df["Stage"],
+        textposition="top center",
+    )
+)
+stage_scatter.update_layout(
+    title="Stage Width vs. Winrate",
+    xaxis_title="Stage Width",
+    yaxis_title="Winrate",
     legend_title="Legend",
     template="plotly_white",
 )
@@ -223,7 +356,13 @@ app.layout = html.Div(
         # Matchup bar plot
         dcc.Graph(id="character-bar", figure=matchup_bar),
         # stage winrate plot
-        dcc.Graph(id="stage_winrate_plot", figure=stage_winrate_plot),
+        # dcc.Graph(id="stage_winrate_plot", figure=stage_winrate_plot),
+        # stage winrate double bar plot
+        dcc.Graph(id="stage_winrate_double_plot", figure=stage_bar),
+        dcc.Graph(
+            id="stage_winrate_scatter",
+            figure=stage_scatter,
+        ),
     ]
 )
 

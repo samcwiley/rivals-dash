@@ -40,12 +40,12 @@
 38	12/7/2024	1:43	944.0	Fleet	L	OXX	932.0	Nandez21	Ranno	920.0	Aetherean Forest	1.0	Aetherean Forest	-1.0	Godai Delta	-2.0		
 39	12/7/2024	1:56	932.0	Fleet	L	XX-	921.0	roobyrebs243	Maypul	962.0	Godai Delta	-1.0	Aetherean Forest	-1.0				
 40	12/7/2024	2:06	921.0	Fleet	W	XOO	933.0	kihunter	Forsburn	937.0	Godai Delta	-2.0	Aetherean Forest	2.0	Fire Capital	2.0		
-41	12/7/2024	21:32	933.0			---	920.0											
+41	12/7/2024	21:32	933.0				920.0											
 42	12/7/2024	21:34	920.0	Fleet	W	OO-	932.0	CliffE	Fleet	932.0	Aetherean Forest	1.0	Aetherean Forest	1.0				
-43	12/9/2024	22:12	932.0	Fleet	W	OO-	946.0	spezius	Loxodont	990.0	Aetherean Forest	2.0	Tempest Peak	1.0				
+43	12/10/2024	22:12	932.0	Fleet	W	OO-	946.0	spezius	Loxodont	990.0	Aetherean Forest	2.0	Tempest Peak	1.0				
 44	12/7/2024	10:24:52 PM	946.0	Fleet	L	OXX	935.0	Sappy	Kragg	980.0	Julesvale	1.0	Merchant Port	-1.0	Hodojo	-2.0		
 45	12/7/2024	10:39:34 PM	935.0	Fleet	L	OXX	927.0	Gecko	Clairen	1036.0	Godai Delta	1.0	Tempest Peak	-1.0	Aetherean Forest	-1.0		
-46	12/8/2024	12:07:43 AM	927.0	Fleet	W	XOO	937.0	Krilliam	Kragg	886.0	Aetherean Forest	-1.0	Julesvale	2.0	Hyperborean Harbor			
+46	12/8/2024	12:07:43 AM	927.0	Fleet	W	XOO	937.0	Krilliam	Kragg	886.0	Aetherean Forest	-1.0	Julesvale	2.0	Hyperborean Harbor	1.0		
 47	12/8/2024	10:44:26 PM	937.0	Fleet	L	XOX	927.0	faheath	Zetterburn	985.0	Godai Delta	-2.0	Aetherean Forest	1.0	Merchant Port	-1.0		
 48	12/8/2024	11:05:01 PM	927.0	Fleet	L	XX-	916.0	Joepamine_ttv	Clairen	955.0	Aetherean Forest	-2.0	Julesvale	-2.0				
 49	12/8/2024	11:12:28 PM	916.0	Fleet	W	XOO	928.0	mega pint	Forsburn	915.0	Julesvale	-1.0	Julesvale	1.0	Rock Wall	1.0		
@@ -69,4 +69,8 @@
 67	12/9/2024	7:34:37 PM	923.0	Fleet	W	OXO	935.0	Russ3ll	Kragg	934.0	Godai Delta	2.0	Merchant Port	-1.0	Aetherean Forest	1.0		
 68	12/9/2024	7:46:38 PM	935.0	Fleet	L	XOO	921.0	Chrisred3000	Clairen	885.0	Julesvale	1.0	Aetherean Forest	-2.0	Godai Delta	-1.0		
 69	12/9/2024	8:05:53 PM	921.0	Fleet	W	XOO	930.0	the rarest produce	Orcane	845.0	Aetherean Forest	-1.0	Godai Delta	1.0	Julesvale	2.0		
-70			930.0															
+70	12/10/2024	10:17:54 PM	930.0	Fleet	L	XX-	917.0	illiterate.bean	Forsburn	888.0	Julesvale	-1.0	Air Armada	-1.0				
+71	12/10/2024	10:33:43 PM	917.0	Fleet	W	OXO	928.0	Sti11Evolving	Orcane	900.0	Julesvale	1.0	Aetherean Forest	-1.0	Godai Delta	1.0		
+72	12/10/2024	10:51:16 PM	928.0	Fleet	L	XX-	917.0	Totodile	Kragg	957.0	Merchant Port	-2.0	Julesvale	-1.0				
+73	12/10/2024	11:00:46 PM	917.0	Fleet	W	OXO	933.0	YasuoTheKing421	Clairen	1051.0	Hodojo	1.0	Hodojo	-1.0	Julesvale	1.0	Maypul	Maypul
+74			933.0															
