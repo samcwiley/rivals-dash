@@ -239,70 +239,70 @@ stage_bar = double_bar_plot(
 )
 
 
-# Calculate regression line and statistics for ELO
-x = df["My ELO"].values.reshape(-1, 1)
-y = df["Opponent ELO"].values
+def scatterplot_with_regression(
+    independent: pd.Series, dependent: pd.Series, title: str, x_title: str, y_title: str
+) -> go.Figure:
+    x = independent.values.reshape(-1, 1)
+    y = dependent.values
 
-model = LinearRegression()
-model.fit(x, y)
+    model = LinearRegression()
+    model.fit(x, y)
 
-y_pred = model.predict(x)
-m = model.coef_[0]
-b = model.intercept_
-r2 = r2_score(y, y_pred)
+    y_pred = model.predict(x)
+    m = model.coef_[0]
+    b = model.intercept_
+    r2 = r2_score(y, y_pred)
 
-elo_scatter = go.Figure()
+    scatter = go.Figure()
 
-# Scatter plot of actual data
-elo_scatter.add_trace(
-    go.Scatter(
-        y=df["Opponent ELO"],
-        x=df["My ELO"],
-        mode="markers",
-        name="Data Points",
-        marker=dict(color="blue", size=8),
+    # Scatter plot of actual data
+    scatter.add_trace(
+        go.Scatter(
+            y=dependent,
+            x=independent,
+            mode="markers",
+            name="Data Points",
+            marker=dict(color="blue", size=8),
+        )
     )
-)
 
-elo_scatter.add_trace(
-    go.Scatter(
-        x=df["My ELO"],
-        y=y_pred,
-        mode="lines",
-        name=f"Best Fit: y = {m:.2f}x + {b:.2f} (R² = {r2:.2f})",
-        line=dict(color="red", width=2, dash="dash"),
+    scatter.add_trace(
+        go.Scatter(
+            x=independent,
+            y=y_pred,
+            mode="lines",
+            name=f"Best Fit: y = {m:.2f}x + {b:.2f} (R² = {r2:.2f})",
+            line=dict(color="red", width=2, dash="dash"),
+        )
     )
-)
-elo_scatter.update_layout(
+    scatter.update_layout(
+        title=title,
+        xaxis_title=x_title,
+        yaxis_title=y_title,
+        legend_title="Legend",
+        template="plotly_white",
+    )
+    return scatter
+
+
+elo_scatter = scatterplot_with_regression(
+    independent=df["My ELO"],
+    dependent=df["Opponent ELO"],
     title="My ELO vs. Opponent ELO",
-    xaxis_title="My ELO",
-    yaxis_title="Opponent ELO",
-    legend_title="Legend",
-    template="plotly_white",
+    x_title="My ELO",
+    y_title="Opponent ELO",
 )
 
 stage_winrate_df["Stage_Width"] = stage_winrate_df["Stage"].map(
     lambda stage: stages[stage].width
 )
 
-stage_scatter = go.Figure()
-stage_scatter.add_trace(
-    go.Scatter(
-        x=stage_winrate_df["Stage_Width"],
-        y=stage_winrate_df["WinRate"],
-        mode="markers+text",
-        name="Data Points",
-        marker=dict(color="blue", size=8),
-        text=stage_winrate_df["Stage"],
-        textposition="top center",
-    )
-)
-stage_scatter.update_layout(
+stage_scatter = scatterplot_with_regression(
+    independent=stage_winrate_df["Stage_Width"],
+    dependent=stage_winrate_df["WinRate"],
     title="Stage Width vs. Winrate",
-    xaxis_title="Stage Width",
-    yaxis_title="Winrate",
-    legend_title="Legend",
-    template="plotly_white",
+    x_title="Stage Width",
+    y_title="Winrate",
 )
 
 # double bar graph for # matchups and winrate against each character
