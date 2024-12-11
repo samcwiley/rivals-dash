@@ -10,6 +10,19 @@ import plotly.express as px
 from game_data import stages, characters, starter_stages, counter_stages
 
 
+def add_50_percent_line(fig: go.Figure):
+    fig.add_shape(
+        type="line",
+        x0=0,
+        x1=1,
+        xref="paper",
+        y0=50,
+        y1=50,
+        yref="y2",
+        line=dict(color="red", width=2, dash="dash"),
+    )
+
+
 # read the csv
 df = pd.read_csv("rivals_spreadsheet.tsv", sep="\t")
 
@@ -140,17 +153,7 @@ stage_bar = go.Figure(
     },
 )
 stage_bar.update_layout(barmode="group")
-
-stage_bar.add_shape(
-    type="line",
-    x0=0,
-    x1=1,
-    xref="paper",
-    y0=50,
-    y1=50,
-    yref="y2",
-    line=dict(color="red", width=2, dash="dash"),
-)
+add_50_percent_line(stage_bar)
 
 
 # Calculate regression line and statistics for ELO
@@ -243,18 +246,7 @@ matchup_bar = go.Figure(
     },
 )
 matchup_bar.update_layout(barmode="group")
-
-# for making horizontal 50% line on bar graph
-matchup_bar.add_shape(
-    type="line",
-    x0=0,
-    x1=1,
-    xref="paper",
-    y0=50,
-    y1=50,
-    yref="y2",
-    line=dict(color="red", width=2, dash="dash"),
-)
+add_50_percent_line(matchup_bar)
 
 
 app = dash.Dash(__name__)
