@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 
 
 def double_bar_plot(
+    title: str,
     x_axis: pd.Series,
     y1_axis: pd.Series,
     y1_name: str,
@@ -35,7 +36,7 @@ def double_bar_plot(
             "yaxis2": {"title": y2_axis_label, "overlaying": "y", "side": "right"},
         },
     )
-    double_bar.update_layout(barmode="group")
+    double_bar.update_layout(barmode="group", title=title)
     add_50_percent_line(double_bar)
     return double_bar
 

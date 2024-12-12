@@ -1,5 +1,5 @@
 import dash
-from dash import dcc, html
+from dash import dcc, html, Input, Output
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
@@ -7,7 +7,7 @@ import plotly.express as px
 import sys
 
 from graph_utils import double_bar_plot, scatterplot_with_regression
-from game_data import stages
+from game_data import stages, characters
 from df_utils import (
     parse_spreadsheet,
     calculate_gamewise_df,
@@ -18,10 +18,11 @@ from df_utils import (
 
 df = parse_spreadsheet("rivals_spreadsheet.tsv")
 winrate_df = calculate_set_winrates(df)
-long_df = calculate_gamewise_df(df)
-stage_winrate_df = calculate_stage_winrates(long_df)
+gamewise_df = calculate_gamewise_df(df)
+stage_winrate_df = calculate_stage_winrates(gamewise_df)
 
 stage_bar = double_bar_plot(
+    title="Stage Winrates",
     x_axis=stage_winrate_df["Stage"],
     y1_axis=stage_winrate_df["Total_Matches"],
     y1_name="Number of Matches",
@@ -54,6 +55,7 @@ stage_scatter = scatterplot_with_regression(
 
 # double bar graph for # matchups and winrate against each character
 matchup_bar = double_bar_plot(
+    title="Character Matchup Winrates",
     x_axis=winrate_df["Main"],
     y1_axis=winrate_df["Total_Matches"],
     y1_name="Number of Matches",
@@ -65,6 +67,32 @@ matchup_bar = double_bar_plot(
 
 
 app = dash.Dash(__name__)
+
+char_options = ["All Characters"] + characters
+
+
+# Callback to update stage winrate plot
+@app.callback(Output("stage-bar-plot", "figure"), [Input("character-filter", "value")])
+def update_graph(selected_character):
+    if selected_character == "All Characters":
+        filtered_df = gamewise_df
+    else:
+        filtered_df = gamewise_df[gamewise_df["Char"] == selected_character]
+
+    stage_winrate_df = calculate_stage_winrates(filtered_df)
+
+    figure = double_bar_plot(
+        title=f"Stage Winrates Against {selected_character}",
+        x_axis=stage_winrate_df["Stage"],
+        y1_axis=stage_winrate_df["Total_Matches"],
+        y1_name="Number of Matches",
+        y1_axis_label="Frequency of Stage",
+        y2_axis=stage_winrate_df["WinRate"],
+        y2_name="Winrate",
+        y2_axis_label="Winrate",
+    )
+    return figure
+
 
 app.layout = html.Div(
     [
@@ -90,6 +118,14 @@ app.layout = html.Div(
             id="stage_winrate_scatter",
             figure=stage_scatter,
         ),
+        # For filtering character bar plot
+        dcc.Dropdown(
+            id="character-filter",
+            options=[{"label": char, "value": char} for char in char_options],
+            value="All Characters",
+            placeholder="Select a character",
+        ),
+        dcc.Graph(id="stage-bar-plot"),
     ]
 )
 
