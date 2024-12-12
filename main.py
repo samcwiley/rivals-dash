@@ -18,7 +18,7 @@ stage_winrate_df = calculate_stage_winrates(gamewise_df)
 
 
 stage_bar = double_bar_plot(
-    title="Stage Winrates (polars)",
+    title="Stage Winrates",
     x_axis=stage_winrate_df["Stage"],
     y1_axis=stage_winrate_df["Total_Matches"],
     y1_name="Number of Matches",
@@ -49,7 +49,7 @@ stage_winrate_df = stage_winrate_df.join(stages_df, on="Stage")
 stage_scatter = scatterplot_with_regression(
     independent=stage_winrate_df["Stage_Width"],
     dependent=stage_winrate_df["WinRate"],
-    title="Stage Width vs. Winrate (Polars)",
+    title="Stage Width vs. Winrate",
     x_title="Stage Width",
     y_title="Winrate",
 )
@@ -57,7 +57,7 @@ stage_scatter = scatterplot_with_regression(
 # double bar graph for # matchups and winrate against each character
 
 matchup_bar = double_bar_plot(
-    title="Character Matchup Winrates (Polars)",
+    title="Character Matchup Winrates",
     x_axis=character_winrate_df["Main"],
     y1_axis=character_winrate_df["Total_Matches"],
     y1_name="Number of Matches",
