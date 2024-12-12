@@ -8,7 +8,7 @@ import sys
 
 from graph_utils import *
 from game_data import stages, characters
-from df_utils_polars import *
+from df_utils import *
 
 
 setwise_df = parse_spreadsheet("rivals_spreadsheet.tsv")
