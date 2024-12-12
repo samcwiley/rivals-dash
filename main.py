@@ -3,335 +3,64 @@ from dash import dcc, html
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score
 import plotly.express as px
+import sys
 
-
-# stages
-class Stage:
-    def __init__(self, name, width, side_blast, top_blast, bot_blast):
-        self.name = name
-        self.width = width
-        self.side_blast = side_blast
-        self.top_blast = top_blast
-        self.bot_blast = bot_blast
-
-    def __repr__(self):
-        return (
-            f"Stage(Name='{self.name}', Width={self.width}, "
-            f"Side_Blast={self.side_blast}, Top_Blast={self.top_blast}, Bot_Blast={self.bot_blast})"
-        )
-
-
-stages = {
-    "Aetherean Forest": Stage(
-        name="Aetherean Forest",
-        width=1280,
-        side_blast=1380,
-        top_blast=2180,
-        bot_blast=1315,
-    ),
-    "Godai Delta": Stage(
-        name="Godai Delta", width=1600, side_blast=1680, top_blast=2230, bot_blast=1280
-    ),
-    "Hodojo": Stage(
-        name="Hodojo", width=1460, side_blast=1478, top_blast=2195, bot_blast=1330
-    ),
-    "Julesvale": Stage(
-        name="Julesvale", width=1400, side_blast=1560, top_blast=2170, bot_blast=1360
-    ),
-    "Merchant Port": Stage(
-        name="Merchant Port",
-        width=1630,
-        side_blast=1540,
-        top_blast=2140,
-        bot_blast=1305,
-    ),
-    "Air Armada": Stage(
-        name="Air Armada", width=1900, side_blast=1630, top_blast=2080, bot_blast=1290
-    ),
-    "Fire Capital": Stage(
-        name="Fire Capital", width=2020, side_blast=1814, top_blast=2254, bot_blast=1470
-    ),
-    "Hyperborean Harbor": Stage(
-        name="Hyperborean Harbor",
-        width=1560,
-        side_blast=1840,
-        top_blast=1940,
-        bot_blast=1390,
-    ),
-    "Rock Wall": Stage(
-        name="Rock Wall", width=1860, side_blast=1320, top_blast=2130, bot_blast=1420
-    ),
-    "Tempest Peak": Stage(
-        name="Tempest Peak", width=1250, side_blast=1645, top_blast=2260, bot_blast=1250
-    ),
-}
-starter_stages = [
-    "Aetherean Forest",
-    "Godai Delta",
-    "Hodojo",
-    "Julesvale",
-    "Merchant Port",
-]
-characters = [
-    "Clairen",
-    "Fleet",
-    "Forsburn",
-    "Kragg",
-    "Loxodont",
-    "Maypul",
-    "Orcane",
-    "Ranno",
-    "Wrastor",
-    "Zetterburn",
-]
-
-# read the csv
-df = pd.read_csv("rivals_spreadsheet.tsv", sep="\t")
-
-# cutting out goals and notes, these are priveleged information!
-if "Notes" in df.columns:
-    df = df.drop(columns=["Notes", "Goal"])
-    df.to_csv("rivals_spreadsheet.tsv", sep="\t", header=True)
-
-# Killing incomplete rows, this is important for calculating the regression
-df = df.dropna(subset=["My Char", "My ELO", "Opponent ELO"])
-
-df["Datetime"] = pd.to_datetime(df["Date"])
-df["Row Index"] = df.index + 1
-
-# calculating winrate for each character
-winrate_df = (
-    df.groupby("Opponent Char")
-    .agg(
-        Wins=("Win/Loss", lambda x: (x == "W").sum()),
-        Total_Matches=("Win/Loss", "count"),
-    )
-    .assign(WinRate=lambda x: (x["Wins"] / x["Total_Matches"]) * 100)
-    .reset_index()
-)
-
-# Imputing Opponent characters for games 2 & 3
-df["G2 char (if different)"] = df.apply(
-    lambda row: (
-        row["Opponent Char"]
-        if pd.notnull(row["G2 Stage"]) and pd.isnull(row["G2 char (if different)"])
-        else row["G2 char (if different)"]
-    ),
-    axis=1,
-)
-
-df["G3 char (if different)"] = df.apply(
-    lambda row: (
-        row["Opponent Char"]
-        if pd.notnull(row["G3 Stage"]) and pd.isnull(row["G3 char (if different)"])
-        else row["G3 char (if different)"]
-    ),
-    axis=1,
-)
-
-df = df.rename(
-    columns={
-        "Opponent Char": "G1 Char",
-        "G2 char (if different)": "G2 Char",
-        "G3 char (if different)": "G3 Char",
-    }
-)
-
-# calculating longer dataframe for game-by-game statistics
-long_df = df.melt(
-    id_vars=[
-        "Date",
-        "Time",
-        "My ELO",
-        "Opponent ELO",
-    ],
-    value_vars=[
-        "G1 Stage",
-        "G1 Stock Diff",
-        "G1 Char",
-        "G2 Stage",
-        "G2 Stock Diff",
-        "G2 Char",
-        "G3 Stage",
-        "G3 Stock Diff",
-        "G3 Char",
-    ],
-    var_name="Game Info",
-    value_name="Value",
-)
-
-long_df["Game"] = long_df["Game Info"].str.extract(r"(G\d)")
-long_df["Attribute"] = long_df["Game Info"].str.extract(r"(Stage|Stock Diff|Char)")
-long_df = long_df.pivot(
-    index=[
-        "Date",
-        "Time",
-        "My ELO",
-        "Opponent ELO",
-        "Game",
-    ],
-    columns="Attribute",
-    values="Value",
-).reset_index()
-
-long_df.dropna(subset=["Char", "Stage", "Stock Diff"], inplace=True)
-long_df.reset_index(inplace=True, drop=True)
-
-# calculating winrates for stages
-long_df["Win"] = long_df["Stock Diff"] > 0
-
-# double bar graph for stages
-
-stage_winrate_df = (
-    long_df.groupby("Stage")
-    .agg(
-        Wins=("Win", lambda x: (x == True).sum()),
-        Total_Matches=("Win", "count"),
-    )
-    .assign(WinRate=lambda x: (x["Wins"] / x["Total_Matches"]) * 100)
-    .reset_index()
-)
-
-stage_bar = go.Figure(
-    data=[
-        go.Bar(
-            name="Number of Matches",
-            x=stage_winrate_df["Stage"],
-            y=stage_winrate_df["Total_Matches"],
-            yaxis="y",
-            offsetgroup=1,
-        ),
-        go.Bar(
-            name="Winrate",
-            x=stage_winrate_df["Stage"],
-            y=stage_winrate_df["WinRate"],
-            yaxis="y2",
-            offsetgroup=2,
-        ),
-    ],
-    layout={
-        "yaxis": {"title": "Frequency of Stage"},
-        "yaxis2": {"title": "Winrate", "overlaying": "y", "side": "right"},
-    },
-)
-stage_bar.update_layout(barmode="group")
-
-stage_bar.add_shape(
-    type="line",
-    x0=0,
-    x1=1,
-    xref="paper",
-    y0=50,
-    y1=50,
-    yref="y2",
-    line=dict(color="red", width=2, dash="dash"),
+from graph_utils import double_bar_plot, scatterplot_with_regression
+from game_data import stages
+from df_utils import (
+    parse_spreadsheet,
+    calculate_gamewise_df,
+    calculate_set_winrates,
+    calculate_stage_winrates,
 )
 
 
-# Calculate regression line and statistics for ELO
-x = df["My ELO"].values.reshape(-1, 1)
-y = df["Opponent ELO"].values
+df = parse_spreadsheet("rivals_spreadsheet.tsv")
+winrate_df = calculate_set_winrates(df)
+long_df = calculate_gamewise_df(df)
+stage_winrate_df = calculate_stage_winrates(long_df)
 
-model = LinearRegression()
-model.fit(x, y)
-
-y_pred = model.predict(x)
-m = model.coef_[0]
-b = model.intercept_
-r2 = r2_score(y, y_pred)
-
-elo_scatter = go.Figure()
-
-# Scatter plot of actual data
-elo_scatter.add_trace(
-    go.Scatter(
-        y=df["Opponent ELO"],
-        x=df["My ELO"],
-        mode="markers",
-        name="Data Points",
-        marker=dict(color="blue", size=8),
-    )
+stage_bar = double_bar_plot(
+    x_axis=stage_winrate_df["Stage"],
+    y1_axis=stage_winrate_df["Total_Matches"],
+    y1_name="Number of Matches",
+    y1_axis_label="Frequency of Stage",
+    y2_axis=stage_winrate_df["WinRate"],
+    y2_name="Winrate",
+    y2_axis_label="Winrate",
 )
 
-elo_scatter.add_trace(
-    go.Scatter(
-        x=df["My ELO"],
-        y=y_pred,
-        mode="lines",
-        name=f"Best Fit: y = {m:.2f}x + {b:.2f} (R² = {r2:.2f})",
-        line=dict(color="red", width=2, dash="dash"),
-    )
-)
-elo_scatter.update_layout(
+
+elo_scatter = scatterplot_with_regression(
+    independent=df["My ELO"],
+    dependent=df["Opponent ELO"],
     title="My ELO vs. Opponent ELO",
-    xaxis_title="My ELO",
-    yaxis_title="Opponent ELO",
-    legend_title="Legend",
-    template="plotly_white",
+    x_title="My ELO",
+    y_title="Opponent ELO",
 )
 
 stage_winrate_df["Stage_Width"] = stage_winrate_df["Stage"].map(
     lambda stage: stages[stage].width
 )
 
-stage_scatter = go.Figure()
-stage_scatter.add_trace(
-    go.Scatter(
-        x=stage_winrate_df["Stage_Width"],
-        y=stage_winrate_df["WinRate"],
-        mode="markers+text",
-        name="Data Points",
-        marker=dict(color="blue", size=8),
-        text=stage_winrate_df["Stage"],
-        textposition="top center",
-    )
-)
-stage_scatter.update_layout(
+stage_scatter = scatterplot_with_regression(
+    independent=stage_winrate_df["Stage_Width"],
+    dependent=stage_winrate_df["WinRate"],
     title="Stage Width vs. Winrate",
-    xaxis_title="Stage Width",
-    yaxis_title="Winrate",
-    legend_title="Legend",
-    template="plotly_white",
+    x_title="Stage Width",
+    y_title="Winrate",
 )
 
 # double bar graph for # matchups and winrate against each character
-matchup_bar = go.Figure(
-    data=[
-        go.Bar(
-            name="Number of Matches",
-            x=winrate_df["Opponent Char"],
-            y=winrate_df["Total_Matches"],
-            yaxis="y",
-            offsetgroup=1,
-        ),
-        go.Bar(
-            name="Winrate",
-            x=winrate_df["Opponent Char"],
-            y=winrate_df["WinRate"],
-            yaxis="y2",
-            offsetgroup=2,
-        ),
-    ],
-    layout={
-        "yaxis": {"title": "Frequency of Opponent Characters"},
-        "yaxis2": {"title": "Winrate", "overlaying": "y", "side": "right"},
-    },
-)
-matchup_bar.update_layout(barmode="group")
-
-# for making horizontal 50% line on bar graph
-matchup_bar.add_shape(
-    type="line",
-    x0=0,
-    x1=1,
-    xref="paper",
-    y0=50,
-    y1=50,
-    yref="y2",
-    line=dict(color="red", width=2, dash="dash"),
+matchup_bar = double_bar_plot(
+    x_axis=winrate_df["Main"],
+    y1_axis=winrate_df["Total_Matches"],
+    y1_name="Number of Matches",
+    y1_axis_label="Frequency of Opponent Characters",
+    y2_axis=winrate_df["WinRate"],
+    y2_name="Winrate",
+    y2_axis_label="Winrate",
 )
 
 
@@ -355,8 +84,6 @@ app.layout = html.Div(
         dcc.Graph(id="scatter-plot", figure=elo_scatter),
         # Matchup bar plot
         dcc.Graph(id="character-bar", figure=matchup_bar),
-        # stage winrate plot
-        # dcc.Graph(id="stage_winrate_plot", figure=stage_winrate_plot),
         # stage winrate double bar plot
         dcc.Graph(id="stage_winrate_double_plot", figure=stage_bar),
         dcc.Graph(
