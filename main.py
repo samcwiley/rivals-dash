@@ -6,15 +6,10 @@ import plotly.graph_objects as go
 import plotly.express as px
 import sys
 
-from graph_utils import double_bar_plot, scatterplot_with_regression
+from graph_utils import *
 from game_data import stages, characters
-from df_utils import (
-    parse_spreadsheet,
-    calculate_gamewise_df,
-    calculate_set_winrates,
-    calculate_stage_winrates,
-)
-from df_utils_polars import parse_spreadsheet_polars
+from df_utils import *
+from df_utils_polars import *
 
 
 df_polars = parse_spreadsheet_polars("rivals_spreadsheet.tsv")
@@ -24,16 +19,38 @@ df_pandas = parse_spreadsheet("rivals_spreadsheet.tsv")
 # print(df_pandas.columns)
 # print(df_polars.columns)
 winrate_df = calculate_set_winrates(df_pandas)
+winrate_df_polars = calculate_set_winrates_polars(df_polars)
+# print(winrate_df.head)
+# print(winrate_df_polars.head)
 gamewise_df = calculate_gamewise_df(df_pandas)
+gamewise_df_polars = calculate_gamewise_df_polars(df_polars)
+# print(gamewise_df.shape)
+# print(gamewise_df.head)
+# print(gamewise_df_polars.shape)
+# print(gamewise_df_polars.head)
 stage_winrate_df = calculate_stage_winrates(gamewise_df)
+stage_winrate_df_polars = calculate_stage_winrates_polars(gamewise_df_polars)
+# print(stage_winrate_df_polars.head)
+# print(stage_winrate_df.head)
 
 stage_bar = double_bar_plot(
-    title="Stage Winrates",
+    title="Stage Winrates (pandas)",
     x_axis=stage_winrate_df["Stage"],
     y1_axis=stage_winrate_df["Total_Matches"],
     y1_name="Number of Matches",
     y1_axis_label="Frequency of Stage",
     y2_axis=stage_winrate_df["WinRate"],
+    y2_name="Winrate",
+    y2_axis_label="Winrate",
+)
+
+stage_bar_polars = double_bar_plot_polars(
+    title="Stage Winrates (polars)",
+    x_axis=stage_winrate_df_polars["Stage"],
+    y1_axis=stage_winrate_df_polars["Total_Matches"],
+    y1_name="Number of Matches",
+    y1_axis_label="Frequency of Stage",
+    y2_axis=stage_winrate_df_polars["WinRate"],
     y2_name="Winrate",
     y2_axis_label="Winrate",
 )
@@ -120,6 +137,7 @@ app.layout = html.Div(
         dcc.Graph(id="character-bar", figure=matchup_bar),
         # stage winrate double bar plot
         dcc.Graph(id="stage_winrate_double_plot", figure=stage_bar),
+        dcc.Graph(id="stage_bar_polars", figure=stage_bar_polars),
         dcc.Graph(
             id="stage_winrate_scatter",
             figure=stage_scatter,

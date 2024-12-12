@@ -1,6 +1,7 @@
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 import pandas as pd
+import polars as pl
 import plotly.graph_objects as go
 
 
@@ -38,6 +39,42 @@ def double_bar_plot(
     )
     double_bar.update_layout(barmode="group", title=title)
     add_50_percent_line(double_bar)
+    return double_bar
+
+
+def double_bar_plot_polars(
+    title: str,
+    x_axis: pl.Series,
+    y1_axis: pl.Series,
+    y1_name: str,
+    y1_axis_label: str,
+    y2_axis: pl.Series,
+    y2_name: str,
+    y2_axis_label: str,
+) -> go.Figure:
+    double_bar = go.Figure(
+        data=[
+            go.Bar(
+                name=y1_name,
+                x=x_axis.to_list(),  # Convert Polars Series to list
+                y=y1_axis.to_list(),
+                yaxis="y",
+                offsetgroup=1,
+            ),
+            go.Bar(
+                name=y2_name,
+                x=x_axis.to_list(),
+                y=y2_axis.to_list(),
+                yaxis="y2",
+                offsetgroup=2,
+            ),
+        ],
+        layout={
+            "yaxis": {"title": y1_axis_label},
+            "yaxis2": {"title": y2_axis_label, "overlaying": "y", "side": "right"},
+        },
+    )
+    double_bar.update_layout(barmode="group", title=title)
     return double_bar
 
 

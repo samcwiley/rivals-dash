@@ -88,3 +88,74 @@ def parse_spreadsheet_polars(filepath: str) -> pl.DataFrame:
     )
 
     return df
+
+
+def calculate_gamewise_df_polars(full_df: pl.DataFrame) -> pl.DataFrame:
+    long_df = full_df.melt(
+        id_vars=["Date", "Time", "My ELO", "Opponent ELO"],
+        value_vars=[
+            "G1 Stage",
+            "G1 Stock Diff",
+            "G1 Char",
+            "G2 Stage",
+            "G2 Stock Diff",
+            "G2 Char",
+            "G3 Stage",
+            "G3 Stock Diff",
+            "G3 Char",
+        ],
+        variable_name="Game Info",
+        value_name="Value",
+    )
+
+    long_df = long_df.with_columns(
+        [
+            long_df["Game Info"].str.extract(r"(G\d)").alias("Game"),
+            long_df["Game Info"]
+            .str.extract(r"(Stage|Stock Diff|Char)")
+            .alias("Attribute"),
+        ]
+    )
+
+    long_df = long_df.pivot(
+        index=["Date", "Time", "My ELO", "Opponent ELO", "Game"],
+        columns="Attribute",
+        values="Value",
+    )
+
+    long_df = long_df.drop_nulls(["Char", "Stage", "Stock Diff"])
+
+    long_df = long_df.with_columns(
+        (long_df["Stock Diff"].cast(pl.Float64) > 0).alias("Win")
+    )
+
+    return long_df
+
+
+def calculate_set_winrates_polars(full_df: pl.DataFrame) -> pl.DataFrame:
+    winrate_df = (
+        full_df.group_by("Main")
+        .agg(
+            [
+                (pl.col("Win/Loss") == "W").sum().alias("Wins"),
+                pl.col("Win/Loss").count().alias("Total_Matches"),
+            ]
+        )
+        .with_columns((pl.col("Wins") / pl.col("Total_Matches") * 100).alias("WinRate"))
+        .sort("Main")
+    )
+    return winrate_df
+
+
+def calculate_stage_winrates_polars(gamewise_df: pl.DataFrame) -> pl.DataFrame:
+    stage_winrate_df = (
+        gamewise_df.group_by("Stage")
+        .agg(
+            [
+                (pl.col("Win") == True).sum().alias("Wins"),
+                pl.col("Win").count().alias("Total_Matches"),
+            ]
+        )
+        .with_columns((pl.col("Wins") / pl.col("Total_Matches") * 100).alias("WinRate"))
+    )
+    return stage_winrate_df
