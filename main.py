@@ -1,25 +1,20 @@
 import dash
 from dash import dcc, html, Input, Output
-import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 import plotly.express as px
 import sys
 
-from graph_utils import double_bar_plot, scatterplot_with_regression
+from graph_utils import *
 from game_data import stages, characters
-from df_utils import (
-    parse_spreadsheet,
-    calculate_gamewise_df,
-    calculate_set_winrates,
-    calculate_stage_winrates,
-)
+from df_utils import *
 
 
-df = parse_spreadsheet("rivals_spreadsheet.tsv")
-winrate_df = calculate_set_winrates(df)
-gamewise_df = calculate_gamewise_df(df)
+setwise_df = parse_spreadsheet("rivals_spreadsheet.tsv")
+character_winrate_df = calculate_set_winrates(setwise_df)
+gamewise_df = calculate_gamewise_df(setwise_df)
 stage_winrate_df = calculate_stage_winrates(gamewise_df)
+
 
 stage_bar = double_bar_plot(
     title="Stage Winrates",
@@ -34,16 +29,21 @@ stage_bar = double_bar_plot(
 
 
 elo_scatter = scatterplot_with_regression(
-    independent=df["My ELO"],
-    dependent=df["Opponent ELO"],
+    independent=setwise_df["My ELO"],
+    dependent=setwise_df["Opponent ELO"],
     title="My ELO vs. Opponent ELO",
     x_title="My ELO",
     y_title="Opponent ELO",
 )
 
-stage_winrate_df["Stage_Width"] = stage_winrate_df["Stage"].map(
-    lambda stage: stages[stage].width
+
+stages_df = pl.DataFrame(
+    {
+        "Stage": list(stages.keys()),
+        "Stage_Width": [stages[stage].width for stage in stages],
+    }
 )
+stage_winrate_df = stage_winrate_df.join(stages_df, on="Stage")
 
 stage_scatter = scatterplot_with_regression(
     independent=stage_winrate_df["Stage_Width"],
@@ -54,13 +54,14 @@ stage_scatter = scatterplot_with_regression(
 )
 
 # double bar graph for # matchups and winrate against each character
+
 matchup_bar = double_bar_plot(
     title="Character Matchup Winrates",
-    x_axis=winrate_df["Main"],
-    y1_axis=winrate_df["Total_Matches"],
+    x_axis=character_winrate_df["Main"],
+    y1_axis=character_winrate_df["Total_Matches"],
     y1_name="Number of Matches",
-    y1_axis_label="Frequency of Opponent Characters",
-    y2_axis=winrate_df["WinRate"],
+    y1_axis_label="Number of Matches",
+    y2_axis=character_winrate_df["WinRate"],
     y2_name="Winrate",
     y2_axis_label="Winrate",
 )
@@ -77,7 +78,7 @@ def update_graph(selected_character):
     if selected_character == "All Characters":
         filtered_df = gamewise_df
     else:
-        filtered_df = gamewise_df[gamewise_df["Char"] == selected_character]
+        filtered_df = gamewise_df.filter(pl.col("Char") == selected_character)
 
     stage_winrate_df = calculate_stage_winrates(filtered_df)
 
@@ -99,9 +100,9 @@ app.layout = html.Div(
         html.H1("ELO Analysis Dashboard"),
         # Line plot of ELO over time
         dcc.Graph(
-            id="line-plot",
+            id="elo-line-plot",
             figure=px.line(
-                df,
+                setwise_df,
                 x="Row Index",
                 y="My ELO",
                 title="My ELO Over Time",
@@ -109,16 +110,12 @@ app.layout = html.Div(
             ),
         ),
         # Scatter plot of My ELO vs. Opponent ELO
-        dcc.Graph(id="scatter-plot", figure=elo_scatter),
+        dcc.Graph(id="elo-scatter", figure=elo_scatter),
         # Matchup bar plot
         dcc.Graph(id="character-bar", figure=matchup_bar),
         # stage winrate double bar plot
-        dcc.Graph(id="stage_winrate_double_plot", figure=stage_bar),
-        dcc.Graph(
-            id="stage_winrate_scatter",
-            figure=stage_scatter,
-        ),
-        # For filtering character bar plot
+        dcc.Graph(id="stage_bar", figure=stage_bar),
+        dcc.Graph(id="stage_winrate_scatter", figure=stage_scatter),
         dcc.Dropdown(
             id="character-filter",
             options=[{"label": char, "value": char} for char in char_options],

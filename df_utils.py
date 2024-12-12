@@ -1,100 +1,102 @@
-import pandas as pd
-import numpy as np
-from game_data import characters, all_stages
+import polars as pl
 import sys
+from datetime import datetime
+from game_data import characters, all_stages
+
+pl.Config.set_tbl_rows(100)
+pl.Config.set_tbl_cols(100)
 
 
-def parse_spreadsheet(filepath: str) -> pd.DataFrame:
-    # read the csv
-    df = pd.read_csv("rivals_spreadsheet.tsv", sep="\t")
+def parse_spreadsheet(filepath: str) -> pl.DataFrame:
+    df = pl.read_csv(filepath, separator="\t")
 
-    # cutting out goals and notes, these are priveleged information!
     if "Notes" in df.columns:
-        df = df.drop(columns=["Notes", "Goal"])
-        df.to_csv("rivals_spreadsheet.tsv", sep="\t", header=True)
+        df = df.drop(["Notes", "Goal"])
+        df.write_csv(filepath, separator="\t", has_header=True)
 
-    # Killing incomplete rows, this is important for calculating the regression
-    df = df.dropna(subset=["My Char", "My ELO", "Opponent ELO"])
+    df = df.drop_nulls(["My Char", "My ELO", "Opponent ELO"])
 
-    # validating stages and characters to ensure there are only correct values
     validation_rules = {
         "Opponent Char": characters,
         "G1 Stage": all_stages,
         "G2 Stage": all_stages,
-        "G3 Stage": all_stages + [None, np.nan],
-        "G2 char (if different)": characters + [None, np.nan],
-        "G3 char (if different)": characters + [None, np.nan],
+        "G3 Stage": all_stages,
+        "G2 char (if different)": characters,
+        "G3 char (if different)": characters,
     }
 
-    valid_rows = pd.Series(True, index=df.index)
+    valid_rows = pl.Series([True] * len(df))
 
     for column, allowed_values in validation_rules.items():
-        invalid_rows = ~df[column].isin(allowed_values)
+        if column in df.columns:
+            is_valid = df[column].is_in(allowed_values) | df[column].is_null()
 
-        if invalid_rows.any():
-            for index, value in df.loc[invalid_rows, column].items():
-                print(
-                    f"Error: Value '{value}' in column '{column}' at row {index} is not allowed. This row will be removed for the current analysis",
-                    file=sys.stderr,
-                )
-                # print(*args, file=sys.stderr, **kwargs)
+            invalid_rows = ~is_valid
 
-        valid_rows &= ~invalid_rows
+            if invalid_rows.any():
+                invalid_indices = invalid_rows.to_numpy().nonzero()[0]
+                for index in invalid_indices:
+                    value = df[column][index]
+                    print(
+                        f"Error: Value '{value}' in column '{column}' at row {index} is not allowed. This row will be removed for the current analysis",
+                        file=sys.stderr,
+                    )
 
-    df = df.loc[valid_rows].reset_index(drop=True)
+            valid_rows &= is_valid
 
-    df["Datetime"] = pd.to_datetime(df["Date"])
-    df["Row Index"] = df.index + 1
+    df = df.filter(valid_rows)
 
-    # Imputing Opponent characters for games 2 & 3
-    df["G2 char (if different)"] = df.apply(
-        lambda row: (
-            row["Opponent Char"]
-            if pd.notnull(row["G2 Stage"]) and pd.isnull(row["G2 char (if different)"])
-            else row["G2 char (if different)"]
-        ),
-        axis=1,
-    )
-
-    df["G3 char (if different)"] = df.apply(
-        lambda row: (
-            row["Opponent Char"]
-            if pd.notnull(row["G3 Stage"]) and pd.isnull(row["G3 char (if different)"])
-            else row["G3 char (if different)"]
-        ),
-        axis=1,
+    # Impute Opponent characters for games 2 & 3
+    df = df.with_columns(
+        [
+            pl.when(
+                (pl.col("G2 Stage").is_not_null())
+                & (pl.col("G2 char (if different)").is_null())
+            )
+            .then(pl.col("Opponent Char"))
+            .otherwise(pl.col("G2 char (if different)"))
+            .alias("G2 char (if different)"),
+            pl.when(
+                (pl.col("G3 Stage").is_not_null())
+                & (pl.col("G3 char (if different)").is_null())
+            )
+            .then(pl.col("Opponent Char"))
+            .otherwise(pl.col("G3 char (if different)"))
+            .alias("G3 char (if different)"),
+        ]
     )
 
     df = df.rename(
-        columns={
+        {
             "Opponent Char": "G1 Char",
             "G2 char (if different)": "G2 Char",
             "G3 char (if different)": "G3 Char",
         }
     )
 
-    df["Main"] = df.apply(
-        lambda row: (
-            row["G1 Char"]
-            if (row["G2 Char"] == row["G1 Char"] and pd.isnull(row["G3 Char"]))
-            or (row["G2 Char"] == row["G1 Char"] and row["G3 Char"] == row["G1 Char"])
-            else "Multiple"
-        ),
-        axis=1,
+    df = df.with_columns(
+        pl.when(
+            ((pl.col("G2 Char") == pl.col("G1 Char")) & pl.col("G3 Char").is_null())
+            | (
+                (pl.col("G2 Char") == pl.col("G1 Char"))
+                & (pl.col("G3 Char") == pl.col("G1 Char"))
+            )
+        )
+        .then(pl.col("G1 Char"))
+        .otherwise(pl.lit("Multiple"))
+        .alias("Main")
+    )
+
+    df = df.with_row_count(name="Row Index").with_columns(
+        (pl.col("Row Index") + 1).alias("Row Index")
     )
 
     return df
 
 
-# calculating longer dataframe for game-by-game statistics
-def calculate_gamewise_df(full_df: pd.DataFrame) -> pd.DataFrame:
+def calculate_gamewise_df(full_df: pl.DataFrame) -> pl.DataFrame:
     long_df = full_df.melt(
-        id_vars=[
-            "Date",
-            "Time",
-            "My ELO",
-            "Opponent ELO",
-        ],
+        id_vars=["Date", "Time", "My ELO", "Opponent ELO"],
         value_vars=[
             "G1 Stage",
             "G1 Stock Diff",
@@ -106,55 +108,58 @@ def calculate_gamewise_df(full_df: pd.DataFrame) -> pd.DataFrame:
             "G3 Stock Diff",
             "G3 Char",
         ],
-        var_name="Game Info",
+        variable_name="Game Info",
         value_name="Value",
     )
 
-    long_df["Game"] = long_df["Game Info"].str.extract(r"(G\d)")
-    long_df["Attribute"] = long_df["Game Info"].str.extract(r"(Stage|Stock Diff|Char)")
+    long_df = long_df.with_columns(
+        [
+            long_df["Game Info"].str.extract(r"(G\d)").alias("Game"),
+            long_df["Game Info"]
+            .str.extract(r"(Stage|Stock Diff|Char)")
+            .alias("Attribute"),
+        ]
+    )
+
     long_df = long_df.pivot(
-        index=[
-            "Date",
-            "Time",
-            "My ELO",
-            "Opponent ELO",
-            "Game",
-        ],
+        index=["Date", "Time", "My ELO", "Opponent ELO", "Game"],
         columns="Attribute",
         values="Value",
-    ).reset_index()
+    )
 
-    long_df.dropna(subset=["Char", "Stage", "Stock Diff"], inplace=True)
-    long_df.reset_index(inplace=True, drop=True)
+    long_df = long_df.drop_nulls(["Char", "Stage", "Stock Diff"])
 
-    # calculating winrates for stages
-    long_df["Win"] = long_df["Stock Diff"] > 0
+    long_df = long_df.with_columns(
+        (long_df["Stock Diff"].cast(pl.Float64) > 0).alias("Win")
+    )
+
     return long_df
 
 
-# calculating winrate for each character
-def calculate_set_winrates(full_df: pd.DataFrame) -> pd.DataFrame:
+def calculate_set_winrates(full_df: pl.DataFrame) -> pl.DataFrame:
     winrate_df = (
-        full_df.groupby("Main")
+        full_df.group_by("Main")
         .agg(
-            Wins=("Win/Loss", lambda x: (x == "W").sum()),
-            Total_Matches=("Win/Loss", "count"),
+            [
+                (pl.col("Win/Loss") == "W").sum().alias("Wins"),
+                pl.col("Win/Loss").count().alias("Total_Matches"),
+            ]
         )
-        .assign(WinRate=lambda x: (x["Wins"] / x["Total_Matches"]) * 100)
-        .reset_index()
+        .with_columns((pl.col("Wins") / pl.col("Total_Matches") * 100).alias("WinRate"))
+        .sort("Main")
     )
     return winrate_df
 
 
-# double bar graph for stages
-def calculate_stage_winrates(gamewise_df: pd.DataFrame) -> pd.DataFrame:
+def calculate_stage_winrates(gamewise_df: pl.DataFrame) -> pl.DataFrame:
     stage_winrate_df = (
-        gamewise_df.groupby("Stage")
+        gamewise_df.group_by("Stage")
         .agg(
-            Wins=("Win", lambda x: (x == True).sum()),
-            Total_Matches=("Win", "count"),
+            [
+                (pl.col("Win") == True).sum().alias("Wins"),
+                pl.col("Win").count().alias("Total_Matches"),
+            ]
         )
-        .assign(WinRate=lambda x: (x["Wins"] / x["Total_Matches"]) * 100)
-        .reset_index()
+        .with_columns((pl.col("Wins") / pl.col("Total_Matches") * 100).alias("WinRate"))
     )
     return stage_winrate_df
