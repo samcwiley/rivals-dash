@@ -3,6 +3,7 @@ from sklearn.metrics import r2_score
 import pandas as pd
 import polars as pl
 import plotly.graph_objects as go
+from game_data import all_stages
 
 
 def double_bar_plot(
@@ -56,7 +57,7 @@ def double_bar_plot_polars(
         data=[
             go.Bar(
                 name=y1_name,
-                x=x_axis.to_list(),  # Convert Polars Series to list
+                x=x_axis.to_list(),
                 y=y1_axis.to_list(),
                 yaxis="y",
                 offsetgroup=1,
@@ -74,7 +75,14 @@ def double_bar_plot_polars(
             "yaxis2": {"title": y2_axis_label, "overlaying": "y", "side": "right"},
         },
     )
-    double_bar.update_layout(barmode="group", title=title)
+    double_bar.update_layout(
+        barmode="group",
+        title=title,
+        xaxis={
+            "categoryorder": "category ascending",
+        },
+    )
+    add_50_percent_line(double_bar)
     return double_bar
 
 
@@ -114,6 +122,51 @@ def scatterplot_with_regression(
             line=dict(color="red", width=2, dash="dash"),
         )
     )
+    scatter.update_layout(
+        title=title,
+        xaxis_title=x_title,
+        yaxis_title=y_title,
+        legend_title="Legend",
+        template="plotly_white",
+    )
+    return scatter
+
+
+def scatterplot_with_regression_polars(
+    independent: pl.Series, dependent: pl.Series, title: str, x_title: str, y_title: str
+) -> go.Figure:
+    x = independent.to_numpy().reshape(-1, 1)
+    y = dependent.to_numpy()
+
+    model = LinearRegression()
+    model.fit(x, y)
+
+    y_pred = model.predict(x)
+    m = model.coef_[0]
+    b = model.intercept_
+    r2 = r2_score(y, y_pred)
+
+    scatter = go.Figure()
+
+    scatter.add_trace(
+        go.Scatter(
+            x=independent.to_list(),
+            y=dependent.to_list(),
+            mode="markers",
+            name="Data Points",
+            marker=dict(color="blue", size=8),
+        )
+    )
+    scatter.add_trace(
+        go.Scatter(
+            x=independent.to_list(),
+            y=y_pred.tolist(),
+            mode="lines",
+            name=f"Best Fit: y = {m:.2f}x + {b:.2f} (R² = {r2:.2f})",
+            line=dict(color="red", width=2, dash="dash"),
+        )
+    )
+
     scatter.update_layout(
         title=title,
         xaxis_title=x_title,

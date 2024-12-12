@@ -64,26 +64,62 @@ elo_scatter = scatterplot_with_regression(
     y_title="Opponent ELO",
 )
 
+elo_scatter_polars = scatterplot_with_regression_polars(
+    independent=df_polars["My ELO"],
+    dependent=df_polars["Opponent ELO"],
+    title="My ELO vs. Opponent ELO",
+    x_title="My ELO",
+    y_title="Opponent ELO",
+)
+
 stage_winrate_df["Stage_Width"] = stage_winrate_df["Stage"].map(
     lambda stage: stages[stage].width
 )
 
+stages_df = pl.DataFrame(
+    {
+        "Stage": list(stages.keys()),
+        "Stage_Width": [stages[stage].width for stage in stages],
+    }
+)
+stage_winrate_df_polars = stage_winrate_df_polars.join(stages_df, on="Stage")
+
+
 stage_scatter = scatterplot_with_regression(
     independent=stage_winrate_df["Stage_Width"],
     dependent=stage_winrate_df["WinRate"],
-    title="Stage Width vs. Winrate",
+    title="Stage Width vs. Winrate (Pandas)",
+    x_title="Stage Width",
+    y_title="Winrate",
+)
+
+stage_scatter_polars = scatterplot_with_regression_polars(
+    independent=stage_winrate_df_polars["Stage_Width"],
+    dependent=stage_winrate_df_polars["WinRate"],
+    title="Stage Width vs. Winrate (Polars)",
     x_title="Stage Width",
     y_title="Winrate",
 )
 
 # double bar graph for # matchups and winrate against each character
 matchup_bar = double_bar_plot(
-    title="Character Matchup Winrates",
+    title="Character Matchup Winrates (Pandas)",
     x_axis=winrate_df["Main"],
     y1_axis=winrate_df["Total_Matches"],
     y1_name="Number of Matches",
     y1_axis_label="Frequency of Opponent Characters",
     y2_axis=winrate_df["WinRate"],
+    y2_name="Winrate",
+    y2_axis_label="Winrate",
+)
+
+matchup_bar_polars = double_bar_plot_polars(
+    title="Character Matchup Winrates (Polars)",
+    x_axis=winrate_df_polars["Main"],
+    y1_axis=winrate_df_polars["Total_Matches"],
+    y1_name="Number of Matches",
+    y1_axis_label="Number of Matches",
+    y2_axis=winrate_df_polars["WinRate"],
     y2_name="Winrate",
     y2_axis_label="Winrate",
 )
@@ -117,6 +153,30 @@ def update_graph(selected_character):
     return figure
 
 
+@app.callback(
+    Output("stage-bar-plot-polars", "figure"), [Input("character-filter", "value")]
+)
+def update_graph_polars(selected_character):
+    if selected_character == "All Characters":
+        filtered_df = gamewise_df_polars
+    else:
+        filtered_df = gamewise_df_polars.filter(pl.col("Char") == selected_character)
+
+    stage_winrate_df = calculate_stage_winrates_polars(filtered_df)
+
+    figure = double_bar_plot_polars(
+        title=f"Stage Winrates Against {selected_character}",
+        x_axis=stage_winrate_df["Stage"],
+        y1_axis=stage_winrate_df["Total_Matches"],
+        y1_name="Number of Matches",
+        y1_axis_label="Frequency of Stage",
+        y2_axis=stage_winrate_df["WinRate"],
+        y2_name="Winrate",
+        y2_axis_label="Winrate",
+    )
+    return figure
+
+
 app.layout = html.Div(
     [
         html.H1("ELO Analysis Dashboard"),
@@ -131,10 +191,23 @@ app.layout = html.Div(
                 labels={"Row Index": "Sets Played", "My ELO": "My ELO"},
             ),
         ),
+        dcc.Graph(
+            id="line-plot-polars",
+            figure=px.line(
+                df_polars,
+                x="Row Index",
+                y="My ELO",
+                title="My ELO Over Time",
+                labels={"Row Index": "Sets Played", "My ELO": "My ELO"},
+            ),
+        ),
         # Scatter plot of My ELO vs. Opponent ELO
         dcc.Graph(id="scatter-plot", figure=elo_scatter),
+        # Same in polars
+        dcc.Graph(id="elo-scatter-polars", figure=elo_scatter_polars),
         # Matchup bar plot
         dcc.Graph(id="character-bar", figure=matchup_bar),
+        dcc.Graph(id="character-bar-polars", figure=matchup_bar_polars),
         # stage winrate double bar plot
         dcc.Graph(id="stage_winrate_double_plot", figure=stage_bar),
         dcc.Graph(id="stage_bar_polars", figure=stage_bar_polars),
@@ -142,6 +215,7 @@ app.layout = html.Div(
             id="stage_winrate_scatter",
             figure=stage_scatter,
         ),
+        dcc.Graph(id="stage_winrate_scatter_polars", figure=stage_scatter_polars),
         # For filtering character bar plot
         dcc.Dropdown(
             id="character-filter",
@@ -150,6 +224,7 @@ app.layout = html.Div(
             placeholder="Select a character",
         ),
         dcc.Graph(id="stage-bar-plot"),
+        dcc.Graph(id="stage-bar-plot-polars"),
     ]
 )
 

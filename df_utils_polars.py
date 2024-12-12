@@ -87,6 +87,8 @@ def parse_spreadsheet_polars(filepath: str) -> pl.DataFrame:
         .alias("Main")
     )
 
+    df = df.with_row_count(name="Row Index")
+
     return df
 
 
