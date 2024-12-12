@@ -13,7 +13,7 @@ from df_utils_polars import *
 
 
 df_polars = parse_spreadsheet_polars("rivals_spreadsheet.tsv")
-# df_pandas = parse_spreadsheet("rivals_spreadsheet.tsv")
+df_pandas = parse_spreadsheet("rivals_spreadsheet.tsv")
 # winrate_df = calculate_set_winrates(df_pandas)
 winrate_df_polars = calculate_set_winrates_polars(df_polars)
 gamewise_df_polars = calculate_gamewise_df_polars(df_polars)
@@ -105,16 +105,16 @@ app.layout = html.Div(
     [
         html.H1("ELO Analysis Dashboard"),
         # Line plot of ELO over time
-        # dcc.Graph(
-        # id="line-plot",
-        # figure=px.line(
-        # df_pandas,
-        # x="Row Index",
-        # y="My ELO",
-        # title="My ELO Over Time",
-        # labels={"Row Index": "Sets Played", "My ELO": "My ELO"},
-        # ),
-        # ),
+        dcc.Graph(
+            id="line-plot",
+            figure=px.line(
+                df_pandas,
+                x="Row Index",
+                y="My ELO",
+                title="My ELO Over Time",
+                labels={"Row Index": "Sets Played", "My ELO": "My ELO"},
+            ),
+        ),
         dcc.Graph(
             id="line-plot-polars",
             figure=px.line(
