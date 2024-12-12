@@ -7,7 +7,7 @@ pl.Config.set_tbl_rows(100)
 pl.Config.set_tbl_cols(100)
 
 
-def parse_spreadsheet_polars(filepath: str) -> pl.DataFrame:
+def parse_spreadsheet(filepath: str) -> pl.DataFrame:
     df = pl.read_csv(filepath, separator="\t")
 
     if "Notes" in df.columns:
@@ -94,7 +94,7 @@ def parse_spreadsheet_polars(filepath: str) -> pl.DataFrame:
     return df
 
 
-def calculate_gamewise_df_polars(full_df: pl.DataFrame) -> pl.DataFrame:
+def calculate_gamewise_df(full_df: pl.DataFrame) -> pl.DataFrame:
     long_df = full_df.melt(
         id_vars=["Date", "Time", "My ELO", "Opponent ELO"],
         value_vars=[
@@ -136,7 +136,7 @@ def calculate_gamewise_df_polars(full_df: pl.DataFrame) -> pl.DataFrame:
     return long_df
 
 
-def calculate_set_winrates_polars(full_df: pl.DataFrame) -> pl.DataFrame:
+def calculate_set_winrates(full_df: pl.DataFrame) -> pl.DataFrame:
     winrate_df = (
         full_df.group_by("Main")
         .agg(
@@ -151,7 +151,7 @@ def calculate_set_winrates_polars(full_df: pl.DataFrame) -> pl.DataFrame:
     return winrate_df
 
 
-def calculate_stage_winrates_polars(gamewise_df: pl.DataFrame) -> pl.DataFrame:
+def calculate_stage_winrates(gamewise_df: pl.DataFrame) -> pl.DataFrame:
     stage_winrate_df = (
         gamewise_df.group_by("Stage")
         .agg(
