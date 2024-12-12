@@ -1,6 +1,5 @@
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
-import pandas as pd
 import polars as pl
 import plotly.graph_objects as go
 from game_data import all_stages
