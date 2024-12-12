@@ -14,11 +14,17 @@ from df_utils import (
     calculate_set_winrates,
     calculate_stage_winrates,
 )
+from df_utils_polars import parse_spreadsheet_polars
 
 
-df = parse_spreadsheet("rivals_spreadsheet.tsv")
-winrate_df = calculate_set_winrates(df)
-gamewise_df = calculate_gamewise_df(df)
+df_polars = parse_spreadsheet_polars("rivals_spreadsheet.tsv")
+df_pandas = parse_spreadsheet("rivals_spreadsheet.tsv")
+# print(df_polars.shape)
+# print(df_pandas.shape)
+# print(df_pandas.columns)
+# print(df_polars.columns)
+winrate_df = calculate_set_winrates(df_pandas)
+gamewise_df = calculate_gamewise_df(df_pandas)
 stage_winrate_df = calculate_stage_winrates(gamewise_df)
 
 stage_bar = double_bar_plot(
@@ -34,8 +40,8 @@ stage_bar = double_bar_plot(
 
 
 elo_scatter = scatterplot_with_regression(
-    independent=df["My ELO"],
-    dependent=df["Opponent ELO"],
+    independent=df_pandas["My ELO"],
+    dependent=df_pandas["Opponent ELO"],
     title="My ELO vs. Opponent ELO",
     x_title="My ELO",
     y_title="Opponent ELO",
@@ -101,7 +107,7 @@ app.layout = html.Div(
         dcc.Graph(
             id="line-plot",
             figure=px.line(
-                df,
+                df_pandas,
                 x="Row Index",
                 y="My ELO",
                 title="My ELO Over Time",
