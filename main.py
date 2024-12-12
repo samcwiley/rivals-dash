@@ -98,31 +98,52 @@ def update_graph(selected_character):
 app.layout = html.Div(
     [
         html.H1("ELO Analysis Dashboard"),
-        # Line plot of ELO over time
-        dcc.Graph(
-            id="elo-line-plot",
-            figure=px.line(
-                setwise_df,
-                x="Row Index",
-                y="My ELO",
-                title="My ELO Over Time",
-                labels={"Row Index": "Sets Played", "My ELO": "My ELO"},
-            ),
+        dcc.Tabs(
+            id="tabs",
+            value="tab-elo",
+            children=[
+                dcc.Tab(
+                    label="ELO Data",
+                    value="tab-elo",
+                    children=[
+                        dcc.Graph(
+                            id="elo-line-plot",
+                            figure=px.line(
+                                setwise_df,
+                                x="Row Index",
+                                y="My ELO",
+                                title="My ELO Over Time",
+                                labels={"Row Index": "Sets Played", "My ELO": "My ELO"},
+                            ),
+                        ),
+                        dcc.Graph(id="elo-scatter", figure=elo_scatter),
+                    ],
+                ),
+                dcc.Tab(
+                    label="Character Data",
+                    value="tab-character",
+                    children=[
+                        dcc.Graph(id="character-bar", figure=matchup_bar),
+                    ],
+                ),
+                dcc.Tab(
+                    label="Stage Data",
+                    value="tab-stage",
+                    children=[
+                        dcc.Dropdown(
+                            id="character-filter",
+                            options=[
+                                {"label": char, "value": char} for char in char_options
+                            ],
+                            value="All Characters",
+                            placeholder="Select a character",
+                        ),
+                        dcc.Graph(id="stage-bar-plot", figure=stage_bar),
+                        dcc.Graph(id="stage_winrate_scatter", figure=stage_scatter),
+                    ],
+                ),
+            ],
         ),
-        # Scatter plot of My ELO vs. Opponent ELO
-        dcc.Graph(id="elo-scatter", figure=elo_scatter),
-        # Matchup bar plot
-        dcc.Graph(id="character-bar", figure=matchup_bar),
-        # stage winrate double bar plot
-        dcc.Graph(id="stage_bar", figure=stage_bar),
-        dcc.Graph(id="stage_winrate_scatter", figure=stage_scatter),
-        dcc.Dropdown(
-            id="character-filter",
-            options=[{"label": char, "value": char} for char in char_options],
-            value="All Characters",
-            placeholder="Select a character",
-        ),
-        dcc.Graph(id="stage-bar-plot"),
     ]
 )
 
