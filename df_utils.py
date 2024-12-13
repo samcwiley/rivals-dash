@@ -110,6 +110,9 @@ def parse_spreadsheet(filepath: str) -> pl.DataFrame:
             .alias("G3 Stage_Choice"),
         ]
     )
+    df = df.with_columns(
+        pl.col("Date").str.strptime(pl.Date, format="%m/%d/%Y").alias("Date")
+    )
 
     return df
 

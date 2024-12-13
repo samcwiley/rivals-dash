@@ -162,3 +162,59 @@ def add_50_percent_line(fig: go.Figure):
         yref="y2",
         line=dict(color="red", width=2, dash="dash"),
     )
+
+
+def make_line_plot(
+    x: pl.Series, y: pl.Series, title: str, x_label: str, y_label: str
+) -> go.Figure:
+    fig = go.Figure()
+
+    fig.add_trace(go.Scatter(x=x, y=y, mode="lines", name=title))
+
+    fig.update_layout(
+        title=title, xaxis_title=x_label, yaxis_title=y_label, template="plotly_white"
+    )
+    return fig
+
+
+def elo_double_line_plot(
+    setwise_df: pl.DataFrame, title: str, x_label: str, y_label: str
+) -> go.Figure:
+    datewise_df = setwise_df.group_by("Date").agg(
+        [
+            pl.col("My ELO").min().alias("Minimum ELO"),
+            pl.col("My ELO").max().alias("Maximum ELO"),
+            pl.col("My ELO").mean().round().alias("Average ELO"),
+        ]
+    )
+    datewise_df = datewise_df.sort("Date")
+    fig = go.Figure()
+    fig.add_trace(
+        go.Scatter(
+            x=datewise_df["Date"],
+            y=datewise_df["Maximum ELO"],
+            mode="lines",
+            name="Maximum ELO",
+        )
+    )
+    fig.add_trace(
+        go.Scatter(
+            x=datewise_df["Date"],
+            y=datewise_df["Average ELO"],
+            mode="lines",
+            name="Average ELO",
+        )
+    )
+    fig.add_trace(
+        go.Scatter(
+            x=datewise_df["Date"],
+            y=datewise_df["Minimum ELO"],
+            mode="lines",
+            name="Minimum ELO",
+        )
+    )
+
+    fig.update_layout(
+        title=title, xaxis_title=x_label, yaxis_title=y_label, template="plotly_white"
+    )
+    return fig
