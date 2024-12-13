@@ -5,6 +5,63 @@ import plotly.graph_objects as go
 from game_data import all_stages
 
 
+def double_bar_plot_stages(
+    title: str,
+    stage_winrate_df: pl.DataFrame,
+    # x_axis: pl.Series,
+    # y1_axis: pl.Series,
+    y1_name: str,
+    y1_axis_label: str,
+    # y2_axis: pl.Series,
+    y2_name: str,
+    y2_axis_label: str,
+) -> go.Figure:
+    customdata = stage_winrate_df[
+        ["Picks_Bans", "My_Counterpick", "Their_Counterpick"]
+    ].to_numpy()
+    double_bar = go.Figure(
+        data=[
+            go.Bar(
+                name=y1_name,
+                x=stage_winrate_df["Stage"].to_list(),
+                y=stage_winrate_df["Total_Matches"].to_list(),
+                yaxis="y",
+                offsetgroup=1,
+                customdata=customdata,
+                hovertemplate=(
+                    "Stage: %{x}<br>"
+                    "Total Matches: %{y}<br>"
+                    "Picks/Bans: %{customdata[0]}<br>"
+                    "My Counterpick: %{customdata[1]}<br>"
+                    "Their Counterpick: %{customdata[2]}<br>"
+                    "<extra></extra>"
+                ),
+            ),
+            go.Bar(
+                name=y2_name,
+                x=stage_winrate_df["Stage"].to_list(),
+                y=stage_winrate_df["WinRate"].to_list(),
+                yaxis="y2",
+                offsetgroup=2,
+            ),
+        ],
+        layout={
+            "yaxis": {"title": y1_axis_label},
+            "yaxis2": {"title": y2_axis_label, "overlaying": "y", "side": "right"},
+        },
+    )
+    double_bar.update_layout(
+        barmode="group",
+        title=title,
+        xaxis={
+            "categoryorder": "category ascending",
+        },
+        yaxis2_range=[0, 100],
+    )
+    add_50_percent_line(double_bar)
+    return double_bar
+
+
 def double_bar_plot(
     title: str,
     x_axis: pl.Series,
@@ -43,6 +100,7 @@ def double_bar_plot(
         xaxis={
             "categoryorder": "category ascending",
         },
+        yaxis2_range=[0, 100],
     )
     add_50_percent_line(double_bar)
     return double_bar

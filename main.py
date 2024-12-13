@@ -16,13 +16,14 @@ gamewise_df = calculate_gamewise_df(setwise_df)
 stage_winrate_df = calculate_stage_winrates(gamewise_df)
 
 
-stage_bar = double_bar_plot(
+stage_bar = double_bar_plot_stages(
     title="Stage Winrates",
-    x_axis=stage_winrate_df["Stage"],
-    y1_axis=stage_winrate_df["Total_Matches"],
+    stage_winrate_df=stage_winrate_df,
+    # x_axis=stage_winrate_df["Stage"],
+    # y1_axis=stage_winrate_df["Total_Matches"],
     y1_name="Number of Matches",
     y1_axis_label="Frequency of Stage",
-    y2_axis=stage_winrate_df["WinRate"],
+    # y2_axis=stage_winrate_df["WinRate"],
     y2_name="Winrate",
     y2_axis_label="Winrate",
 )
@@ -71,7 +72,7 @@ app = dash.Dash(__name__)
 
 char_options = ["All Characters"] + characters
 
-
+"""
 # Callback to update stage winrate plot
 @app.callback(Output("stage-bar-plot", "figure"), [Input("character-filter", "value")])
 def update_graph(selected_character):
@@ -91,6 +92,39 @@ def update_graph(selected_character):
         y2_axis=stage_winrate_df["WinRate"],
         y2_name="Winrate",
         y2_axis_label="Winrate",
+    )
+    return figure
+    """
+
+
+@app.callback(Output("stage-bar-plot", "figure"), [Input("character-filter", "value")])
+def update_graph(selected_character):
+    if selected_character == "All Characters":
+        filtered_df = gamewise_df
+    else:
+        filtered_df = gamewise_df.filter(pl.col("Char") == selected_character)
+
+    stage_winrate_df = calculate_stage_winrates(filtered_df)
+
+    hoverdata = {
+        "Picks_Bans": stage_winrate_df.to_dict(as_series=False)["Picks_Bans"],
+        "My_Counterpick": stage_winrate_df.to_dict(as_series=False)["My_Counterpick"],
+        "Their_Counterpick": stage_winrate_df.to_dict(as_series=False)[
+            "Their_Counterpick"
+        ],
+    }
+
+    figure = double_bar_plot_stages(
+        title=f"Stage Winrates Against {selected_character}",
+        stage_winrate_df=stage_winrate_df,
+        # x_axis=stage_winrate_df["Stage"],
+        # y1_axis=stage_winrate_df["Total_Matches"],
+        y1_name="Number of Matches",
+        y1_axis_label="Frequency of Stage",
+        # y2_axis=stage_winrate_df["WinRate"],
+        y2_name="Winrate",
+        y2_axis_label="Winrate",
+        # hoverdata=hoverdata,
     )
     return figure
 

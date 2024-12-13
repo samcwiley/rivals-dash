@@ -1,81 +1,94 @@
-	Date	Time	My ELO	My Char	Win/Loss	Breakdown	Ending ELO	Opponent Name	Opponent Char	Opponent ELO	G1 Stage	G1 Stock Diff	G2 Stage	G2 Stock Diff	G3 Stage	G3 Stock Diff	G2 char (if different)	G3 char (if different)
-0	12/3/2024			Fleet	W	OO-	905.0		Ranno		Julesvale	1.0	Hyperborean Harbor	2.0				
-1	12/3/2024		905.0	Fleet	W	OO-	914.0	EggsForYou	Clairen	838.0	Julesvale	3.0	Aetherean Forest	3.0			Kragg	
-2	12/3/2024		914.0	Fleet	W	OO-	928.0	sm4shbruh	Clairen	971.0	Godai Delta	2.0	Fire Capital	1.0				
-3	12/3/2024		928.0	Fleet	L	XX-	918.0	FantasyFuzion	Zetterburn	995.0	Julesvale	-1.0	Godai Delta	-1.0				
-4	12/3/2024		918.0	Fleet	W	OXO	930.0	Viscacha Enthusiast	Kragg	924.0	Julesvale	1.0	Fire Capital	-1.0	Godai Delta	3.0		
-5	12/3/2024		930.0	Fleet	W	XOO	942.0	mayonnaise is an instrument	Clairen	930.0	Julesvale	-1.0	Julesvale	2.0	Hodojo	1.0		
-6	12/3/2024		942.0	Fleet	W	OO-	955.0	Helium	Forsburn	976.0	Godai Delta	1.0	Godai Delta	1.0				
-7	12/3/2024		955.0	Fleet	L	XOX	942.0	Gamer	Kragg	923.0	Julesvale	-2.0	Godai Delta	1.0	Merchant Port	-1.0		
-8	12/3/2024		942.0	Fleet	L	XX-	932.0	CryoBat	Ranno	977.0	Julesvale	-1.0	Godai Delta	-1.0				
-9	12/3/2024		932.0	Fleet	W	OO-	943.0	LombardiTwist	Ranno	890.0	Godai Delta	2.0	Hodojo	1.0				
-10	12/3/2024		943.0	Fleet	W	OO-	954.0	Crunk Lord Tiberius	Clairen	915.0	Julesvale	1.0	Tempest Peak	1.0				
-11	12/3/2024		954.0	Fleet	W	OO-	964.0	Atlatl	Orcane	919.0	Julesvale	1.0	Rock Wall	1.0				
-12	12/3/2024		964.0	Fleet	W	OXO	977.0	uleksite	Kragg	992.0	Julesvale	1.0	Tempest Peak	-1.0	Aetherean Forest	3.0		
-13	12/3/2024		977.0	Fleet	W	XOO	990.0	FreshWaterFern	Kragg	1024.0	Julesvale	-1.0	Godai Delta	2.0	Tempest Peak	1.0	Kragg	Clairen
-14	12/4/2024		990.0	Fleet	L	XOX	978.0	gatordraq	Clairen	983.0	Julesvale	-1.0	Godai Delta	1.0	Aetherean Forest	-1.0		
-15	12/4/2024		978.0	Fleet	W	XOO	989.0	[MRY] Sk-iLite	Wrastor	959.0	Aetherean Forest	-1.0	Hodojo	1.0	Fire Capital	2.0		
-16	12/4/2024		989.0	Fleet	W	OXO	999.0	Drift	Wrastor	944.0	Godai Delta	1.0	Rock Wall	-1.0	Aetherean Forest	1.0		
-17	12/4/2024		999.0	Fleet	L	OXX	987.0	Na Wtf	Zetterburn	1002.0	Julesvale	1.0	Hyperborean Harbor	-1.0	Godai Delta	-2.0		
-18	12/4/2024		987.0	Fleet	W	OO-	997.0	Sir Cire	Loxodont	935.0	Julesvale	1.0	Tempest Peak	2.0				
-19	12/4/2024		997.0	Fleet	L	XOX	988.0	Headcoald	Clairen	1066.0	Aetherean Forest	-1.0	Julesvale	2.0	Rock Wall	-2.0		
-20	12/4/2024		988.0	Fleet	L	XX-	982.0	Injo	Ranno	1176.0	Godai Delta	-1.0	Julesvale	-3.0				
-21	12/4/2024		982.0	Fleet	L	XX-	969.0	Debis	Maypul	966.0	Godai Delta	-2.0	Godai Delta	-2.0				
-22	12/4/2024		969.0	Fleet	W	OO-	977.0	emb1234	Orcane	858.0	Godai Delta	2.0	Godai Delta	1.0				
-23	12/4/2024		977.0	Fleet	L	XX-	966.0	LawyerDog	Fleet	998.0	Godai Delta	-1.0	Julesvale	-1.0				
-24	12/4/2024		966.0	Fleet	W	XOO	979.0	Femcel Gooner	Loxodont	991.0	Aetherean Forest	-1.0	Godai Delta	1.0	Hodojo	1.0		
-25	12/4/2024		979.0	Fleet	W	OO-	993.0	Mephiles	Forsburn	1041.0	Julesvale	2.0	Fire Capital	3.0				
-26	12/4/2024		993.0	Fleet	L	XX-	980.0	Red the Demon Fox	Zetterburn	938.0	Godai Delta	-2.0	Julesvale	-1.0				
-27	12/4/2024		980.0	Fleet	L	XX-	969.0	AloneCubone	Maypul	995.0	Godai Delta	-2.0	Godai Delta	-2.0				
-28	12/4/2024		969.0	Fleet	L	XX-	958.0	rat girl	Loxodont	1001.0	Godai Delta	-1.0	Julesvale	-1.0				
-29	12/4/2024		958.0	Fleet	L	XX-	945.0	Captain Caine	Forsburn	926.0	Godai Delta	-1.0	Aetherean Forest	-1.0				
-30	12/4/2024		945.0	Fleet	L	OXX	934.0	danielmowi	Fleet	974.0	Godai Delta	1.0	Julesvale	-1.0	Aetherean Forest	-1.0	Maypul	Maypul
-31	12/4/2024		934.0	Fleet	W	OO-	944.0	V1ctoria Just1ce	Zetterburn	889.0	Godai Delta	1.0	Godai Delta	1.0				
-32	12/4/2024		944.0	Fleet	W	OXO	956.0	Darwin Watterson	Clairen	950.0	Aetherean Forest	1.0	Godai Delta	-1.0	Julesvale	1.0		
-33	12/4/2024		956.0	Fleet	L	XX-	943.0	Richard and Blaziken	Ranno	908.0	Julesvale	-1.0	Godai Delta	-1.0				
-34	12/4/2024		943.0	Fleet	L	XX-	932.0	Ender	Clairen	963.0	Godai Delta	-1.0	Godai Delta	-1.0				
-35	12/4/2024		932.0	Fleet	W	OXO	944.0	hex	Clairen	943.0	Julesvale	1.0	Hodojo	-1.0	Godai Delta	1.0		
-36	12/4/2024		944.0	Fleet	L	XX-	933.0	B 0 A T	Kragg	966.0	Godai Delta	-2.0	Julesvale	-2.0				
-37	12/7/2024	0:15	933.0	Fleet	W	XOO	944.0	Society???	Loxodont	915.0	Godai Delta	-2.0	Aetherean Forest	1.0	Aetherean Forest	1.0		
-38	12/7/2024	1:43	944.0	Fleet	L	OXX	932.0	Nandez21	Ranno	920.0	Aetherean Forest	1.0	Aetherean Forest	-1.0	Godai Delta	-2.0		
-39	12/7/2024	1:56	932.0	Fleet	L	XX-	921.0	roobyrebs243	Maypul	962.0	Godai Delta	-1.0	Aetherean Forest	-1.0				
-40	12/7/2024	2:06	921.0	Fleet	W	XOO	933.0	kihunter	Forsburn	937.0	Godai Delta	-2.0	Aetherean Forest	2.0	Fire Capital	2.0		
-41	12/7/2024	21:32	933.0				920.0											
-42	12/7/2024	21:34	920.0	Fleet	W	OO-	932.0	CliffE	Fleet	932.0	Aetherean Forest	1.0	Aetherean Forest	1.0				
-43	12/11/2024	22:12	932.0	Fleet	W	OO-	946.0	spezius	Loxodont	990.0	Aetherean Forest	2.0	Tempest Peak	1.0				
-44	12/7/2024	10:24:52 PM	946.0	Fleet	L	OXX	935.0	Sappy	Kragg	980.0	Julesvale	1.0	Merchant Port	-1.0	Hodojo	-2.0		
-45	12/7/2024	10:39:34 PM	935.0	Fleet	L	OXX	927.0	Gecko	Clairen	1036.0	Godai Delta	1.0	Tempest Peak	-1.0	Aetherean Forest	-1.0		
-46	12/8/2024	12:07:43 AM	927.0	Fleet	W	XOO	937.0	Krilliam	Kragg	886.0	Aetherean Forest	-1.0	Julesvale	2.0	Hyperborean Harbor	1.0		
-47	12/8/2024	10:44:26 PM	937.0	Fleet	L	XOX	927.0	faheath	Zetterburn	985.0	Godai Delta	-2.0	Aetherean Forest	1.0	Merchant Port	-1.0		
-48	12/8/2024	11:05:01 PM	927.0	Fleet	L	XX-	916.0	Joepamine_ttv	Clairen	955.0	Aetherean Forest	-2.0	Julesvale	-2.0				
-49	12/8/2024	11:12:28 PM	916.0	Fleet	W	XOO	928.0	mega pint	Forsburn	915.0	Julesvale	-1.0	Julesvale	1.0	Rock Wall	1.0		
-50	12/8/2024	11:29:15 PM	928.0	Fleet	L	XOX	918.0	Sundae	Maypul	972.0	Godai Delta	1.0	Julesvale	1.0	Aetherean Forest	-1.0		
-51	12/8/2024	11:44:10 PM	918.0	Fleet	W	OXO	932.0	SB4LIFE_Curb	Zetterburn	980.0	Godai Delta	1.0	Tempest Peak	-1.0	Julesvale	1.0		
-52	12/9/2024	2:00:42 PM	932.0	Fleet	L	XX-	920.0	Lord Fuquad	Loxodont	906.0	Julesvale	-1.0	Aetherean Forest	-1.0				
-53	12/9/2024	2:11:14 PM	920.0	Fleet	W	OO-	932.0	Stoic	Loxodont	919.0	Julesvale	1.0	Tempest Peak	1.0			Zetterburn	
-54	12/9/2024	2:22:24 PM	932.0	Fleet	L	OO-	920.0	Sea Dog	Clairen	913.0	Godai Delta	-2.0	Julesvale	-1.0				
-55	12/9/2024	2:33:05 PM	920.0	Fleet	W	XOO	929.0	KnightRush	Loxodont	845.0	Julesvale	-2.0	Julesvale	2.0	Godai Delta	1.0		
-56	12/9/2024	4:24:39 PM	929.0	Fleet	W	XOO	942.0	Cxntra	Forsburn	975.0	Julesvale	-2.0	Julesvale	1.0	Fire Capital	1.0		
-57	12/9/2024	4:38:19 PM	942.0	Fleet	L	XX-	932.0	Panionator	Loxodont	997.0	Godai Delta	-2.0	Julesvale	-1.0				
-58	12/9/2024	4:46:51 PM	932.0	Fleet	L	XOX	920.0	Spidermango	Loxodont	929.0	Julesvale	-2.0	Godai Delta	-3.0	Aetherean Forest	-2.0		
-59	12/9/2024	4:57:55 PM	920.0	Fleet	L	XX-	910.0	Child	Kragg	956.0	Godai Delta	-1.0	Godai Delta	-1.0				
-60	12/9/2024	5:04:51 PM	910.0	Fleet	W	OO-	921.0	paradigm	Ranno	889.0	Godai Delta	1.0	Godai Delta	1.0				
-61	12/9/2024	5:15:46 PM	921.0	Fleet	L	OXX	909.0	DoubleJazz	Orcane	900.0	Godai Delta	1.0	Rock Wall	-1.0	Julesvale	-1.0		
-62	12/9/2024	5:28:33 PM	909.0	Fleet	W	OO-	923.0	Oyfgefuntsht	Clairen	969.0	Julesvale	2.0	Godai Delta	2.0				
-63	12/9/2024	5:52:04 PM	923.0	Fleet	W	OO-	935.0	kaiyedy	Loxodont	927.0	Julesvale	1.0	Fire Capital	1.0				
-64	12/9/2024	6:01:50 PM	935.0	Fleet	L	XX-	925.0	Minkus	Forsburn	988.0	Godai Delta	-1.0	Julesvale	-1.0				
-65	12/9/2024	6:20:52 PM	925.0	Fleet	L	XX-	912.0	Erih	Loxodont	901.0	Godai Delta	-1.0	Julesvale	-1.0				
-66	12/9/2024	6:28:59 PM	912.0	Fleet	W	XOO	923.0	Syraxus	Clairen	887.0	Godai Delta	-1.0	Julesvale	1.0	Hodojo	2.0		
-67	12/9/2024	7:34:37 PM	923.0	Fleet	W	OXO	935.0	Russ3ll	Kragg	934.0	Godai Delta	2.0	Merchant Port	-1.0	Aetherean Forest	1.0		
-68	12/9/2024	7:46:38 PM	935.0	Fleet	L	XOO	921.0	Chrisred3000	Clairen	885.0	Julesvale	1.0	Aetherean Forest	-2.0	Godai Delta	-1.0		
-69	12/9/2024	8:05:53 PM	921.0	Fleet	W	XOO	930.0	the rarest produce	Orcane	845.0	Aetherean Forest	-1.0	Godai Delta	1.0	Julesvale	2.0		
-70	12/10/2024	10:17:54 PM	930.0	Fleet	L	XX-	917.0	illiterate.bean	Forsburn	888.0	Julesvale	-1.0	Air Armada	-1.0				
-71	12/10/2024	10:33:43 PM	917.0	Fleet	W	OXO	928.0	Sti11Evolving	Orcane	900.0	Julesvale	1.0	Aetherean Forest	-1.0	Godai Delta	1.0		
-72	12/10/2024	10:51:16 PM	928.0	Fleet	L	XX-	917.0	Totodile	Kragg	957.0	Merchant Port	-2.0	Julesvale	-1.0				
-73	12/10/2024	11:00:46 PM	917.0	Fleet	W	OXO	933.0	YasuoTheKing421	Clairen	1051.0	Hodojo	1.0	Hodojo	-1.0	Julesvale	1.0	Maypul	Maypul
-74	12/11/2024	18:45:17	933.0	Fleet	L	XOX	921.0	Bb	Wrastor	932.0	Julesvale	-2.0	Julesvale	1.0	Hyperborean Harbor	-1.0		
-75	12/11/2024	10:34:09 PM	921.0	Fleet	L	OXX	909.0	Jiac	Clairen	924.0	Godai Delta	2.0	Julesvale	-1.0	Julesvale	-2.0		
-76	12/11/2024	10:50:35 PM	909.0		W	XX-	921.0											
-77	12/11/2024	10:52:03 PM	921.0	Fleet	W	OO-	934.0	thouxanbanbrodie	Zetterburn	943.0	Julesvale	2.0	Hodojo	1.0				
-78	12/11/2024	11:01:13 PM	934.0	Fleet	W	XOO	947.0	toxikgreens	Ranno	957.0	Merchant Port	-1.0	Godai Delta	2.0	Hyperborean Harbor	1.0		
-79			947.0															
+Date	Time	My ELO	My Char	Win/Loss	Breakdown	Ending ELO	Opponent Name	Opponent Char	Opponent ELO	G1 Stage	G1 Stock Diff	G2 Stage	G2 Stock Diff	G3 Stage	G3 Stock Diff	G2 char (if different)	G3 char (if different)
+12/3/2024			Fleet	W	OO-	905		Ranno		Julesvale	1	Hyperborean Harbor	2				
+12/3/2024		905	Fleet	W	OO-	914	EggsForYou	Clairen	838	Julesvale	3	Aetherean Forest	3			Kragg	
+12/3/2024		914	Fleet	W	OO-	928	sm4shbruh	Clairen	971	Godai Delta	2	Fire Capital	1				
+12/3/2024		928	Fleet	L	XX-	918	FantasyFuzion	Zetterburn	995	Julesvale	-1	Godai Delta	-1				
+12/3/2024		918	Fleet	W	OXO	930	Viscacha Enthusiast	Kragg	924	Julesvale	1	Fire Capital	-1	Godai Delta	3		
+12/3/2024		930	Fleet	W	XOO	942	mayonnaise is an instrument	Clairen	930	Julesvale	-1	Julesvale	2	Hodojo	1		
+12/3/2024		942	Fleet	W	OO-	955	Helium	Forsburn	976	Godai Delta	1	Godai Delta	1				
+12/3/2024		955	Fleet	L	XOX	942	Gamer	Kragg	923	Julesvale	-2	Godai Delta	1	Merchant Port	-1		
+12/3/2024		942	Fleet	L	XX-	932	CryoBat	Ranno	977	Julesvale	-1	Godai Delta	-1				
+12/3/2024		932	Fleet	W	OO-	943	LombardiTwist	Ranno	890	Godai Delta	2	Hodojo	1				
+12/3/2024		943	Fleet	W	OO-	954	Crunk Lord Tiberius	Clairen	915	Julesvale	1	Tempest Peak	1				
+12/3/2024		954	Fleet	W	OO-	964	Atlatl	Orcane	919	Julesvale	1	Rock Wall	1				
+12/3/2024		964	Fleet	W	OXO	977	uleksite	Kragg	992	Julesvale	1	Tempest Peak	-1	Aetherean Forest	3		
+12/3/2024		977	Fleet	W	XOO	990	FreshWaterFern	Kragg	1024	Julesvale	-1	Godai Delta	2	Tempest Peak	1	Kragg	Clairen
+12/4/2024		990	Fleet	L	XOX	978	gatordraq	Clairen	983	Julesvale	-1	Godai Delta	1	Aetherean Forest	-1		
+12/4/2024		978	Fleet	W	XOO	989	[MRY] Sk-iLite	Wrastor	959	Aetherean Forest	-1	Hodojo	1	Fire Capital	2		
+12/4/2024		989	Fleet	W	OXO	999	Drift	Wrastor	944	Godai Delta	1	Rock Wall	-1	Aetherean Forest	1		
+12/4/2024		999	Fleet	L	OXX	987	Na Wtf	Zetterburn	1002	Julesvale	1	Hyperborean Harbor	-1	Godai Delta	-2		
+12/4/2024		987	Fleet	W	OO-	997	Sir Cire	Loxodont	935	Julesvale	1	Tempest Peak	2				
+12/4/2024		997	Fleet	L	XOX	988	Headcoald	Clairen	1066	Aetherean Forest	-1	Julesvale	2	Rock Wall	-2		
+12/4/2024		988	Fleet	L	XX-	982	Injo	Ranno	1176	Godai Delta	-1	Julesvale	-3				
+12/4/2024		982	Fleet	L	XX-	969	Debis	Maypul	966	Godai Delta	-2	Godai Delta	-2				
+12/4/2024		969	Fleet	W	OO-	977	emb1234	Orcane	858	Godai Delta	2	Godai Delta	1				
+12/4/2024		977	Fleet	L	XX-	966	LawyerDog	Fleet	998	Godai Delta	-1	Julesvale	-1				
+12/4/2024		966	Fleet	W	XOO	979	Femcel Gooner	Loxodont	991	Aetherean Forest	-1	Godai Delta	1	Hodojo	1		
+12/4/2024		979	Fleet	W	OO-	993	Mephiles	Forsburn	1041	Julesvale	2	Fire Capital	3				
+12/4/2024		993	Fleet	L	XX-	980	Red the Demon Fox	Zetterburn	938	Godai Delta	-2	Julesvale	-1				
+12/4/2024		980	Fleet	L	XX-	969	AloneCubone	Maypul	995	Godai Delta	-2	Godai Delta	-2				
+12/4/2024		969	Fleet	L	XX-	958	rat girl	Loxodont	1001	Godai Delta	-1	Julesvale	-1				
+12/4/2024		958	Fleet	L	XX-	945	Captain Caine	Forsburn	926	Godai Delta	-1	Aetherean Forest	-1				
+12/4/2024		945	Fleet	L	OXX	934	danielmowi	Fleet	974	Godai Delta	1	Julesvale	-1	Aetherean Forest	-1	Maypul	Maypul
+12/4/2024		934	Fleet	W	OO-	944	V1ctoria Just1ce	Zetterburn	889	Godai Delta	1	Godai Delta	1				
+12/4/2024		944	Fleet	W	OXO	956	Darwin Watterson	Clairen	950	Aetherean Forest	1	Godai Delta	-1	Julesvale	1		
+12/4/2024		956	Fleet	L	XX-	943	Richard and Blaziken	Ranno	908	Julesvale	-1	Godai Delta	-1				
+12/4/2024		943	Fleet	L	XX-	932	Ender	Clairen	963	Godai Delta	-1	Godai Delta	-1				
+12/4/2024		932	Fleet	W	OXO	944	hex	Clairen	943	Julesvale	1	Hodojo	-1	Godai Delta	1		
+12/4/2024		944	Fleet	L	XX-	933	B 0 A T	Kragg	966	Godai Delta	-2	Julesvale	-2				
+12/7/2024	0:15	933	Fleet	W	XOO	944	Society???	Loxodont	915	Godai Delta	-2	Aetherean Forest	1	Aetherean Forest	1		
+12/7/2024	1:43	944	Fleet	L	OXX	932	Nandez21	Ranno	920	Aetherean Forest	1	Aetherean Forest	-1	Godai Delta	-2		
+12/7/2024	1:56	932	Fleet	L	XX-	921	roobyrebs243	Maypul	962	Godai Delta	-1	Aetherean Forest	-1				
+12/7/2024	2:06	921	Fleet	W	XOO	933	kihunter	Forsburn	937	Godai Delta	-2	Aetherean Forest	2	Fire Capital	2		
+12/7/2024	21:32	933				920											
+12/7/2024	21:34	920	Fleet	W	OO-	932	CliffE	Fleet	932	Aetherean Forest	1	Aetherean Forest	1				
+12/13/2024	22:12	932	Fleet	W	OO-	946	spezius	Loxodont	990	Aetherean Forest	2	Tempest Peak	1				
+12/7/2024	10:24:52 PM	946	Fleet	L	OXX	935	Sappy	Kragg	980	Julesvale	1	Merchant Port	-1	Hodojo	-2		
+12/7/2024	10:39:34 PM	935	Fleet	L	OXX	927	Gecko	Clairen	1036	Godai Delta	1	Tempest Peak	-1	Aetherean Forest	-1		
+12/8/2024	12:07:43 AM	927	Fleet	W	XOO	937	Krilliam	Kragg	886	Aetherean Forest	-1	Julesvale	2	Hyperborean Harbor	1		
+12/8/2024	10:44:26 PM	937	Fleet	L	XOX	927	faheath	Zetterburn	985	Godai Delta	-2	Aetherean Forest	1	Merchant Port	-1		
+12/8/2024	11:05:01 PM	927	Fleet	L	XX-	916	Joepamine_ttv	Clairen	955	Aetherean Forest	-2	Julesvale	-2				
+12/8/2024	11:12:28 PM	916	Fleet	W	XOO	928	mega pint	Forsburn	915	Julesvale	-1	Julesvale	1	Rock Wall	1		
+12/8/2024	11:29:15 PM	928	Fleet	L	XOX	918	Sundae	Maypul	972	Godai Delta	1	Julesvale	1	Aetherean Forest	-1		
+12/8/2024	11:44:10 PM	918	Fleet	W	OXO	932	SB4LIFE_Curb	Zetterburn	980	Godai Delta	1	Tempest Peak	-1	Julesvale	1		
+12/9/2024	2:00:42 PM	932	Fleet	L	XX-	920	Lord Fuquad	Loxodont	906	Julesvale	-1	Aetherean Forest	-1				
+12/9/2024	2:11:14 PM	920	Fleet	W	OO-	932	Stoic	Loxodont	919	Julesvale	1	Tempest Peak	1			Zetterburn	
+12/9/2024	2:22:24 PM	932	Fleet	L	OO-	920	Sea Dog	Clairen	913	Godai Delta	-2	Julesvale	-1				
+12/9/2024	2:33:05 PM	920	Fleet	W	XOO	929	KnightRush	Loxodont	845	Julesvale	-2	Julesvale	2	Godai Delta	1		
+12/9/2024	4:24:39 PM	929	Fleet	W	XOO	942	Cxntra	Forsburn	975	Julesvale	-2	Julesvale	1	Fire Capital	1		
+12/9/2024	4:38:19 PM	942	Fleet	L	XX-	932	Panionator	Loxodont	997	Godai Delta	-2	Julesvale	-1				
+12/9/2024	4:46:51 PM	932	Fleet	L	XOX	920	Spidermango	Loxodont	929	Julesvale	-2	Godai Delta	-3	Aetherean Forest	-2		
+12/9/2024	4:57:55 PM	920	Fleet	L	XX-	910	Child	Kragg	956	Godai Delta	-1	Godai Delta	-1				
+12/9/2024	5:04:51 PM	910	Fleet	W	OO-	921	paradigm	Ranno	889	Godai Delta	1	Godai Delta	1				
+12/9/2024	5:15:46 PM	921	Fleet	L	OXX	909	DoubleJazz	Orcane	900	Godai Delta	1	Rock Wall	-1	Julesvale	-1		
+12/9/2024	5:28:33 PM	909	Fleet	W	OO-	923	Oyfgefuntsht	Clairen	969	Julesvale	2	Godai Delta	2				
+12/9/2024	5:52:04 PM	923	Fleet	W	OO-	935	kaiyedy	Loxodont	927	Julesvale	1	Fire Capital	1				
+12/9/2024	6:01:50 PM	935	Fleet	L	XX-	925	Minkus	Forsburn	988	Godai Delta	-1	Julesvale	-1				
+12/9/2024	6:20:52 PM	925	Fleet	L	XX-	912	Erih	Loxodont	901	Godai Delta	-1	Julesvale	-1				
+12/9/2024	6:28:59 PM	912	Fleet	W	XOO	923	Syraxus	Clairen	887	Godai Delta	-1	Julesvale	1	Hodojo	2		
+12/9/2024	7:34:37 PM	923	Fleet	W	OXO	935	Russ3ll	Kragg	934	Godai Delta	2	Merchant Port	-1	Aetherean Forest	1		
+12/9/2024	7:46:38 PM	935	Fleet	L	XOO	921	Chrisred3000	Clairen	885	Julesvale	1	Aetherean Forest	-2	Godai Delta	-1		
+12/9/2024	8:05:53 PM	921	Fleet	W	XOO	930	the rarest produce	Orcane	845	Aetherean Forest	-1	Godai Delta	1	Julesvale	2		
+12/10/2024	10:17:54 PM	930	Fleet	L	XX-	917	illiterate.bean	Forsburn	888	Julesvale	-1	Air Armada	-1				
+12/10/2024	10:33:43 PM	917	Fleet	W	OXO	928	Sti11Evolving	Orcane	900	Julesvale	1	Aetherean Forest	-1	Godai Delta	1		
+12/10/2024	10:51:16 PM	928	Fleet	L	XX-	917	Totodile	Kragg	957	Merchant Port	-2	Julesvale	-1				
+12/10/2024	11:00:46 PM	917	Fleet	W	OXO	933	YasuoTheKing421	Clairen	1051	Hodojo	1	Hodojo	-1	Julesvale	1	Maypul	Maypul
+12/11/2024	18:45:17	933	Fleet	L	XOX	921	Bb	Wrastor	932	Julesvale	-2	Julesvale	1	Hyperborean Harbor	-1		
+12/11/2024	10:34:09 PM	921	Fleet	L	OXX	909	Jiac	Clairen	924	Godai Delta	2	Julesvale	-1	Julesvale	-2		
+12/11/2024	10:50:35 PM	909		W	XX-	921											
+12/11/2024	10:52:03 PM	921	Fleet	W	OO-	934	thouxanbanbrodie	Zetterburn	943	Julesvale	2	Hodojo	1				
+12/11/2024	11:01:13 PM	934	Fleet	W	XOO	947	toxikgreens	Ranno	957	Merchant Port	-1	Godai Delta	2	Hyperborean Harbor	1		
+12/12/2024	10:29:28 PM	947	Fleet	L	XX-	934	DangerPanther	Clairen	927	Julesvale	-1	Hodojo	-2				
+12/12/2024	10:38:48 PM	934	Fleet	L	XOX	922	Jesterx64	Kragg	922	Aetherean Forest	-2	Air Armada	1	Fire Capital	-1		
+12/12/2024	10:51:55 PM	922	Fleet	L	XX-	909	Wave	Clairen	900	Godai Delta	-1	Julesvale					
+12/12/2024	11:03:30 PM	909	Fleet	L	XX-	902	havent rendered in yet	Kragg	1057	Julesvale	-2	Julesvale	-1				
+12/12/2024	11:10:27 PM	902	Fleet	L	OXX	890	Bright	Orcane	899	Julesvale	1	Julesvale	-1	Godai Delta	-1		
+12/12/2024	11:33:46 PM	890	Fleet	W	OXO	902	VectorGun25	Forsburn	881	Godai Delta	1	Fire Capital	-1	Julesvale	2		
+12/13/2024	12:29:01 PM	902	Fleet	L	XX-	892	gabromero18	Zetterburn	957	Julesvale	-1	Tempest Peak	-2				
+12/13/2024	12:38:28 PM	892	Fleet	W	OO-	903	Toto	Clairen	858	Julesvale	2	Fire Capital	3				
+12/13/2024	12:44:37 PM	903	Fleet	W	OO-	915	jvarg1990	Loxodont	911	Aetherean Forest	1	Fire Capital	1				
+12/13/2024	12:53:51 PM	915	Fleet	W	OO-	929	Debis	Maypul	976	Julesvale	2	Hodojo	1				
+12/13/2024	1:00:37 PM	929	Fleet	W	OO-	942	jason	Ranno	966	Godai Delta	2	Hyperborean Harbor	1				
+12/13/2024	1:55:12 PM	942	Fleet	L	OXX	930	LUA	Clairen	937	Julesvale	1	Godai Delta	-2	Hodojo	-2		
+12/13/2024	2:10:55 PM	930	Fleet	W	XOO	940	ttv/OmenNJ	Loxodont	889	Aetherean Forest	-1	Julesvale	2	Fire Capital	2		
+		940															

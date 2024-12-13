@@ -3,19 +3,20 @@ import sys
 from datetime import datetime
 from game_data import characters, all_stages
 
-pl.Config.set_tbl_rows(100)
+pl.Config.set_tbl_rows(1000)
 pl.Config.set_tbl_cols(100)
 
 
 def parse_spreadsheet(filepath: str) -> pl.DataFrame:
     df = pl.read_csv(filepath, separator="\t")
-
+    # removing notes and game goals, these are priveleged information!
     if "Notes" in df.columns:
         df = df.drop(["Notes", "Goal"])
-        df.write_csv(filepath, separator="\t", has_header=True)
-
+        df.write_csv(filepath, separator="\t")
+    # removing rows where it seems the set didn't happen, e.g. game bugs where it crashes or they forfeit before game 1 starts
+    # these null values must be dropped so we can calculate the linear regression
     df = df.drop_nulls(["My Char", "My ELO", "Opponent ELO"])
-
+    # validating data to make sure there are no invalid characters or stages listed
     validation_rules = {
         "Opponent Char": characters,
         "G1 Stage": all_stages,
@@ -73,7 +74,7 @@ def parse_spreadsheet(filepath: str) -> pl.DataFrame:
             "G3 char (if different)": "G3 Char",
         }
     )
-
+    # Figuring out their main for set winrate stats
     df = df.with_columns(
         pl.when(
             ((pl.col("G2 Char") == pl.col("G1 Char")) & pl.col("G3 Char").is_null())
@@ -86,9 +87,28 @@ def parse_spreadsheet(filepath: str) -> pl.DataFrame:
         .otherwise(pl.lit("Multiple"))
         .alias("Main")
     )
-
+    # Adding a row index for counting sets
     df = df.with_row_count(name="Row Index").with_columns(
         (pl.col("Row Index") + 1).alias("Row Index")
+    )
+
+    # imputing who chose the stage for each game
+    df = df.with_columns(
+        [
+            pl.lit("Picks/Bans").alias("G1 Stage_Choice"),
+            pl.when(pl.col("G1 Stock Diff") < 0)
+            .then(pl.lit("My Counterpick"))
+            .otherwise(pl.lit("Their Counterpick"))
+            .alias("G2 Stage_Choice"),
+            pl.when(pl.col("G3 Stage").is_not_null())
+            .then(
+                pl.when(pl.col("G2 Stock Diff") < 0)
+                .then(pl.lit("My Counterpick"))
+                .otherwise(pl.lit("Their Counterpick"))
+            )
+            .otherwise(pl.lit(""))
+            .alias("G3 Stage_Choice"),
+        ]
     )
 
     return df
@@ -101,12 +121,15 @@ def calculate_gamewise_df(full_df: pl.DataFrame) -> pl.DataFrame:
             "G1 Stage",
             "G1 Stock Diff",
             "G1 Char",
+            "G1 Stage_Choice",
             "G2 Stage",
             "G2 Stock Diff",
             "G2 Char",
+            "G2 Stage_Choice",
             "G3 Stage",
             "G3 Stock Diff",
             "G3 Char",
+            "G3 Stage_Choice",
         ],
         variable_name="Game Info",
         value_name="Value",
@@ -116,7 +139,7 @@ def calculate_gamewise_df(full_df: pl.DataFrame) -> pl.DataFrame:
         [
             long_df["Game Info"].str.extract(r"(G\d)").alias("Game"),
             long_df["Game Info"]
-            .str.extract(r"(Stage|Stock Diff|Char)")
+            .str.extract(r"(Stage_Choice|Stock Diff|Char|Stage)")
             .alias("Attribute"),
         ]
     )
@@ -127,7 +150,7 @@ def calculate_gamewise_df(full_df: pl.DataFrame) -> pl.DataFrame:
         values="Value",
     )
 
-    long_df = long_df.drop_nulls(["Char", "Stage", "Stock Diff"])
+    long_df = long_df.drop_nulls(["Char", "Stage", "Stock Diff", "Stage_Choice"])
 
     long_df = long_df.with_columns(
         (long_df["Stock Diff"].cast(pl.Float64) > 0).alias("Win")
@@ -158,6 +181,13 @@ def calculate_stage_winrates(gamewise_df: pl.DataFrame) -> pl.DataFrame:
             [
                 (pl.col("Win") == True).sum().alias("Wins"),
                 pl.col("Win").count().alias("Total_Matches"),
+                (pl.col("Stage_Choice") == "Picks/Bans").sum().alias("Picks_Bans"),
+                (pl.col("Stage_Choice") == "My Counterpick")
+                .sum()
+                .alias("My_Counterpick"),
+                (pl.col("Stage_Choice") == "Their Counterpick")
+                .sum()
+                .alias("Their_Counterpick"),
             ]
         )
         .with_columns((pl.col("Wins") / pl.col("Total_Matches") * 100).alias("WinRate"))
