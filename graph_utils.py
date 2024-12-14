@@ -43,6 +43,7 @@ def double_bar_plot_stages(
                 y=stage_winrate_df["WinRate"].to_list(),
                 yaxis="y2",
                 offsetgroup=2,
+                hovertemplate=("Stage: %{x}<br>" "Winrate: %{y}%" "<extra></extra>"),
             ),
         ],
         layout={

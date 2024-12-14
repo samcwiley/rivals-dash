@@ -11,7 +11,7 @@ def parse_spreadsheet(filepath: str) -> pl.DataFrame:
     df = pl.read_csv(filepath, separator="\t")
     # removing notes and game goals, these are priveleged information!
     if "Notes" in df.columns:
-        df = df.drop(["Notes", "Goal"])
+        df = df.drop(["Notes", "Goal", "Opponent Name"])
         df.write_csv(filepath, separator="\t")
     # removing rows where it seems the set didn't happen, e.g. game bugs where it crashes or they forfeit before game 1 starts
     # these null values must be dropped so we can calculate the linear regression
@@ -113,6 +113,7 @@ def parse_spreadsheet(filepath: str) -> pl.DataFrame:
     df = df.with_columns(
         pl.col("Date").str.strptime(pl.Date, format="%m/%d/%Y").alias("Date")
     )
+    df = df.with_columns((pl.col("My ELO") - pl.col("Opponent ELO")).alias("ELO Diff"))
 
     return df
 
@@ -162,7 +163,7 @@ def calculate_gamewise_df(full_df: pl.DataFrame) -> pl.DataFrame:
     return long_df
 
 
-def calculate_set_winrates(full_df: pl.DataFrame) -> pl.DataFrame:
+def calculate_set_character_winrates(full_df: pl.DataFrame) -> pl.DataFrame:
     winrate_df = (
         full_df.group_by("Main")
         .agg(
@@ -196,3 +197,17 @@ def calculate_stage_winrates(gamewise_df: pl.DataFrame) -> pl.DataFrame:
         .with_columns((pl.col("Wins") / pl.col("Total_Matches") * 100).alias("WinRate"))
     )
     return stage_winrate_df
+
+
+def calculate_game_character_winrates(gamewise_df: pl.DataFrame) -> pl.DataFrame:
+    character_winrate_df = (
+        gamewise_df.group_by("Char")
+        .agg(
+            [
+                (pl.col("Win") == True).sum().alias("Wins"),
+                pl.col("Win").count().alias("Total_Matches"),
+            ]
+        )
+        .with_columns((pl.col("Wins") / pl.col("Total_Matches") * 100).alias("WinRate"))
+    )
+    return character_winrate_df

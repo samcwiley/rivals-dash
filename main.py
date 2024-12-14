@@ -11,9 +11,10 @@ from df_utils import *
 
 
 setwise_df = parse_spreadsheet("rivals_spreadsheet.tsv")
-character_winrate_df = calculate_set_winrates(setwise_df)
+character_set_winrate_df = calculate_set_character_winrates(setwise_df)
 gamewise_df = calculate_gamewise_df(setwise_df)
 stage_winrate_df = calculate_stage_winrates(gamewise_df)
+character_game_winrate_df = calculate_game_character_winrates(gamewise_df)
 
 
 stage_bar = double_bar_plot_stages(
@@ -58,11 +59,11 @@ stage_scatter = scatterplot_with_regression(
 
 matchup_bar = double_bar_plot(
     title="Character Matchup Winrates",
-    x_axis=character_winrate_df["Main"],
-    y1_axis=character_winrate_df["Total_Matches"],
+    x_axis=character_set_winrate_df["Main"],
+    y1_axis=character_set_winrate_df["Total_Matches"],
     y1_name="Number of Matches",
     y1_axis_label="Number of Matches",
-    y2_axis=character_winrate_df["WinRate"],
+    y2_axis=character_set_winrate_df["WinRate"],
     y2_name="Winrate",
     y2_axis_label="Winrate",
 )
@@ -73,6 +74,39 @@ elo_plot = make_line_plot(
     title="ELO Over Time",
     x_label="By Set",
     y_label="ELO",
+)
+
+histogram = go.Figure(
+    go.Histogram(
+        x=setwise_df["ELO Diff"],
+        nbinsx=20,
+        marker=dict(color="blue"),
+    )
+)
+
+histogram.update_layout(
+    title="Distribution of ELO Diff",
+    xaxis_title="ELO Diff",
+    yaxis_title="Count",
+    template="plotly_white",
+)
+
+boxplot = go.Figure(
+    go.Box(
+        x=setwise_df["ELO Diff"],
+        boxpoints="all",
+        jitter=0.3,
+        pointpos=0,
+        marker=dict(color="green"),
+        name="ELO Diff",
+    )
+)
+
+# Add layout details
+boxplot.update_layout(
+    title="Box-and-Whisker Plot of ELO Diff",
+    xaxis_title="ELO Diff",
+    template="plotly_white",
 )
 
 
@@ -118,6 +152,37 @@ def update_elo_line(date_vs_set):
     return elo_plot
 
 
+@app.callback(
+    Output("character-bar", "figure"), [Input("character-set-game-filter", "value")]
+)
+def update_character_bars(character_set_game):
+    if character_set_game == "By Set":
+        matchup_bar = double_bar_plot(
+            title="Character Matchup Winrates By Set",
+            x_axis=character_set_winrate_df["Main"],
+            y1_axis=character_set_winrate_df["Total_Matches"],
+            y1_name="Number of Sets",
+            y1_axis_label="Number of Sets",
+            y2_axis=character_set_winrate_df["WinRate"],
+            y2_name="Winrate",
+            y2_axis_label="Winrate",
+        )
+        matchup_bar.update_layout(xaxis_title="Character (Main)")
+    else:
+        matchup_bar = double_bar_plot(
+            title="Character Matchup Winrates By Game",
+            x_axis=character_game_winrate_df["Char"],
+            y1_axis=character_game_winrate_df["Total_Matches"],
+            y1_name="Number of Games",
+            y1_axis_label="Number of Games",
+            y2_axis=character_set_winrate_df["WinRate"],
+            y2_name="Winrate",
+            y2_axis_label="Winrate",
+        )
+        matchup_bar.update_layout(xaxis_title="Character")
+    return matchup_bar
+
+
 app.layout = html.Div(
     [
         html.H1("ELO Analysis Dashboard"),
@@ -139,12 +204,35 @@ app.layout = html.Div(
                             figure=elo_plot,
                         ),
                         dcc.Graph(id="elo-scatter", figure=elo_scatter),
+                        html.Div(
+                            children=[
+                                dcc.Graph(
+                                    id="elo-histogram",
+                                    figure=histogram,
+                                    style={"width": "48%", "display": "inline-block"},
+                                ),
+                                dcc.Graph(
+                                    id="elo-boxplot",
+                                    figure=boxplot,
+                                    style={"width": "48%", "display": "inline-block"},
+                                ),
+                            ],
+                            style={
+                                "display": "flex",
+                                "justify-content": "space-between",
+                            },
+                        ),
                     ],
                 ),
                 dcc.Tab(
                     label="Character Data",
                     value="tab-character",
                     children=[
+                        dcc.Dropdown(
+                            id="character-set-game-filter",
+                            options=["By Set", "By Game"],
+                            value="By Set",
+                        ),
                         dcc.Graph(id="character-bar", figure=matchup_bar),
                     ],
                 ),
