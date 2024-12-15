@@ -1,7 +1,7 @@
 import polars as pl
 import sys
 from datetime import datetime
-from game_data import characters, all_stages
+from game_data import characters, all_stages, character_icons
 
 pl.Config.set_tbl_rows(1000)
 pl.Config.set_tbl_cols(100)
@@ -114,6 +114,7 @@ def parse_spreadsheet(filepath: str) -> pl.DataFrame:
         pl.col("Date").str.strptime(pl.Date, format="%m/%d/%Y").alias("Date")
     )
     df = df.with_columns((pl.col("My ELO") - pl.col("Opponent ELO")).alias("ELO Diff"))
+    df = df.with_columns(pl.col("Main").replace(character_icons).alias("Icon_Path"))
 
     return df
 

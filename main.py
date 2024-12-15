@@ -6,7 +6,7 @@ import plotly.express as px
 import sys
 
 from graph_utils import *
-from game_data import stages, characters
+from game_data import stages, characters, character_icons
 from df_utils import *
 
 
@@ -30,12 +30,13 @@ stage_bar = double_bar_plot_stages(
 )
 
 
-elo_scatter = scatterplot_with_regression(
+elo_scatter = scatterplot_with_icons(
     independent=setwise_df["My ELO"],
     dependent=setwise_df["Opponent ELO"],
     title="My ELO vs. Opponent ELO",
     x_title="My ELO",
     y_title="Opponent ELO",
+    df=setwise_df,
 )
 
 

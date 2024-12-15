@@ -2,7 +2,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 import polars as pl
 import plotly.graph_objects as go
-from game_data import all_stages
+from game_data import all_stages, character_icons
+from PIL import Image
 
 
 def double_bar_plot_stages(
@@ -156,6 +157,68 @@ def scatterplot_with_regression(
             line=dict(color="red", width=2, dash="dash"),
         )
     )
+
+    scatter.update_layout(
+        title=title,
+        xaxis_title=x_title,
+        yaxis_title=y_title,
+        legend_title="Legend",
+        template="plotly_white",
+    )
+    return scatter
+
+
+def scatterplot_with_icons(
+    independent: pl.Series,
+    dependent: pl.Series,
+    title: str,
+    x_title: str,
+    y_title: str,
+    df: pl.DataFrame,
+) -> go.Figure:
+    x = independent.to_numpy().reshape(-1, 1)
+    y = dependent.to_numpy()
+
+    model = LinearRegression()
+    model.fit(x, y)
+
+    y_pred = model.predict(x)
+    m = model.coef_[0]
+    b = model.intercept_
+    r2 = r2_score(y, y_pred)
+
+    scatter = go.Figure()
+
+    scatter.add_trace(
+        go.Scatter(
+            x=independent.to_list(),
+            y=dependent.to_list(),
+            mode="markers",
+            name="Data Points",
+            marker=dict(color="blue", size=8),
+        )
+    )
+    scatter.add_trace(
+        go.Scatter(
+            x=independent.to_list(),
+            y=y_pred.tolist(),
+            mode="lines",
+            name=f"Best Fit: y = {m:.2f}x + {b:.2f} (R² = {r2:.2f})",
+            line=dict(color="red", width=2, dash="dash"),
+        )
+    )
+    for x, y, png in zip(scatter.data[0].x, scatter.data[0].y, df["Icon_Path"]):
+        scatter.add_layout_image(
+            x=x,
+            y=y,
+            source=Image.open(png),
+            xref="x",
+            yref="y",
+            sizex=40,
+            sizey=40,
+            xanchor="center",
+            yanchor="middle",
+        )
 
     scatter.update_layout(
         title=title,

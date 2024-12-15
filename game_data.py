@@ -85,3 +85,16 @@ characters = [
     "Wrastor",
     "Zetterburn",
 ]
+character_icons = {
+    "Clairen": "character_icons/clairen.png",
+    "Fleet": "character_icons/fleet.png",
+    "Forsburn": "character_icons/forsburn.png",
+    "Kragg": "character_icons/kragg.png",
+    "Loxodont": "character_icons/loxodont.png",
+    "Maypul": "character_icons/maypul.png",
+    "Orcane": "character_icons/orcane.png",
+    "Ranno": "character_icons/ranno.png",
+    "Wrastor": "character_icons/wrastor.png",
+    "Zetterburn": "character_icons/zetterburn.png",
+    "Multiple": "character_icons/rivals.png",
+}
