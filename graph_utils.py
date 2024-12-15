@@ -17,7 +17,14 @@ def double_bar_plot_stages(
     y2_axis_label: str,
 ) -> go.Figure:
     customdata = stage_winrate_df[
-        ["Picks_Bans", "My_Counterpick", "Their_Counterpick"]
+        [
+            "Picks_Bans",
+            "My_Counterpick",
+            "Their_Counterpick",
+            "Pick/Ban_Winrate",
+            "My_Counterpick_Winrate",
+            "Their_Counterpick_Winrate",
+        ]
     ].to_numpy()
     double_bar = go.Figure(
         data=[
@@ -43,7 +50,15 @@ def double_bar_plot_stages(
                 y=stage_winrate_df["WinRate"].to_list(),
                 yaxis="y2",
                 offsetgroup=2,
-                hovertemplate=("Stage: %{x}<br>" "Winrate: %{y}%" "<extra></extra>"),
+                customdata=customdata,
+                hovertemplate=(
+                    "Stage: %{x}<br>"
+                    "Winrate: %{y}%<br>"
+                    "Picks/Bans Winrate: %{customdata[3]}<br>"
+                    "My Counterpick Winrate: %{customdata[4]}<br>"
+                    "Their Counterpick Winrate: %{customdata[5]}<br>"
+                    "<extra></extra>"
+                ),
             ),
         ],
         layout={

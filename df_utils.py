@@ -178,7 +178,7 @@ def calculate_set_character_winrates(full_df: pl.DataFrame) -> pl.DataFrame:
     return winrate_df
 
 
-def calculate_stage_winrates(gamewise_df: pl.DataFrame) -> pl.DataFrame:
+"""def calculate_stage_winrates(gamewise_df: pl.DataFrame) -> pl.DataFrame:
     stage_winrate_df = (
         gamewise_df.group_by("Stage")
         .agg(
@@ -196,6 +196,81 @@ def calculate_stage_winrates(gamewise_df: pl.DataFrame) -> pl.DataFrame:
         )
         .with_columns((pl.col("Wins") / pl.col("Total_Matches") * 100).alias("WinRate"))
     )
+    return stage_winrate_df"""
+
+
+def calculate_stage_winrates(gamewise_df: pl.DataFrame) -> pl.DataFrame:
+    stage_winrate_df = (
+        gamewise_df.group_by("Stage")
+        .agg(
+            [
+                (pl.col("Win") == True).sum().alias("Wins"),
+                pl.col("Win").count().alias("Total_Matches"),
+                (pl.col("Stage_Choice") == "Picks/Bans").sum().alias("Picks_Bans"),
+                ((pl.col("Stage_Choice") == "Picks/Bans") & (pl.col("Win") == True))
+                .sum()
+                .alias("Picks_Bans_Wins"),
+                (pl.col("Stage_Choice") == "My Counterpick")
+                .sum()
+                .alias("My_Counterpick"),
+                ((pl.col("Stage_Choice") == "My Counterpick") & (pl.col("Win") == True))
+                .sum()
+                .alias("My_Counterpick_Wins"),
+                (pl.col("Stage_Choice") == "Their Counterpick")
+                .sum()
+                .alias("Their_Counterpick"),
+                (
+                    (pl.col("Stage_Choice") == "Their Counterpick")
+                    & (pl.col("Win") == True)
+                )
+                .sum()
+                .alias("Their_Counterpick_Wins"),
+            ]
+        )
+        .with_columns(
+            [
+                ((pl.col("Wins") / pl.col("Total_Matches") * 100).round(2)).alias(
+                    "WinRate"
+                ),
+                (
+                    (pl.col("Picks_Bans_Wins") / pl.col("Picks_Bans") * 100).round(2)
+                ).alias("Pick/Ban_Winrate"),
+                (
+                    (
+                        pl.col("My_Counterpick_Wins") / pl.col("My_Counterpick") * 100
+                    ).round(2)
+                ).alias("My_Counterpick_Winrate"),
+                (
+                    (
+                        pl.col("Their_Counterpick_Wins")
+                        / pl.col("Their_Counterpick")
+                        * 100
+                    ).round(2)
+                ).alias("Their_Counterpick_Winrate"),
+            ]
+        )
+    )
+    stage_winrate_df = stage_winrate_df.with_columns(
+        [
+            pl.when(pl.col("WinRate").is_not_nan())
+            .then((pl.col("WinRate").cast(str) + " %"))
+            .otherwise(pl.lit("N/A"))
+            .alias("WinRate_str"),
+            pl.when(pl.col("Pick/Ban_Winrate").is_not_nan())
+            .then((pl.col("Pick/Ban_Winrate").cast(str) + " %"))
+            .otherwise(pl.lit("N/A"))
+            .alias("Pick/Ban_Winrate"),
+            pl.when(pl.col("My_Counterpick_Winrate").is_not_nan())
+            .then((pl.col("My_Counterpick_Winrate").cast(str) + " %"))
+            .otherwise(pl.lit("N/A"))
+            .alias("My_Counterpick_Winrate"),
+            pl.when(pl.col("Their_Counterpick_Winrate").is_not_nan())
+            .then((pl.col("Their_Counterpick_Winrate").cast(str) + " %"))
+            .otherwise(pl.lit("N/A"))
+            .alias("Their_Counterpick_Winrate"),
+        ]
+    )
+
     return stage_winrate_df
 
 
