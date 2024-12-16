@@ -4,6 +4,7 @@ import polars as pl
 import plotly.graph_objects as go
 from game_data import all_stages, character_icons
 from PIL import Image
+import numpy as np
 
 
 def double_bar_plot_stages(
@@ -166,6 +167,79 @@ def scatterplot_with_regression(
         template="plotly_white",
     )
     return scatter
+
+
+def make_elo_histogram(
+    x: pl.Series, x_label: str, title: str, y_label: str
+) -> go.Figure:
+
+    histogram = go.Figure(
+        go.Histogram(
+            x=x,
+            nbinsx=20,
+            marker=dict(color="blue"),
+        )
+    )
+
+    histogram.update_layout(
+        title=title,
+        xaxis_title=x_label,
+        yaxis_title=y_label,
+        template="plotly_white",
+    )
+    return histogram
+
+
+def make_elo_mirror_histogram(
+    setwise_df: pl.DataFrame, x_label: str, y_label: str, title: str
+) -> go.Figure:
+    wins = setwise_df.filter(pl.col("Win/Loss") == "W").select(["ELO Diff"]).to_series()
+    losses = (
+        setwise_df.filter(pl.col("Win/Loss") == "L").select(["ELO Diff"]).to_series()
+    )
+
+    elo_min = min(wins.min(), losses.min())
+    elo_max = max(wins.max(), losses.max())
+
+    bin_edges = np.arange(elo_min // 10 * 10, elo_max // 10 * 10 + 10, 10)
+
+    win_counts, _ = np.histogram(wins, bins=bin_edges)
+    loss_counts, _ = np.histogram(losses, bins=bin_edges)
+
+    loss_counts = -loss_counts
+
+    fig = go.Figure()
+
+    fig.add_trace(
+        go.Bar(
+            x=bin_edges[:-1],
+            y=win_counts,
+            width=10,
+            marker_color="blue",
+            name="ELO Dist. of Sets Won",
+            offset=0,
+        )
+    )
+
+    fig.add_trace(
+        go.Bar(
+            x=bin_edges[:-1],
+            y=loss_counts,
+            width=10,
+            marker_color="red",
+            name="ELO Dist. of Sets Lost",
+            offset=0,
+        )
+    )
+
+    fig.update_layout(
+        title="Mirrored Histogram of ELO Differences",
+        xaxis_title="ELO Difference",
+        yaxis_title="Count",
+        barmode="overlay",
+        bargap=0,
+    )
+    return fig
 
 
 def scatterplot_with_icons(

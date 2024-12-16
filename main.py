@@ -78,19 +78,14 @@ elo_plot = make_elo_line_plot(
     df=setwise_df,
 )
 
-histogram = go.Figure(
-    go.Histogram(
-        x=setwise_df["ELO Diff"],
-        nbinsx=20,
-        marker=dict(color="blue"),
-    )
-)
-
-histogram.update_layout(
-    title="Distribution of ELO Diff",
-    xaxis_title="ELO Diff",
-    yaxis_title="Count",
-    template="plotly_white",
+"""elo_histogram = make_elo_histogram(
+    x=setwise_df["ELO Diff"], x_label="ELO Difference", y_label="Count of Sets"
+)"""
+elo_histogram = make_elo_mirror_histogram(
+    setwise_df=setwise_df,
+    x_label="ELO Difference",
+    y_label="Counts",
+    title="ELO Histogram",
 )
 
 boxplot = go.Figure(
@@ -101,6 +96,17 @@ boxplot = go.Figure(
         pointpos=0,
         marker=dict(color="green"),
         name="ELO Diff",
+        customdata=setwise_df[
+            ["Main", "Win/Loss", "Breakdown", "My ELO", "Opponent ELO"]
+        ],
+        hovertemplate=(
+            "Opponent Main: %{customdata[0]}<br>"
+            "Opponent ELO: %{customdata[4]}<br>"
+            "My ELO: %{customdata[3]}<br>"
+            "Set Outcome: %{customdata[1]}<br>"
+            "Game Breakdown: %{customdata[2]}<br>"
+            "<extra></extra>"
+        ),
     )
 )
 
@@ -211,7 +217,7 @@ app.layout = html.Div(
                             children=[
                                 dcc.Graph(
                                     id="elo-histogram",
-                                    figure=histogram,
+                                    figure=elo_histogram,
                                     style={"width": "48%", "display": "inline-block"},
                                 ),
                                 dcc.Graph(
