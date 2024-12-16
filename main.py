@@ -69,12 +69,13 @@ matchup_bar = double_bar_plot(
     y2_axis_label="Winrate",
 )
 
-elo_plot = make_line_plot(
+elo_plot = make_elo_line_plot(
     x=setwise_df["Row Index"],
     y=setwise_df["My ELO"],
     title="ELO Over Time",
     x_label="By Set",
     y_label="ELO",
+    df=setwise_df,
 )
 
 histogram = go.Figure(
@@ -139,12 +140,13 @@ def update_stage_bar_graph(selected_character):
 @app.callback(Output("elo-line-plot", "figure"), [Input("elo-line-filter", "value")])
 def update_elo_line(date_vs_set):
     if date_vs_set == "By Set":
-        elo_plot = make_line_plot(
+        elo_plot = make_elo_line_plot(
             x=setwise_df["Row Index"],
             y=setwise_df["My ELO"],
             title="ELO Over Time",
             x_label="Set Number",
             y_label="ELO",
+            df=setwise_df,
         )
     else:
         elo_plot = elo_double_line_plot(

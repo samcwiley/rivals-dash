@@ -188,7 +188,7 @@ def scatterplot_with_icons(
     r2 = r2_score(y, y_pred)
 
     scatter = go.Figure()
-
+    customdata = df[["Main", "Breakdown", "Win/Loss"]].to_numpy()
     scatter.add_trace(
         go.Scatter(
             x=independent.to_list(),
@@ -196,6 +196,15 @@ def scatterplot_with_icons(
             mode="markers",
             name="Data Points",
             marker=dict(color="blue", size=8),
+            customdata=customdata,
+            hovertemplate=(
+                "Opponent Main: %{customdata[0]}<br>"
+                "Opponent ELO: %{y}<br>"
+                "My ELO: %{x}<br>"
+                "Set Outcome: %{customdata[2]}<br>"
+                "Game Breakdown: %{customdata[1]}<br>"
+                "<extra></extra>"
+            ),
         )
     )
     scatter.add_trace(
@@ -252,6 +261,39 @@ def make_line_plot(
 
     fig.update_layout(
         title=title, xaxis_title=x_label, yaxis_title=y_label, template="plotly_white"
+    )
+    return fig
+
+
+def make_elo_line_plot(
+    x: pl.Series, y: pl.Series, title: str, x_label: str, y_label: str, df: pl.DataFrame
+) -> go.Figure:
+    customdata = df[["Main", "My ELO", "Breakdown", "Win/Loss"]].to_numpy()
+    fig = go.Figure()
+
+    fig.add_trace(
+        go.Scatter(
+            x=x,
+            y=y,
+            mode="lines",
+            name=title,
+            customdata=customdata,
+            hovertemplate=(
+                "Opponent Main: %{customdata[0]}<br>"
+                "Opponent ELO: %{y}<br>"
+                "My ELO: %{customdata[1]}<br>"
+                "Set Outcome: %{customdata[3]}<br>"
+                "Game Breakdown: %{customdata[2]}<br>"
+                "<extra></extra>"
+            ),
+        )
+    )
+
+    fig.update_layout(
+        title=title,
+        xaxis_title=x_label,
+        yaxis_title=y_label,
+        template="plotly_white",
     )
     return fig
 

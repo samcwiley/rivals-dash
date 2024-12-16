@@ -75,7 +75,7 @@ Date	Time	My ELO	My Char	Win/Loss	Breakdown	Ending ELO	Opponent Char	Opponent EL
 12/10/2024	11:00:46 PM	917	Fleet	W	OXO	933	Clairen	1051	Hodojo	1	Hodojo	-1	Julesvale	1	Maypul	Maypul
 12/11/2024	18:45:17	933	Fleet	L	XOX	921	Wrastor	932	Julesvale	-2	Julesvale	1	Hyperborean Harbor	-1		
 12/11/2024	10:34:09 PM	921	Fleet	L	OXX	909	Clairen	924	Godai Delta	2	Julesvale	-1	Julesvale	-2		
-12/11/2024	10:50:35 PM	909		W	XX-	921										
+12/11/2024	10:50:35 PM	909		W		921										
 12/11/2024	10:52:03 PM	921	Fleet	W	OO-	934	Zetterburn	943	Julesvale	2	Hodojo	1				
 12/11/2024	11:01:13 PM	934	Fleet	W	XOO	947	Ranno	957	Merchant Port	-1	Godai Delta	2	Hyperborean Harbor	1		
 12/12/2024	10:29:28 PM	947	Fleet	L	XX-	934	Clairen	927	Julesvale	-1	Hodojo	-2				
@@ -109,4 +109,20 @@ Date	Time	My ELO	My Char	Win/Loss	Breakdown	Ending ELO	Opponent Char	Opponent EL
 12/15/2024	12:15:07 AM	945	Fleet	W	XOO	955	Ranno	912	Godai Delta	-1	Hyperborean Harbor	1	Hyperborean Harbor	1		
 12/15/2024	12:29:30 AM	955	Fleet	L	XX-	944	Maypul	976	Julesvale	-1	Hyperborean Harbor	-1				
 12/15/2024	12:38:55 AM	944	Fleet	W	OO-	953	Ranno	974	Hodojo	2	Rock Wall	1				
-		953														
+12/15/2024	2:37:55 PM	953	Fleet	L	XX-	943	Loxodont	1002	Merchant Port	-2	Fire Capital	-1				
+12/15/2024	2:48:57 PM	943	Fleet	L	XOX	932	Ranno	972	Hodojo	-2	Hyperborean Harbor	2	Tempest Peak	-2		
+12/15/2024	3:03:13 PM	932	Fleet	L	XOX	919	Maypul	893	Julesvale	-2	Hyperborean Harbor	3	Hodojo	-2		
+12/15/2024	3:13:20 PM	919	Fleet	W	OXO	933	Maypul	988	Julesvale	1	Godai Delta	-1	Hyperborean Harbor	1		
+12/15/2024	4:48:03 PM	933	Fleet	L	XOX	920	Loxodont	914	Hodojo	-1	Tempest Peak	1	Godai Delta	-1		
+12/15/2024	5:00:19 PM	920	Fleet	W	OXO	932	Forsburn	921	Julesvale	2	Aetherean Forest	-1	Fire Capital	1		
+12/15/2024	5:20:36 PM	932	Fleet	L	XX-	921	Wrastor	939	Hodojo	-2	Aetherean Forest	-2				
+12/15/2024	5:29:02 PM	921	Fleet	W	OO-	934	Fleet	946	Hodojo	2	Aetherean Forest	1				
+12/15/2024	7:55:55 PM	934	Fleet	L	XX-	924	Maypul	1001	Julesvale	-1	Rock Wall	-2				
+12/15/2024	10:11:33 PM	924	Fleet	L	XX-	915	Forsburn	1003	Aetherean Forest	-1	Merchant Port	-1				
+12/15/2024	10:22:10 PM	915	Fleet	W	OO-	927	Orcane	926	Julesvale	1	Aetherean Forest	1				
+12/15/2024	10:32:51 PM	927	Fleet	W	OO-	938	Zetterburn	918	Julesvale	1	Air Armada	2				
+12/15/2024	10:40:10 PM	938	Fleet	W	OO-	948	Maypul	887	Julesvale	2	Julesvale	1				
+12/15/2024	10:49:13 PM	948	Fleet	W	OO-	959	Clairen	928	Julesvale	1	Hodojo	2				
+12/15/2024	10:59:39 PM	959	Fleet	L	XX-	952	Clairen	1098	Julesvale	-1	Tempest Peak	-1				
+12/15/2024	11:11:01 PM	952	Fleet	W	XOO	969	Zetterburn	1108	Julesvale	-1	Merchant Port	1	Godai Delta	2		
+		969														
