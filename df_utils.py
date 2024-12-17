@@ -121,7 +121,7 @@ def parse_spreadsheet(filepath: str) -> pl.DataFrame:
 
 def calculate_gamewise_df(full_df: pl.DataFrame) -> pl.DataFrame:
     long_df = full_df.melt(
-        id_vars=["Date", "Time", "My ELO", "Opponent ELO"],
+        id_vars=["Date", "Time", "My ELO", "Opponent ELO", "Main"],
         value_vars=[
             "G1 Stage",
             "G1 Stock Diff",
@@ -150,7 +150,7 @@ def calculate_gamewise_df(full_df: pl.DataFrame) -> pl.DataFrame:
     )
 
     long_df = long_df.pivot(
-        index=["Date", "Time", "My ELO", "Opponent ELO", "Game"],
+        index=["Date", "Time", "My ELO", "Opponent ELO", "Game", "Main"],
         columns="Attribute",
         values="Value",
     )
@@ -173,31 +173,12 @@ def calculate_set_character_winrates(full_df: pl.DataFrame) -> pl.DataFrame:
                 pl.col("Win/Loss").count().alias("Total_Matches"),
             ]
         )
-        .with_columns((pl.col("Wins") / pl.col("Total_Matches") * 100).alias("WinRate"))
+        .with_columns(
+            ((pl.col("Wins") / pl.col("Total_Matches") * 100).round(2)).alias("WinRate")
+        )
         .sort("Main")
     )
     return winrate_df
-
-
-"""def calculate_stage_winrates(gamewise_df: pl.DataFrame) -> pl.DataFrame:
-    stage_winrate_df = (
-        gamewise_df.group_by("Stage")
-        .agg(
-            [
-                (pl.col("Win") == True).sum().alias("Wins"),
-                pl.col("Win").count().alias("Total_Matches"),
-                (pl.col("Stage_Choice") == "Picks/Bans").sum().alias("Picks_Bans"),
-                (pl.col("Stage_Choice") == "My Counterpick")
-                .sum()
-                .alias("My_Counterpick"),
-                (pl.col("Stage_Choice") == "Their Counterpick")
-                .sum()
-                .alias("Their_Counterpick"),
-            ]
-        )
-        .with_columns((pl.col("Wins") / pl.col("Total_Matches") * 100).alias("WinRate"))
-    )
-    return stage_winrate_df"""
 
 
 def calculate_stage_winrates(gamewise_df: pl.DataFrame) -> pl.DataFrame:
@@ -276,6 +257,13 @@ def calculate_stage_winrates(gamewise_df: pl.DataFrame) -> pl.DataFrame:
 
 
 def calculate_game_character_winrates(gamewise_df: pl.DataFrame) -> pl.DataFrame:
+    gamewise_df = gamewise_df.with_columns(
+        pl.when(pl.col("Main") == pl.col("Char"))
+        .then(pl.lit("Main"))
+        .otherwise(pl.lit("Counterpick"))
+        .alias("Character_Pick")
+    )
+
     character_winrate_df = (
         gamewise_df.group_by("Char")
         .agg(
@@ -284,6 +272,63 @@ def calculate_game_character_winrates(gamewise_df: pl.DataFrame) -> pl.DataFrame
                 pl.col("Win").count().alias("Total_Matches"),
             ]
         )
-        .with_columns((pl.col("Wins") / pl.col("Total_Matches") * 100).alias("WinRate"))
+        .with_columns(
+            ((pl.col("Wins") / pl.col("Total_Matches") * 100).round(2)).alias("WinRate")
+        )
     )
-    return character_winrate_df
+
+    main_vs_counterpick_df = gamewise_df.group_by(["Char", "Character_Pick"]).agg(
+        [
+            (pl.col("Win") == True).sum().alias("Wins"),
+            pl.col("Win").count().alias("Total_Games"),
+        ]
+    )
+
+    main_vs_counterpick_df = main_vs_counterpick_df.pivot(
+        values=["Total_Games", "Wins"],
+        index="Char",
+        columns="Character_Pick",
+        aggregate_function="sum",
+    ).fill_null(0)
+
+    final_df = character_winrate_df.join(main_vs_counterpick_df, on="Char", how="left")
+
+    final_df = final_df.with_columns(
+        ((pl.col("Wins_Main") / pl.col("Total_Games_Main") * 100).round(2)).alias(
+            "WinRate_Main"
+        ),
+        (
+            (
+                pl.col("Wins_Counterpick") / pl.col("Total_Games_Counterpick") * 100
+            ).round(2)
+        ).alias("WinRate_Counterpick"),
+        ((pl.col("Total_Games_Main") / pl.col("Total_Matches") * 100).round(2)).alias(
+            "Percent_Main"
+        ),
+        (
+            (pl.col("Total_Games_Counterpick") / pl.col("Total_Matches") * 100).round(2)
+        ).alias("Percent_Counterpick"),
+    )
+
+    final_df = final_df.with_columns(
+        [
+            pl.when(pl.col("WinRate").is_not_nan())
+            .then((pl.col("WinRate").cast(str) + " %"))
+            .otherwise(pl.lit("N/A"))
+            .alias("WinRate_str"),
+            pl.when(pl.col("WinRate_Main").is_not_nan())
+            .then((pl.col("WinRate_Main").cast(str) + " %"))
+            .otherwise(pl.lit("N/A")),
+            pl.when(pl.col("WinRate_Counterpick").is_not_nan())
+            .then((pl.col("WinRate_Counterpick").cast(str) + " %"))
+            .otherwise(pl.lit("N/A")),
+            pl.when(pl.col("Percent_Main").is_not_nan())
+            .then((pl.col("Percent_Main").cast(str) + " %"))
+            .otherwise(pl.lit("N/A")),
+            pl.when(pl.col("Percent_Counterpick").is_not_nan())
+            .then((pl.col("Percent_Counterpick").cast(str) + " %"))
+            .otherwise(pl.lit("N/A")),
+        ]
+    )
+
+    return final_df

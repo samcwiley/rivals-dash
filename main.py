@@ -57,7 +57,7 @@ stage_scatter = scatterplot_with_regression(
 
 # double bar graph for # matchups and winrate against each character
 
-matchup_bar = character_double_bar_plot(
+matchup_bar = character_setwise_bar_plot(
     title="Character Matchup Winrates",
     x_axis=character_set_winrate_df["Main"],
     y1_axis=character_set_winrate_df["Total_Matches"],
@@ -165,7 +165,7 @@ def update_elo_line(date_vs_set):
 )
 def update_character_bars(character_set_game):
     if character_set_game == "By Set":
-        matchup_bar = character_double_bar_plot(
+        matchup_bar = character_setwise_bar_plot(
             title="Character Matchup Winrates By Set",
             x_axis=character_set_winrate_df["Main"],
             y1_axis=character_set_winrate_df["Total_Matches"],
@@ -174,11 +174,10 @@ def update_character_bars(character_set_game):
             y2_axis=character_set_winrate_df["WinRate"],
             y2_name="Winrate",
             y2_axis_label="Winrate",
-            # customdata=character_set_winrate_df[["Main", "Total_Matches", "WinRate"]],
         )
         matchup_bar.update_layout(xaxis_title="Character (Main)")
     else:
-        matchup_bar = character_double_bar_plot(
+        matchup_bar = character_gamewise_bar_plot(
             title="Character Matchup Winrates By Game",
             x_axis=character_game_winrate_df["Char"],
             y1_axis=character_game_winrate_df["Total_Matches"],
@@ -187,7 +186,7 @@ def update_character_bars(character_set_game):
             y2_axis=character_game_winrate_df["WinRate"],
             y2_name="Winrate",
             y2_axis_label="Winrate",
-            # customdata=character_set_winrate_df[["Main", "Total_Matches", "WinRate"]],
+            df=character_game_winrate_df,
         )
         matchup_bar.update_layout(xaxis_title="Character")
     return matchup_bar
