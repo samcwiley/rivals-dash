@@ -80,7 +80,7 @@ def double_bar_plot_stages(
     return double_bar
 
 
-def double_bar_plot(
+def character_double_bar_plot(
     title: str,
     x_axis: pl.Series,
     y1_axis: pl.Series,
@@ -89,6 +89,7 @@ def double_bar_plot(
     y2_axis: pl.Series,
     y2_name: str,
     y2_axis_label: str,
+    # customdata,
 ) -> go.Figure:
     double_bar = go.Figure(
         data=[
@@ -98,6 +99,12 @@ def double_bar_plot(
                 y=y1_axis.to_list(),
                 yaxis="y",
                 offsetgroup=1,
+                # customdata=customdata,
+                hovertemplate=(
+                    "Opponent Character: %{x}<br>"
+                    "Total Matches: %{y}%<br>"
+                    "<extra></extra>"
+                ),
             ),
             go.Bar(
                 name=y2_name,
@@ -105,6 +112,12 @@ def double_bar_plot(
                 y=y2_axis.to_list(),
                 yaxis="y2",
                 offsetgroup=2,
+                # customdata=customdata,
+                hovertemplate=(
+                    "Opponent Character: %{x}<br>"
+                    "Winrate: %{y}%<br>"
+                    "<extra></extra>"
+                ),
             ),
         ],
         layout={
