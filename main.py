@@ -14,6 +14,7 @@ setwise_df = parse_spreadsheet("rivals_spreadsheet.tsv")
 character_set_winrate_df = calculate_set_character_winrates(setwise_df)
 gamewise_df = calculate_gamewise_df(setwise_df)
 stage_winrate_df = calculate_stage_winrates(gamewise_df)
+# print(stage_winrate_df)
 character_game_winrate_df = calculate_game_character_winrates(gamewise_df)
 
 stage_bar = double_bar_plot_stages(
@@ -38,21 +39,13 @@ elo_scatter = scatterplot_with_icons(
     df=setwise_df,
 )
 
-
-stages_df = pl.DataFrame(
-    {
-        "Stage": list(stages.keys()),
-        "Stage_Width": [stages[stage].width for stage in stages],
-    }
-)
-stage_winrate_df = stage_winrate_df.join(stages_df, on="Stage")
-
-stage_scatter = scatterplot_with_regression(
-    independent=stage_winrate_df["Stage_Width"],
-    dependent=stage_winrate_df["WinRate"],
+stage_dimension_scatter = make_stage_scatter(
+    stage_winrate_df=stage_winrate_df,
     title="Stage Width vs. Winrate",
     x_title="Stage Width",
     y_title="Winrate",
+    # dependent=stage_winrate_df["WinRate"],
+    independent_var="Stage_Width",
 )
 
 # double bar graph for # matchups and winrate against each character
@@ -192,6 +185,21 @@ def update_character_bars(character_set_game):
     return matchup_bar
 
 
+@app.callback(
+    Output("stage-dimension-scatter", "figure"), [Input("stage-stat-selector", "value")]
+)
+def update_stage_dimension_scatter(stage_dimension):
+    stage_dimension_scatter = make_stage_scatter(
+        stage_winrate_df=stage_winrate_df,
+        title=f"Stage {stage_dimension} vs. Winrate",
+        x_title=f"Stage {stage_dimension}",
+        y_title="Winrate",
+        # dependent=stage_winrate_df["WinRate"],
+        independent_var=stage_dimension,
+    )
+    return stage_dimension_scatter
+
+
 app.layout = html.Div(
     [
         html.H1("ELO Analysis Dashboard"),
@@ -258,7 +266,20 @@ app.layout = html.Div(
                             placeholder="Select a character",
                         ),
                         dcc.Graph(id="stage-bar-plot", figure=stage_bar),
-                        dcc.Graph(id="stage_winrate_scatter", figure=stage_scatter),
+                        dcc.Dropdown(
+                            id="stage-stat-selector",
+                            options={
+                                "Stage_Width": "Width",
+                                "Top_Blast": "Top Blastzone",
+                                "Side_Blast": "Side Blastzone",
+                                "Bot_Blast": "Bottom Blastzone",
+                            },
+                            value="Stage_Width",
+                            placeholder="Select a stage dimension",
+                        ),
+                        dcc.Graph(
+                            id="stage-dimension-scatter", figure=stage_dimension_scatter
+                        ),
                     ],
                 ),
             ],

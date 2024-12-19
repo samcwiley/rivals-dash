@@ -2,7 +2,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 import polars as pl
 import plotly.graph_objects as go
-from game_data import all_stages, character_icons
+from game_data import all_stages, character_icons, stages
 from PIL import Image
 import numpy as np
 
@@ -493,3 +493,78 @@ def elo_double_line_plot(
         title=title, xaxis_title=x_label, yaxis_title=y_label, template="plotly_white"
     )
     return fig
+
+
+def make_stage_scatter(
+    stage_winrate_df: pl.DataFrame,
+    title: str,
+    x_title: str,
+    y_title: str,
+    independent_var: str,
+    # dependent: pl.Series,
+) -> go.Figure:
+
+    stages_df = pl.DataFrame(
+        {
+            "Stage": list(stages.keys()),
+            "Stage_Width": [stages[stage].width for stage in stages],
+            "Top_Blast": [stages[stage].top_blast for stage in stages],
+            "Bot_Blast": [stages[stage].top_blast for stage in stages],
+            "Side_Blast": [stages[stage].side_blast for stage in stages],
+        }
+    )
+    stage_scatter_df = stage_winrate_df.join(stages_df, on="Stage")
+    independent = stage_scatter_df[independent_var]
+    dependent = stage_scatter_df["WinRate"]
+    x = independent.to_numpy().reshape(-1, 1)
+    y = dependent.to_numpy()
+
+    # print(dimension_series)
+    # print(dependent)
+
+    model = LinearRegression()
+    model.fit(x, y)
+
+    y_pred = model.predict(x)
+    m = model.coef_[0]
+    b = model.intercept_
+    r2 = r2_score(y, y_pred)
+
+    scatter = go.Figure()
+
+    scatter.add_trace(
+        go.Scatter(
+            x=independent.to_list(),
+            y=dependent.to_list(),
+            mode="markers",
+            name="Data Points",
+            marker=dict(color="blue", size=8),
+            customdata=stage_scatter_df[["Stage"]],
+            hovertemplate=(
+                "Stage: %{customdata[0]}<br>"
+                f"{independent_var}: "
+                "%{x}<br>"
+                "Winrate: %{y}<br>"
+                "<extra></extra>"
+            ),
+        )
+    )
+    scatter.add_trace(
+        go.Scatter(
+            x=independent.to_list(),
+            y=y_pred.tolist(),
+            mode="lines",
+            name=f"Best Fit: y = {m:.2f}x + {b:.2f} (R² = {r2:.2f})",
+            line=dict(color="red", width=2, dash="dash"),
+        )
+    )
+
+    scatter.update_layout(
+        title=title,
+        xaxis_title=x_title,
+        yaxis_title=y_title,
+        legend_title="Legend",
+        template="plotly_white",
+    )
+
+    return scatter
