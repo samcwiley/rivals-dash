@@ -1,0 +1,11 @@
+name: rivals-dash
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - polars
+  - plotly
+  - scikit-learn
+  - dash
