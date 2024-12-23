@@ -298,6 +298,21 @@ def make_elo_mirror_histogram(
             marker_color="blue",
             name="ELO Dist. of Sets Won",
             offset=0,
+            customdata=[
+                (
+                    f"Your Opponent was {abs(tx)} to {abs(tx+10)} ELO Points {'Higher' if tx < 0 else 'Lower'} Than You",
+                    lc,  # loss count
+                    (
+                        f"{wc / (wc + abs(lc)):.2%}" if wc + abs(lc) > 0 else "N/A"
+                    ),  # Winrate for this bin
+                )
+                for tx, wc, lc in zip(bin_edges[:-1], win_counts, loss_counts)
+            ],
+            hovertemplate="%{customdata[0]}<br>"
+            "Sets Won: %{y}<br>"
+            "Sets Lost: %{customdata[1]}<br>"
+            "Winrate for this bin: %{customdata[2]}"
+            "<extra></extra>",
         )
     )
 
@@ -309,6 +324,21 @@ def make_elo_mirror_histogram(
             marker_color="red",
             name="ELO Dist. of Sets Lost",
             offset=0,
+            customdata=[
+                (
+                    f"Your Opponent was {abs(tx)} to {abs(tx+10)} ELO Points {'Higher' if tx < 0 else 'Lower'} Than You",
+                    wc,  # win count
+                    (
+                        f"{wc / (wc + abs(lc)):.2%}" if wc + abs(lc) > 0 else "N/A"
+                    ),  # Winrate for this bin
+                )
+                for tx, wc, lc in zip(bin_edges[:-1], win_counts, loss_counts)
+            ],
+            hovertemplate="%{customdata[0]}<br>"
+            "Sets Won: %{customdata[1]}<br>"
+            "Sets Lost: %{y}<br>"
+            "Winrate for this bin: %{customdata[2]}"
+            "<extra></extra>",
         )
     )
 
