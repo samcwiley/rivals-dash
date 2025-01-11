@@ -211,6 +211,7 @@ app.layout = html.Div(
                     label="ELO Data",
                     value="tab-elo",
                     children=[
+                        html.H2("ELO Line Plot"),
                         dcc.Dropdown(
                             id="elo-line-filter",
                             options=["By Set", "By Date"],

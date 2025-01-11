@@ -301,7 +301,7 @@ def make_elo_mirror_histogram(
             customdata=[
                 (
                     f"Your Opponent was {abs(tx)} to {abs(tx+10)} ELO Points {'Higher' if tx < 0 else 'Lower'} Than You",
-                    lc,  # loss count
+                    -lc,  # loss count
                     (
                         f"{wc / (wc + abs(lc)):.2%}" if wc + abs(lc) > 0 else "N/A"
                     ),  # Winrate for this bin
@@ -331,12 +331,13 @@ def make_elo_mirror_histogram(
                     (
                         f"{wc / (wc + abs(lc)):.2%}" if wc + abs(lc) > 0 else "N/A"
                     ),  # Winrate for this bin
+                    -lc,
                 )
                 for tx, wc, lc in zip(bin_edges[:-1], win_counts, loss_counts)
             ],
             hovertemplate="%{customdata[0]}<br>"
             "Sets Won: %{customdata[1]}<br>"
-            "Sets Lost: %{y}<br>"
+            "Sets Lost: %{customdata[3]}<br>"
             "Winrate for this bin: %{customdata[2]}"
             "<extra></extra>",
         )
@@ -452,7 +453,9 @@ def make_line_plot(
 def make_elo_line_plot(
     x: pl.Series, y: pl.Series, title: str, x_label: str, y_label: str, df: pl.DataFrame
 ) -> go.Figure:
-    customdata = df[["Main", "My ELO", "Breakdown", "Win/Loss"]].to_numpy()
+    customdata = df[
+        ["Main", "My ELO", "Breakdown", "Win/Loss", "Opponent ELO", "Date", "Time"]
+    ].to_numpy()
     fig = go.Figure()
 
     fig.add_trace(
@@ -463,13 +466,23 @@ def make_elo_line_plot(
             name=title,
             customdata=customdata,
             hovertemplate=(
+                "Date: %{customdata[5]} %{customdata[6]}<br>"
                 "Opponent Main: %{customdata[0]}<br>"
-                "Opponent ELO: %{y}<br>"
+                "Opponent ELO: %{customdata[4]}<br>"
                 "My ELO: %{customdata[1]}<br>"
                 "Set Outcome: %{customdata[3]}<br>"
                 "Game Breakdown: %{customdata[2]}<br>"
                 "<extra></extra>"
             ),
+        )
+    )
+    fig.add_trace(
+        go.Scatter(
+            x=x,
+            y=df["Opponent ELO"],
+            mode="markers",
+            name=title,
+            hoverinfo="skip",
         )
     )
 
@@ -478,6 +491,13 @@ def make_elo_line_plot(
         xaxis_title=x_label,
         yaxis_title=y_label,
         template="plotly_white",
+        hovermode="x unified",
+        hoverlabel=dict(
+            align="left",
+            bgcolor="rgba(255, 255, 255, 0.8)",
+            bordercolor="black",
+            font=dict(size=12),
+        ),
     )
     return fig
 
@@ -520,7 +540,11 @@ def elo_double_line_plot(
     )
 
     fig.update_layout(
-        title=title, xaxis_title=x_label, yaxis_title=y_label, template="plotly_white"
+        title=title,
+        xaxis_title=x_label,
+        yaxis_title=y_label,
+        template="plotly_white",
+        hovermode="x unified",
     )
     return fig
 
