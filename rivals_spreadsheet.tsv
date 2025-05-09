@@ -1,273 +1,715 @@
-Date	Time	My ELO	My Char	Win/Loss	Breakdown	Ending ELO	Opponent Char	Opponent ELO	G1 Stage	G1 Stock Diff	G2 Stage	G2 Stock Diff	G3 Stage	G3 Stock Diff	G2 char (if different)	G3 char (if different)
-12/3/2024			Fleet	W	OO-	905	Ranno		Julesvale	1	Hyperborean Harbor	2				
-12/3/2024		905	Fleet	W	OO-	914	Clairen	838	Julesvale	3	Aetherean Forest	3			Kragg	
-12/3/2024		914	Fleet	W	OO-	928	Clairen	971	Godai Delta	2	Fire Capital	1				
-12/3/2024		928	Fleet	L	XX-	918	Zetterburn	995	Julesvale	-1	Godai Delta	-1				
-12/3/2024		918	Fleet	W	OXO	930	Kragg	924	Julesvale	1	Fire Capital	-1	Godai Delta	3		
-12/3/2024		930	Fleet	W	XOO	942	Clairen	930	Julesvale	-1	Julesvale	2	Hodojo	1		
-12/3/2024		942	Fleet	W	OO-	955	Forsburn	976	Godai Delta	1	Godai Delta	1				
-12/3/2024		955	Fleet	L	XOX	942	Kragg	923	Julesvale	-2	Godai Delta	1	Merchant Port	-1		
-12/3/2024		942	Fleet	L	XX-	932	Ranno	977	Julesvale	-1	Godai Delta	-1				
-12/3/2024		932	Fleet	W	OO-	943	Ranno	890	Godai Delta	2	Hodojo	1				
-12/3/2024		943	Fleet	W	OO-	954	Clairen	915	Julesvale	1	Tempest Peak	1				
-12/3/2024		954	Fleet	W	OO-	964	Orcane	919	Julesvale	1	Rock Wall	1				
-12/3/2024		964	Fleet	W	OXO	977	Kragg	992	Julesvale	1	Tempest Peak	-1	Aetherean Forest	3		
-12/3/2024		977	Fleet	W	XOO	990	Kragg	1024	Julesvale	-1	Godai Delta	2	Tempest Peak	1	Kragg	Clairen
-12/4/2024		990	Fleet	L	XOX	978	Clairen	983	Julesvale	-1	Godai Delta	1	Aetherean Forest	-1		
-12/4/2024		978	Fleet	W	XOO	989	Wrastor	959	Aetherean Forest	-1	Hodojo	1	Fire Capital	2		
-12/4/2024		989	Fleet	W	OXO	999	Wrastor	944	Godai Delta	1	Rock Wall	-1	Aetherean Forest	1		
-12/4/2024		999	Fleet	L	OXX	987	Zetterburn	1002	Julesvale	1	Hyperborean Harbor	-1	Godai Delta	-2		
-12/4/2024		987	Fleet	W	OO-	997	Loxodont	935	Julesvale	1	Tempest Peak	2				
-12/4/2024		997	Fleet	L	XOX	988	Clairen	1066	Aetherean Forest	-1	Julesvale	2	Rock Wall	-2		
-12/4/2024		988	Fleet	L	XX-	982	Ranno	1176	Godai Delta	-1	Julesvale	-3				
-12/4/2024		982	Fleet	L	XX-	969	Maypul	966	Godai Delta	-2	Godai Delta	-2				
-12/4/2024		969	Fleet	W	OO-	977	Orcane	858	Godai Delta	2	Godai Delta	1				
-12/4/2024		977	Fleet	L	XX-	966	Fleet	998	Godai Delta	-1	Julesvale	-1				
-12/4/2024		966	Fleet	W	XOO	979	Loxodont	991	Aetherean Forest	-1	Godai Delta	1	Hodojo	1		
-12/4/2024		979	Fleet	W	OO-	993	Forsburn	1041	Julesvale	2	Fire Capital	3				
-12/4/2024		993	Fleet	L	XX-	980	Zetterburn	938	Godai Delta	-2	Julesvale	-1				
-12/4/2024		980	Fleet	L	XX-	969	Maypul	995	Godai Delta	-2	Godai Delta	-2				
-12/4/2024		969	Fleet	L	XX-	958	Loxodont	1001	Godai Delta	-1	Julesvale	-1				
-12/4/2024		958	Fleet	L	XX-	945	Forsburn	926	Godai Delta	-1	Aetherean Forest	-1				
-12/4/2024		945	Fleet	L	OXX	934	Fleet	974	Godai Delta	1	Julesvale	-1	Aetherean Forest	-1	Maypul	Maypul
-12/4/2024		934	Fleet	W	OO-	944	Zetterburn	889	Godai Delta	1	Godai Delta	1				
-12/4/2024		944	Fleet	W	OXO	956	Clairen	950	Aetherean Forest	1	Godai Delta	-1	Julesvale	1		
-12/4/2024		956	Fleet	L	XX-	943	Ranno	908	Julesvale	-1	Godai Delta	-1				
-12/4/2024		943	Fleet	L	XX-	932	Clairen	963	Godai Delta	-1	Godai Delta	-1				
-12/4/2024		932	Fleet	W	OXO	944	Clairen	943	Julesvale	1	Hodojo	-1	Godai Delta	1		
-12/4/2024		944	Fleet	L	XX-	933	Kragg	966	Godai Delta	-2	Julesvale	-2				
-12/7/2024	0:15	933	Fleet	W	XOO	944	Loxodont	915	Godai Delta	-2	Aetherean Forest	1	Aetherean Forest	1		
-12/7/2024	1:43	944	Fleet	L	OXX	932	Ranno	920	Aetherean Forest	1	Aetherean Forest	-1	Godai Delta	-2		
-12/7/2024	1:56	932	Fleet	L	XX-	921	Maypul	962	Godai Delta	-1	Aetherean Forest	-1				
-12/7/2024	2:06	921	Fleet	W	XOO	933	Forsburn	937	Godai Delta	-2	Aetherean Forest	2	Fire Capital	2		
-12/7/2024	21:32	933				920										
-12/7/2024	21:34	920	Fleet	W	OO-	932	Fleet	932	Aetherean Forest	1	Aetherean Forest	1				
-12/7/2024	22:12	932	Fleet	W	OO-	946	Loxodont	990	Aetherean Forest	2	Tempest Peak	1				
-12/7/2024	10:24:52 PM	946	Fleet	L	OXX	935	Kragg	980	Julesvale	1	Merchant Port	-1	Hodojo	-2		
-12/7/2024	10:39:34 PM	935	Fleet	L	OXX	927	Clairen	1036	Godai Delta	1	Tempest Peak	-1	Aetherean Forest	-1		
-12/8/2024	12:07:43 AM	927	Fleet	W	XOO	937	Kragg	886	Aetherean Forest	-1	Julesvale	2	Hyperborean Harbor	1		
-12/8/2024	10:44:26 PM	937	Fleet	L	XOX	927	Zetterburn	985	Godai Delta	-2	Aetherean Forest	1	Merchant Port	-1		
-12/8/2024	11:05:01 PM	927	Fleet	L	XX-	916	Clairen	955	Aetherean Forest	-2	Julesvale	-2				
-12/8/2024	11:12:28 PM	916	Fleet	W	XOO	928	Forsburn	915	Julesvale	-1	Julesvale	1	Rock Wall	1		
-12/8/2024	11:29:15 PM	928	Fleet	L	XOX	918	Maypul	972	Godai Delta	1	Julesvale	1	Aetherean Forest	-1		
-12/8/2024	11:44:10 PM	918	Fleet	W	OXO	932	Zetterburn	980	Godai Delta	1	Tempest Peak	-1	Julesvale	1		
-12/9/2024	2:00:42 PM	932	Fleet	L	XX-	920	Loxodont	906	Julesvale	-1	Aetherean Forest	-1				
-12/9/2024	2:11:14 PM	920	Fleet	W	OO-	932	Loxodont	919	Julesvale	1	Tempest Peak	1			Zetterburn	
-12/9/2024	2:22:24 PM	932	Fleet	L	OO-	920	Clairen	913	Godai Delta	-2	Julesvale	-1				
-12/9/2024	2:33:05 PM	920	Fleet	W	XOO	929	Loxodont	845	Julesvale	-2	Julesvale	2	Godai Delta	1		
-12/9/2024	4:24:39 PM	929	Fleet	W	XOO	942	Forsburn	975	Julesvale	-2	Julesvale	1	Fire Capital	1		
-12/9/2024	4:38:19 PM	942	Fleet	L	XX-	932	Loxodont	997	Godai Delta	-2	Julesvale	-1				
-12/9/2024	4:46:51 PM	932	Fleet	L	XOX	920	Loxodont	929	Julesvale	-2	Godai Delta	-3	Aetherean Forest	-2		
-12/9/2024	4:57:55 PM	920	Fleet	L	XX-	910	Kragg	956	Godai Delta	-1	Godai Delta	-1				
-12/9/2024	5:04:51 PM	910	Fleet	W	OO-	921	Ranno	889	Godai Delta	1	Godai Delta	1				
-12/9/2024	5:15:46 PM	921	Fleet	L	OXX	909	Orcane	900	Godai Delta	1	Rock Wall	-1	Julesvale	-1		
-12/9/2024	5:28:33 PM	909	Fleet	W	OO-	923	Clairen	969	Julesvale	2	Godai Delta	2				
-12/9/2024	5:52:04 PM	923	Fleet	W	OO-	935	Loxodont	927	Julesvale	1	Fire Capital	1				
-12/9/2024	6:01:50 PM	935	Fleet	L	XX-	925	Forsburn	988	Godai Delta	-1	Julesvale	-1				
-12/9/2024	6:20:52 PM	925	Fleet	L	XX-	912	Loxodont	901	Godai Delta	-1	Julesvale	-1				
-12/9/2024	6:28:59 PM	912	Fleet	W	XOO	923	Clairen	887	Godai Delta	-1	Julesvale	1	Hodojo	2		
-12/9/2024	7:34:37 PM	923	Fleet	W	OXO	935	Kragg	934	Godai Delta	2	Merchant Port	-1	Aetherean Forest	1		
-12/9/2024	7:46:38 PM	935	Fleet	L	XOO	921	Clairen	885	Julesvale	1	Aetherean Forest	-2	Godai Delta	-1		
-12/9/2024	8:05:53 PM	921	Fleet	W	XOO	930	Orcane	845	Aetherean Forest	-1	Godai Delta	1	Julesvale	2		
-12/10/2024	10:17:54 PM	930	Fleet	L	XX-	917	Forsburn	888	Julesvale	-1	Air Armada	-1				
-12/10/2024	10:33:43 PM	917	Fleet	W	OXO	928	Orcane	900	Julesvale	1	Aetherean Forest	-1	Godai Delta	1		
-12/10/2024	10:51:16 PM	928	Fleet	L	XX-	917	Kragg	957	Merchant Port	-2	Julesvale	-1				
-12/10/2024	11:00:46 PM	917	Fleet	W	OXO	933	Clairen	1051	Hodojo	1	Hodojo	-1	Julesvale	1	Maypul	Maypul
-12/11/2024	18:45:17	933	Fleet	L	XOX	921	Wrastor	932	Julesvale	-2	Julesvale	1	Hyperborean Harbor	-1		
-12/11/2024	10:34:09 PM	921	Fleet	L	OXX	909	Clairen	924	Godai Delta	2	Julesvale	-1	Julesvale	-2		
-12/11/2024	10:50:35 PM	909		W		921										
-12/11/2024	10:52:03 PM	921	Fleet	W	OO-	934	Zetterburn	943	Julesvale	2	Hodojo	1				
-12/11/2024	11:01:13 PM	934	Fleet	W	XOO	947	Ranno	957	Merchant Port	-1	Godai Delta	2	Hyperborean Harbor	1		
-12/12/2024	10:29:28 PM	947	Fleet	L	XX-	934	Clairen	927	Julesvale	-1	Hodojo	-2				
-12/12/2024	10:38:48 PM	934	Fleet	L	XOX	922	Kragg	922	Aetherean Forest	-2	Air Armada	1	Fire Capital	-1		
-12/12/2024	10:51:55 PM	922	Fleet	L	XX-	909	Clairen	900	Godai Delta	-1	Julesvale					
-12/12/2024	11:03:30 PM	909	Fleet	L	XX-	902	Kragg	1057	Julesvale	-2	Julesvale	-1				
-12/12/2024	11:10:27 PM	902	Fleet	L	OXX	890	Orcane	899	Julesvale	1	Julesvale	-1	Godai Delta	-1		
-12/12/2024	11:33:46 PM	890	Fleet	W	OXO	902	Forsburn	881	Godai Delta	1	Fire Capital	-1	Julesvale	2		
-12/13/2024	12:29:01 PM	902	Fleet	L	XX-	892	Zetterburn	957	Julesvale	-1	Tempest Peak	-2				
-12/13/2024	12:38:28 PM	892	Fleet	W	OO-	903	Clairen	858	Julesvale	2	Fire Capital	3				
-12/13/2024	12:44:37 PM	903	Fleet	W	OO-	915	Loxodont	911	Aetherean Forest	1	Fire Capital	1				
-12/13/2024	12:53:51 PM	915	Fleet	W	OO-	929	Maypul	976	Julesvale	2	Hodojo	1				
-12/13/2024	1:00:37 PM	929	Fleet	W	OO-	942	Ranno	966	Godai Delta	2	Hyperborean Harbor	1				
-12/13/2024	1:55:12 PM	942	Fleet	L	OXX	930	Clairen	937	Julesvale	1	Godai Delta	-2	Hodojo	-2		
-12/13/2024	2:10:55 PM	930	Fleet	W	XOO	940	Loxodont	889	Aetherean Forest	-1	Julesvale	2	Fire Capital	2		
-12/13/2024	3:57:40 PM	940	Fleet	L	XX-	926	Zetterburn	878	Aetherean Forest	-1	Julesvale	-1				
-12/13/2024	4:06:05 PM	926	Fleet	W	OXO	939	Maypul	960	Julesvale	1	Julesvale	-2	Hyperborean Harbor	1		
-12/13/2024	4:34:32 PM	939	Fleet	W	OO-	951	Clairen	936	Godai Delta	2	Fire Capital	1			Loxodont	
-12/13/2024	11:56:35 PM	951	Fleet	L	XX-	936	Wrastor	850	Godai Delta	-2	Julesvale	-1				
-12/14/2024	12:06:46 AM	936	Fleet	W	XOO	948	Ranno	949	Aetherean Forest	-2	Hodojo	1	Tempest Peak	2		
-12/14/2024	12:22:00 AM	948	Fleet	W	OXO	958	Kragg	903	Hodojo	2	Hyperborean Harbor	-1	Julesvale	3		
-12/14/2024	3:57:31 PM	958	Fleet	W	OO-	970	Orcane	980	Julesvale	1	Hyperborean Harbor	2				
-12/14/2024	6:12:10 PM	970	Fleet	L	XOX	957	Clairen	932	Julesvale	-1	Julesvale	1	Aetherean Forest	-2		
-12/14/2024	6:28:49 PM	957	Fleet	W	OO-	968	Orcane	943	Julesvale	1	Tempest Peak	1				
-12/14/2024	7:06:39 PM	968	Fleet	L	XOO	955	Zetterburn	932	Julesvale	1	Tempest Peak	-2	Aetherean Forest	-2		
-12/14/2024	7:19:39 PM	955	Fleet	L	OO-	942	Fleet	937	Godai Delta	-1	Julesvale	-2				
-12/14/2024	7:29:58 PM	942	Fleet	W	OXO	955	Ranno	958	Julesvale	1	Julesvale	-2	Hyperborean Harbor	1		
-12/14/2024	9:59:19 PM	955	Fleet	W	OO-	967	Kragg	953	Aetherean Forest	1	Fire Capital	2				
-12/14/2024	11:57:38 PM	967	Fleet	L	XX-	957	Maypul	1022	Julesvale	-1	Tempest Peak	-2				
-12/15/2024	12:06:48 AM	957	Fleet	L	XX-	945	Ranno	958	Godai Delta	-1	Aetherean Forest	-2				
-12/15/2024	12:15:07 AM	945	Fleet	W	XOO	955	Ranno	912	Godai Delta	-1	Hyperborean Harbor	1	Hyperborean Harbor	1		
-12/15/2024	12:29:30 AM	955	Fleet	L	XX-	944	Maypul	976	Julesvale	-1	Hyperborean Harbor	-1				
-12/15/2024	12:38:55 AM	944	Fleet	W	OO-	953	Ranno	974	Hodojo	2	Rock Wall	1				
-12/15/2024	2:37:55 PM	953	Fleet	L	XX-	943	Loxodont	1002	Merchant Port	-2	Fire Capital	-1				
-12/15/2024	2:48:57 PM	943	Fleet	L	XOX	932	Ranno	972	Hodojo	-2	Hyperborean Harbor	2	Tempest Peak	-2		
-12/15/2024	3:03:13 PM	932	Fleet	L	XOX	919	Maypul	893	Julesvale	-2	Hyperborean Harbor	3	Hodojo	-2		
-12/15/2024	3:13:20 PM	919	Fleet	W	OXO	933	Maypul	988	Julesvale	1	Godai Delta	-1	Hyperborean Harbor	1		
-12/15/2024	4:48:03 PM	933	Fleet	L	XOX	920	Loxodont	914	Hodojo	-1	Tempest Peak	1	Godai Delta	-1		
-12/15/2024	5:00:19 PM	920	Fleet	W	OXO	932	Forsburn	921	Julesvale	2	Aetherean Forest	-1	Fire Capital	1		
-12/15/2024	5:20:36 PM	932	Fleet	L	XX-	921	Wrastor	939	Hodojo	-2	Aetherean Forest	-2				
-12/15/2024	5:29:02 PM	921	Fleet	W	OO-	934	Fleet	946	Hodojo	2	Aetherean Forest	1				
-12/15/2024	7:55:55 PM	934	Fleet	L	XX-	924	Maypul	1001	Julesvale	-1	Rock Wall	-2				
-12/15/2024	10:11:33 PM	924	Fleet	L	XX-	915	Forsburn	1003	Aetherean Forest	-1	Merchant Port	-1				
-12/15/2024	10:22:10 PM	915	Fleet	W	OO-	927	Orcane	926	Julesvale	1	Aetherean Forest	1				
-12/15/2024	10:32:51 PM	927	Fleet	W	OO-	938	Zetterburn	918	Julesvale	1	Air Armada	2				
-12/15/2024	10:40:10 PM	938	Fleet	W	OO-	948	Maypul	887	Julesvale	2	Julesvale	1				
-12/15/2024	10:49:13 PM	948	Fleet	W	OO-	959	Clairen	928	Julesvale	1	Hodojo	2				
-12/15/2024	10:59:39 PM	959	Fleet	L	XX-	952	Clairen	1098	Julesvale	-1	Tempest Peak	-1				
-12/15/2024	11:11:01 PM	952	Fleet	W	XOO	969	Zetterburn	1108	Julesvale	-1	Merchant Port	1	Godai Delta	2		
-12/16/2024	10:21:41 PM	969	Fleet	W	XOO	982	Kragg	1011	Aetherean Forest	-1	Aetherean Forest	2	Rock Wall	3		
-12/16/2024	10:31:15 PM	982	Fleet	W	OXO	994	Loxodont	1000	Aetherean Forest	1	Rock Wall	-2	Julesvale	1		
-12/17/2024	11:09:05 PM	994	Fleet	W	OO-	1007	Loxodont	1016	Aetherean Forest	2	Julesvale	1				
-12/18/2024	6:01:30 PM	1007	Fleet	W	XOO	1016	Orcane	907	Merchant Port	-1	Julesvale	1	Godai Delta	1		
-12/19/2024	6:51:49 PM	1016	Fleet	L	OXX	1001	Ranno	939	Hodojo	1	Merchant Port	-2	Hyperborean Harbor	-1		
-12/19/2024	7:20:20 PM	1001	Fleet	W	OXO	1010	Clairen	921	Hodojo	2	Tempest Peak	-2	Julesvale	2		
-12/19/2024	8:23:08 PM	1010	Fleet	L	XX-	999	Kragg	1014	Aetherean Forest	-1	Julesvale	-2				
-12/19/2024	8:29:50 PM	999	Fleet	W	OO-	1010	Forsburn	968	Aetherean Forest	-2	Julesvale	2	Merchant Port	2		
-12/19/2024	8:41:27 PM	1010	Fleet	L	XOX	997	Loxodont	975	Aetherean Forest	-1	Julesvale	1	Hodojo	-1		
-12/19/2024	8:55:05 PM	997	Fleet	L	XX-	986	Zetterburn	1039	Julesvale	-2	Julesvale	-2				
-12/19/2024	9:01:41 PM	986	Fleet	W	OO-	999	Ranno	1021	Julesvale	2	Hodojo	1				
-12/19/2024	9:09:18 PM	999	Fleet	L	XOX	988	Clairen	1007	Julesvale	-1	Julesvale	2	Rock Wall	-1		
-12/19/2024	9:26:59 PM	988	Fleet	W	OXO	998	Loxodont	918	Julesvale	1	Aetherean Forest	-1	Hyperborean Harbor	1		
-12/19/2024	9:42:52 PM	998	Fleet	W	OXO	1010	Fleet	1023	Aetherean Forest	1	Rock Wall	-2	Julesvale	2	Clairen	Clairen
-12/19/2024	9:54:47 PM	1010	Fleet	W	OXO	1020	Kragg	958	Godai Delta	2	Aetherean Forest	-1	Julesvale	2	Fleet	Fleet
-12/19/2024	10:12:09 PM	1020	Fleet	L	XOX	1008	Ranno	1015	Julesvale	-2	Hodojo	-3	Hyperborean Harbor	-2	Wrastor	Zetterburn
-12/19/2024	10:29:22 PM	1008	Fleet	W	XOO	1021	Forsburn		Aetherean Forest	-1	Julesvale	-1	Fire Capital	-1	Loxodont	
-12/20/2024	12:02:43 AM	1021	Fleet	W	OO-	1030	Ranno	946	Julesvale	1	Hodojo	1				
-12/20/2024	11:01:15 PM	1030	Fleet	L	XX-	1018	Zetterburn	1027	Julesvale	-2	Aetherean Forest	-1				
-12/20/2024	11:10:28 PM	1018	Fleet	W	XOO	1033	Kragg	1093	Julesvale	-1	Julesvale	1	Air Armada	2		
-12/20/2024	11:42:50 PM	1033	Fleet	W	OXO	1044	Clairen	1010	Aetherean Forest	1	Aetherean Forest	-2	Julesvale	1		
-12/21/2024	12:45:39 AM	1044	Fleet	W	XOO	1056	Loxodont	1057	Aetherean Forest	-1	Julesvale	2	Rock Wall	2		
-12/21/2024	10:59:57 PM	1056	Fleet	L	OXX	1040	Loxodont	926	Julesvale	1	Julesvale	-2	Hodojo	-1		
-12/21/2024	11:11:21 PM	1040	Fleet	W	XOO	1050	Wrastor	986	Julesvale	-1	Aetherean Forest	1	Air Armada	2		
-12/21/2024	11:26:19 PM	1050	Fleet	L	XX-	1038	Fleet	1043	Julesvale	-1	Aetherean Forest	-2				
-12/21/2024	11:36:40 PM	1038	Fleet	L	XX-	1024	Clairen	988	Julesvale	-1	Julesvale	-2				
-12/21/2024	11:46:04 PM	1024	Fleet	L	XX-	1012	Forsburn	1017	Godai Delta	-2	Julesvale	-1				
-12/22/2024	12:03:49 AM	1012	Fleet	W	OO-	1024	Orcane	1012	Aetherean Forest	1	Merchant Port	1				
-12/22/2024	11:43:13 PM	1024	Fleet	L	XX-	1012	Kragg	1010	Aetherean Forest	-1	Julesvale	-1				
-12/22/2024	11:53:49 PM	1012	Fleet	W	OO-	1024	Zetterburn	1021	Aetherean Forest	1	Aetherean Forest	1				
-12/23/2024	12:04:22 AM	1024	Fleet	W	OXO	1037	Loxodont	1054	Godai Delta	1	Godai Delta	-1	Aetherean Forest	1		
-12/23/2024	12:17:07 AM	1037	Fleet	W	OO-	1049	Maypul	1044	Julesvale	2	Merchant Port	2				
-12/23/2024	12:37:09 AM	1049	Fleet	W	OO-	1057	Maypul	936	Julesvale	1	Hodojo	2				
-12/23/2024	10:10:37 AM	1057	Fleet	L	XX-	1053	Wrastor	1347	Aetherean Forest	-1	Hodojo	-2				
-12/23/2024	10:19:30 AM	1053	Fleet	L	XX-	1044	Zetterburn	1119	Godai Delta	-1	Julesvale	-1				
-12/23/2024	10:27:42 AM	1044	Fleet	L	XOX	1034	Ranno	1109	Julesvale	-1	Julesvale	1	Hodojo	-1		
-12/23/2024	10:43:50 AM	1034	Fleet	L	XX-	1026	Ranno	1168	Aetherean Forest	-2	Julesvale	-1				
-12/23/2024	11:33:41 AM	1026	Fleet	W	OXO	1035	Zetterburn	947	Aetherean Forest	2	Tempest Peak	-1	Julesvale	2		Fleet
-12/23/2024	1:25:31 PM	1035	Fleet	L	XX-	1022	Loxodont	1003	Godai Delta	-2	Julesvale	-2				
-12/23/2024	1:33:16 PM	1022	Fleet	W	XOO	1036	Orcane	1070	Godai Delta	-2	Tempest Peak	1	Julesvale	1		
-12/23/2024	1:49:58 PM	1036	Fleet	L	XX-	1028	Forsburn	1145	Julesvale	-2	Aetherean Forest	-2				
-12/23/2024	1:56:20 PM	1028	Fleet	L	XX-	1014	Ranno	964	Aetherean Forest	-2	Julesvale	-2				
-12/23/2024	2:04:35 PM	1014	Fleet	L	OXX	1003	Forsburn	1035	Julesvale	1	Aetherean Forest	-3	Fire Capital	-1		
-12/23/2024	2:18:57 PM	1003		L		996										
-12/23/2024	2:21:40 PM	996	Fleet	L	OXX	982	Clairen	940	Julesvale	2	Julesvale	-1	Aetherean Forest	-1		
-12/23/2024	2:35:11 PM	982	Fleet	L	OXO	993	Forsburn	954	Godai Delta	1	Tempest Peak	-1	Julesvale	1		
-12/23/2024	2:48:30 PM	993	Fleet	W	OO-	1008	Kragg	1088	Aetherean Forest	1	Tempest Peak	1				
-12/23/2024	3:06:17 PM	1008	Fleet	W	OO-	1018	Zetterburn	943	Godai Delta	1	Merchant Port	2				
-12/23/2024	11:07:36 PM	1018	Fleet	L	XX-	1007	Maypul	1061	Julesvale	-2	Aetherean Forest	-2				
-12/23/2024	11:17:01 PM	1007	Fleet	L	OXX	996	Forsburn	1032	Julesvale	1	Hyperborean Harbor	-1	Godai Delta	-2		
-12/23/2024	11:31:15 PM	996	Fleet	W	OO-	1006	Loxodont	937	Godai Delta	1	Hodojo	2			Zetterburn	
-12/23/2024	11:40:39 PM	1006	Fleet	L	XX-	993	Ranno	949	Godai Delta	-1	Aetherean Forest	-1				
-12/23/2024	11:51:32 PM	993	Fleet	W	OXO	1004	Clairen	951	Aetherean Forest	1	Aetherean Forest	-1	Julesvale	2		
-12/24/2024	12:06:36 AM	1004	Fleet	W	OXO	1014	Clairen	943	Godai Delta	1	Hodojo	-1	Merchant Port	1		
-12/24/2024	12:27:31 AM	1014	Fleet	W	XOO	1028	Ranno	1075	Godai Delta	-1	Julesvale	1	Tempest Peak	1		
-12/24/2024	12:40:31 AM	1028	Fleet	W	OO-	1036	Ranno	920	Hodojo	1	Tempest Peak	3				
-12/27/2024	12:02:20 AM	1036	Fleet	W	OO-	1044	Loxodont	939	Julesvale	1	Julesvale	2				
-12/27/2024	12:12:37 AM	1044	Fleet	L	XX-	1035	Wrastor	1133	Godai Delta	-1	Julesvale	-1				
-12/27/2024	12:23:56 AM	1035	Fleet	L	XOX	1022	Orcane	1000	Aetherean Forest	-1	Julesvale	1	Hodojo	-1		
-12/27/2024	12:39:59 AM	1022	Fleet	L	XX-	1008	Zetterburn	949	Merchant Port	-2	Rock Wall	-1				
-12/27/2024	12:47:57 AM	1008	Fleet	W	XOO	1015	Loxodont	870	Julesvale	-1	Julesvale	1	Fire Capital	1		
-12/27/2024	1:02:59 AM	1015	Fleet	L	XX-	1004	Zetterburn	1025	Julesvale	-2	Aetherean Forest	-2				
-12/27/2024	1:11:36 AM	1004	Fleet	W	OO-	1013	Maypul	934	Julesvale	1	Julesvale	1				
-12/27/2024	4:16:51 PM	1013	Fleet	W	XOO	1024	Zetterburn	977	Julesvale	-1	Aetherean Forest	1	Tempest Peak	1		
-12/27/2024	4:32:28 PM	1024	Fleet	L	XX-	1013	Kragg	1037	Julesvale	-1	Aetherean Forest	-1				
-12/27/2024	4:40:46 PM	1013	Fleet	W	OO-	1022	Kragg	936	Julesvale	2	Air Armada	1			Orcane	
-12/27/2024	4:49:16 PM	1022	Fleet	W	OXO	1031	Zetterburn	935	Julesvale	1	Hodojo	-1	Aetherean Forest	1		
-12/29/2024	12:15:43 AM	1031	Fleet	L	XX-	1021	Zetterburn	1091	Julesvale	-2	Julesvale	-1				
-12/29/2024	12:32:36 AM	1021	Fleet	L	XX-	1010	Loxodont	1042	Aetherean Forest	-1	Julesvale	-1				
-12/29/2024	12:50:17 AM	1010	Fleet	L	XX-	998	Fleet	1004	Julesvale	-2	Julesvale	-1				
-12/29/2024	12:58:01 AM	998	Fleet	L	XX-	987	Zetterburn	1013	Aetherean Forest	-3	Julesvale	-1				
-12/29/2024	12:59:01 AM	987	Fleet	L	XX-	976	Zetterburn	1011	Julesvale	-1	Julesvale	-1				
-12/29/2024	1:10:06 AM	976	Fleet	L	OXX	964	Clairen		Julesvale	1	Godai Delta	-1	Aetherean Forest	-2		
-12/29/2024	1:23:17 AM	964	Fleet	L	XX-	952	Fleet	955	Godai Delta	-1	Julesvale	-1			Loxodont	
-12/29/2024	1:34:32 AM	952	Fleet	L	XOX	943	Ranno	1047	Aetherean Forest	-1	Julesvale	2	Tempest Peak	-1		
-12/29/2024	1:47:19 AM	943	Fleet	L	XX-	931	Kragg	950	Aetherean Forest	-2	Julesvale	-1				
-12/29/2024	1:55:12 AM	931	Fleet	W	XOO	940	Ranno	835	Julesvale	-1	Julesvale	1	Hodojo	1		
-1/1/2025	10:20:40 PM	940	Fleet	L	XOX	928	Kragg	931	Julesvale	-2	Julesvale	1	Hyperborean Harbor	-1		
-1/1/2025	10:34:12 PM	928	Fleet	L	XOX	915	Loxodont	895	Julesvale	-1	Julesvale	1	Hodojo	-1		
-1/1/2025	10:46:25 PM	915	Fleet	W	OO-	929	Kragg	966	Julesvale	1	Julesvale	1				
-1/1/2025	10:55:31 PM	929	Fleet	L	OXX	916	Ranno	885	Julesvale	2	Hodojo	-1	Aetherean Forest	-3		
-1/1/2025	11:09:16 PM	916	Fleet	L	OXX	905	Wrastor	953	Aetherean Forest	-1	Hodojo	-1	Julesvale	-1		
-1/1/2025	11:25:39 PM	905	Fleet	W	OO-	918	Fleet	933	Aetherean Forest	2	Hodojo	1				
-1/1/2025	11:36:15 PM	918	Fleet	L	OXX	909	Maypul	993	Aetherean Forest	1	Aetherean Forest	-1	Julesvale	-1		
-1/1/2025	11:48:20 PM	909	Fleet	L	OXX	899	Wrastor	961	Julesvale	2	Aetherean Forest	-1				
-1/6/2025	11:34:12 AM	899	Fleet	W	OO-	912	Kragg	935	Aetherean Forest	1	Aetherean Forest	1				
-1/6/2025	2:50:36 PM	912	Fleet	W	OXO	942	Ranno	924	Julesvale	2	Aetherean Forest	-1	Aetherean Forest	1		
-1/6/2025	3:06:13 PM	942	Fleet	W	OXO	931	Zetterburn	780	Julesvale	2	Julesvale	-1	Aetherean Forest	3		
-1/6/2025	10:32:42 PM	931	Fleet	W	OO-	943	Maypul	936	Julesvale	1	Hyperborean Harbor	2				
-1/6/2025	10:42:37 PM	943	Fleet	W	OXO	955	Maypul	949	Julesvale	1	Godai Delta	-1	Aetherean Forest	1		Clairen
-1/6/2025	10:56:13 PM	955	Fleet	L	XX-	949	Clairen	1046	Aetherean Forest	-2	Julesvale	-1				
-1/6/2025	11:03:16 PM	949	Fleet	L	XOX		Clairen	1006	Aetherean Forest	-1	Julesvale	1	Hodojo	-1		
-1/6/2025	11:20:42 PM		Fleet	L	OXX	923	Ranno	896	Godai Delta	1	Fire Capital	-1	Hodojo	-2		
-1/6/2025	11:33:51 PM	923	Fleet	W	XOO	932	Ranno	836	Godai Delta	-2	Julesvale	1	Aetherean Forest	1		
-1/7/2025	6:15:45 PM	932	Fleet	L	XOX	921	Zetterburn	955	Aetherean Forest	-2	Aetherean Forest	1	Godai Delta	-2		
-1/7/2025	6:37:23 PM	921	Fleet	W	OO-	930	Kragg	855	Julesvale	2	Tempest Peak	2				
-1/7/2025	6:46:16 PM	930	Fleet	W	XOO	944	Zetterburn	975	Julesvale	-2	Aetherean Forest	1	Aetherean Forest	1		
-1/7/2025	7:34:03 PM	944	Fleet	L	OXX	932	Clairen	955	Aetherean Forest	1	Air Armada	-1	Julesvale	-2		
-1/7/2025	7:45:24 PM	932	Fleet	L	OXX	919	Clairen	897	Julesvale	1	Tempest Peak	-1	Aetherean Forest	-1		
-1/7/2025	8:07:00 PM	919	Fleet	L	OXX	908	Ranno	945	Aetherean Forest	2	Rock Wall	-1	Hyperborean Harbor	-1		
-1/7/2025	8:23:24 PM	908	Fleet	L	OXX	897	Kragg	947	Aetherean Forest	1	Aetherean Forest	-1	Julesvale	-1		
-1/7/2025	8:37:21 PM	897	Fleet	W	OO-	904	Ranno	757	Aetherean Forest	2	Merchant Port	1				
-1/7/2025	8:45:44 PM	904	Zetterburn	W	OO-	917	Zetterburn	940	Julesvale	1	Air Armada	1				
-1/7/2025	8:55:51 PM	917	Zetterburn	W	OO-	929	Loxodont	933	Julesvale	1	Tempest Peak	1				
-1/7/2025	9:06:35 PM	929	Zetterburn	L	XX-	917	Wrastor	941	Aetherean Forest	-1	Julesvale	-1				
-1/7/2025	9:14:54 PM	917	Zetterburn	L	OO-	907	Loxodont	971	Aetherean Forest	-1	Julesvale	-2				
-1/7/2025	9:23:04 PM	907	Zetterburn	L	XX-	898	Loxodont	998	Julesvale	-1	Julesvale	-2				
-1/7/2025	9:31:42 PM	898	Zetterburn	L	XOX	884	Orcane	852	Julesvale	-1	Godai Delta	2	Merchant Port	-2		
-1/7/2025	11:03:57 PM	884	Fleet	W	OO-	893	Fleet	815	Julesvale	1	Aetherean Forest	1				
-1/7/2025	11:11:37 PM	893	Zetterburn	W	OXO	904	Clairen	862	Aetherean Forest	1	Aetherean Forest	-1	Julesvale	1	Zetterburn	Zetterburn
-1/7/2025	11:26:17 PM	904	Zetterburn	L	XX-	894	Ranno	941	Godai Delta	-1	Godai Delta	-1				
-1/7/2025	11:36:51 PM	894	Zetterburn	W	OXO	908	Zetterburn	981	Godai Delta	2	Godai Delta	-2	Aetherean Forest	1		
-1/7/2025	11:52:21 PM	908	Zetterburn	L	XX-	901	Wrastor	1048	Julesvale	-2	Aetherean Forest	-2				
-1/7/2025	11:59:24 PM	901	Zetterburn	W	OXO	913	Ranno	900	Godai Delta	2	Tempest Peak	-1	Julesvale	1		
-1/8/2025	6:42:47 PM	913	Zetterburn	W	OO-	925	Forsburn	916	Julesvale	1	Fire Capital	1				
-1/8/2025	6:51:06 PM	925	Zetterburn	W	OO-	938	Zetterburn	941	Julesvale	1	Aetherean Forest	2				
-1/8/2025	11:04:20 PM	938	Zetterburn	L	XOX	927	Zetterburn	957	Godai Delta	-1	Julesvale	1	Hodojo	-1		
-1/8/2025	11:17:13 PM	927	Zetterburn	L	XX-	917	Orcane	985	Godai Delta	-1	Aetherean Forest	-2				
-1/8/2025	11:29:32 PM	917	Zetterburn	L	XX-	904	Zetterburn	886	Hodojo	-2	Godai Delta	-3				
-1/8/2025	11:36:56 PM	904	Zetterburn	W	OO-	916	Fleet	909	Aetherean Forest	1	Hyperborean Harbor	1				
-1/8/2025	11:49:17 PM	916	Zetterburn	L	XOX	904	Forsburn	916	Godai Delta	-2	Julesvale	1	Julesvale	-1		
-1/9/2025	12:01:57 AM	904	Zetterburn	W	XOO	915	Orcane	878	Julesvale	-1	Julesvale	1	Aetherean Forest	1		
-1/9/2025	1:42:02 PM	915	Zetterburn	L	XX-	904	Forsburn	945	Godai Delta	-2	Julesvale	-2				
-1/9/2025	1:52:49 PM	904	Zetterburn	L	XX-	893	Maypul	919	Julesvale	-2	Hodojo	-2				
-1/9/2025	1:58:16 PM	893	Zetterburn	L	XX-	881	Zetterburn	876	Aetherean Forest	-1	Julesvale	-2				
-1/9/2025	2:05:42 PM	881	Fleet	L	XOX	870	Zetterburn	889	Aetherean Forest	-1	Julesvale	1	Godai Delta	-1		
-1/9/2025	3:15:40 PM	870	Zetterburn	W	OO-	879	Clairen	799	Godai Delta	2	Julesvale	3				
-1/9/2025	3:21:27 PM	879	Zetterburn	L	XX-	872	Clairen	1011	Aetherean Forest	-2	Julesvale	-2				
-1/9/2025	3:29:43 PM	872	Zetterburn	W	XOO	885	Wrastor	890	Aetherean Forest	-1	Godai Delta	1		-3		
-1/9/2025	3:39:58 PM	885	Zetterburn	W	OO-	896	Kragg	856	Aetherean Forest	2	Godai Delta	1			Loxodont	
-1/9/2025	3:47:53 PM	896	Zetterburn	L	XX-	884	Kragg	898	Godai Delta	-1	Aetherean Forest	-1				
-1/9/2025	3:55:39 PM	884	Zetterburn	W	XOO	898	Orcane	932	Julesvale	-1	Godai Delta	2	Air Armada	1		
-1/9/2025	4:58:31 PM	898	Zetterburn	L	XX-	888	Ranno	939	Godai Delta	-2	Aetherean Forest	-2				
-1/9/2025	5:12:51 PM	888	Zetterburn	L	OXX	878	Wrastor	923	Aetherean Forest	2	Air Armada	-2	Godai Delta	-2		
-1/10/2025	10:09:06 AM	878	Zetterburn	W	OO-	888	Ranno	822	Godai Delta	1	Julesvale	2				
-1/10/2025	10:22:14 AM	888	Zetterburn	W	OO-	898	Maypul	831	Julesvale	1	Tempest Peak	-2	Godai Delta	1		
-1/10/2025	12:55:20 PM	898	Zetterburn	L	XX-	886	Ranno	895	Godai Delta	-2	Julesvale	-2				
-1/10/2025	1:01:25 PM	886	Zetterburn	L	XX-	876	Clairen	934	Julesvale	-1	Hyperborean Harbor	-1				
-1/10/2025	2:05:34 PM	876	Zetterburn	L	OXX	866	Kragg	926	Julesvale	2	Tempest Peak	-1	Godai Delta	-1		
-1/10/2025	2:19:03 PM	866	Zetterburn	W	OO-	876	Clairen	825	Aetherean Forest	1	Hyperborean Harbor	2				
-1/10/2025	2:27:13 PM	876	Zetterburn	W	OO-	884	Clairen	762	Hodojo	2	Julesvale	3				
-1/10/2025	2:35:41 PM	884	Zetterburn	W	OO-	893	Maypul	814	Godai Delta	3	Godai Delta	1				
-1/10/2025	2:43:24 PM	893	Zetterburn	W	XOO	903	Forsburn	857	Merchant Port	-1	Hyperborean Harbor	1	Hodojo	1		
-1/10/2025	3:42:56 PM	903	Zetterburn	W	OO-	915	Zetterburn	902	Godai Delta	1	Merchant Port	2				
-1/10/2025	3:51:49 PM	915	Zetterburn	W	OO-	929	Wrastor	981	Aetherean Forest	1	Godai Delta	1				
-		929														
+Date	Time	My ELO	My Char	Win/Loss	Breakdown	Ending ELO	Opponent Name	Opponent ELO	Opponent Char	G1 Stage	G1 Stock Diff	G2 Stage	G2 Stock Diff	G3 Stage	G3 Stock Diff	Notes	G2 char (if different)	G3 char (if different)	My G2 (if different)	My G3 (if different)
+12/3/2024			Fleet	W	OO-	905			Ranno	Julesvale	1	Hyperborean Harbor	2							
+12/3/2024		905	Fleet	W	OO-	914	EggsForYou	838	Clairen	Julesvale	3	Aetherean Forest	3				Kragg			
+12/3/2024		914	Fleet	W	OO-	928	sm4shbruh	971	Clairen	Godai Delta	2	Fire Capital	1			he was really overusing counter and I got a lot of mileage off of grabbing. Also there was this chain grab thing he kept getting at low percents that I couldn't figure out how to escape. I played very reactively, which was helping.				
+12/3/2024		928	Fleet	L	XX-	918	FantasyFuzion	995	Zetterburn	Julesvale	-1	Godai Delta	-1			fsmash makes me sad				
+12/3/2024		918	Fleet	W	OXO	930	Viscacha Enthusiast	924	Kragg	Julesvale	1	Fire Capital	-1	Godai Delta	3	Ate an fsmash and died at 45 percent on 2nd stock game 2, otherwise this probably would've been a win. Got some nice gimps game 3 with the pillar and dair spikes. Strong dair is something I should go for more often. And ISF nair				
+12/3/2024		930	Fleet	W	XOO	942	mayonnaise is an instrument	930	Clairen	Julesvale	-1	Julesvale	2	Hodojo	1	Grabbing is so good				
+12/3/2024		942	Fleet	W	OO-	955	Helium	976	Forsburn	Godai Delta	1	Godai Delta	1			I need to figure out what to do against the side b to the stage. Also do not underestimate Forsburn's ability to get the first hit of up smash on platforms. Shield when you land on platform. The cape is far reaching and will hit you from the edge and combo into the strong hit up smash			More ISF Nair	
+12/3/2024		955	Fleet	L	XOX	942	Gamer	923	Kragg	Julesvale	-2	Godai Delta	1	Merchant Port	-1	Ate an fsmash and died at 50 percent when he was at 130+ on game 3. Probably would've won otherwise Gotta really watch out for stray smash attacks against kragg.			More ISF Nair	
+12/3/2024		942	Fleet	L	XX-	932	CryoBat	977	Ranno	Julesvale	-1	Godai Delta	-1			SD'd at 0 stock 2 on BOTH GAMES. very unfortunate. almost brought both of them back at the end but died to stray f smashes at high percents			More ISF Nair	
+12/3/2024		932	Fleet	W	OO-	943	LombardiTwist	890	Ranno	Godai Delta	2	Hodojo	1						More ISF Nair	
+12/3/2024		943	Fleet	W	OO-	954	Crunk Lord Tiberius	915	Clairen	Julesvale	1	Tempest Peak	1			I can beat charged neutral b during recovery by tournament winner double jump. Try to remember to go low more often to cover side b to wall jump with bair or nair.			More ISF Nair	
+12/3/2024		954	Fleet	W	OO-	964	Atlatl	919	Orcane	Julesvale	1	Rock Wall	1			Almost blew an entire stock lead by looking too aggressively for a final kill. Do not charge fsmash against orcane when he's on the ledge because he can special getup and go right under itg invicibly			More ISF Nair	
+12/3/2024		964	Fleet	W	OXO	977	uleksite	992	Kragg	Julesvale	1	Tempest Peak	-1	Aetherean Forest	3	Turns out Kragg is hella slow so I just need to wait out his abilities and be more patient, then he is just combo food. Going out when he is on the pillar is risky but has paid off so far.			More ISF Nair	
+12/3/2024		977	Fleet	W	XOO	990	FreshWaterFern	1024	Kragg	Julesvale	-1	Godai Delta	2	Tempest Peak	1	This guy was spamming parry like crazy game 1 and I got around it by grabbing more and trying to bait out the parries by mixing up my timings with forward smash. kragg really do get crazy early kills butr I think this is definitely a winning matchup	Kragg	Clairen	More ISF Nair	
+12/4/2024		990	Fleet	L	XOX	978	gatordraq	983	Clairen	Julesvale	-1	Godai Delta	1	Aetherean Forest	-1	Not a good idea to play so late. This guy was very aggressive but so much of it was double jump dair over andd over. I need to be more patient and parry the dair, or shield the dair, then parry the up tilt that comes after it if they cross up with the dair or nair.			More ISF Nair	
+12/4/2024		978	Fleet	W	XOO	989	[MRY] Sk-iLite	959	Wrastor	Aetherean Forest	-1	Hodojo	1	Fire Capital	2	This guy was really cracked. Fighting wrastor feels like fighting zelda. you can't overextend your combos since he is so floaty. His punish potential is insane. Be careful when recovering high (he will do a spinny thing (neutral b?)) or low (he will try to stomp you) but if you can get his jumps out using dair or something else, his up b is not very good.			More ISF Nair	
+12/4/2024		989	Fleet	W	OXO	999	Drift	944	Wrastor	Godai Delta	1	Rock Wall	-1	Aetherean Forest	1	It's time to go to bed			More ISF Nair	
+12/4/2024		999	Fleet	L	OXX	987	Na Wtf	1002	Zetterburn	Julesvale	1	Hyperborean Harbor	-1	Godai Delta	-2	TIL zetter has a di mixup on throw where he gets an up smash if i di in on down throw (if im expecting f throw kill throw). Using nair and bair were really effective for stopping his recovery, maybe I should also try fair since it has a bigger hitbox. Should parry more.			More ISF Nair	
+12/4/2024		987	Fleet	W	OO-	997	Sir Cire	935	Loxodont	Julesvale	1	Tempest Peak	2			Lox is slow, we just gotta play it slow and punish his mistakes. I don't like tempest peak. Slow falling fair to get a grab aftgerwards seems like a good plan			More ISF Nair	
+12/4/2024		997	Fleet	L	XOX	988	Headcoald	1066	Clairen	Aetherean Forest	-1	Julesvale	2	Rock Wall	-2	Two unfortunate SDs game 1. Getting a lot of mileage off of parries. Got camped like crazy on rock wall. I think I need to ban rock wall against clairen. I need to play more patiently when I'm being camped. More parries. The clairens love to do down air on shield			More ISF Nair	
+12/4/2024		988	Fleet	L	XX-	982	Injo	1176	Ranno	Godai Delta	-1	Julesvale	-3			I need to take a break			More ISF Nair	
+12/4/2024		982	Fleet	L	XX-	969	Debis	966	Maypul	Godai Delta	-2	Godai Delta	-2			Maypul is way too fast, I have no idea what I should be doing differently. Perhaps throwing out more inplace fairs.			More ISF Nair	
+12/4/2024		969	Fleet	W	OO-	977	emb1234	858	Orcane	Godai Delta	2	Godai Delta	1			Watch out for stray fsmashes, they stay trying to go for these. Parrying the water will be good. Also I need to try to waveland grab on the platforms more often instead of trying to aerial or up tilt them			More ISF Nair	
+12/4/2024		977	Fleet	L	XX-	966	LawyerDog	998	Fleet	Godai Delta	-1	Julesvale	-1			I got outplayed here. His neutral was better and punish was better. He really destroyed me with the fair nair edgeguard, and I need to practice this			More ISF Nair	
+12/4/2024		966	Fleet	W	XOO	979	Femcel Gooner	991	Loxodont	Aetherean Forest	-1	Godai Delta	1	Hodojo	1	Need to not try to get too much mileage with descending dairs after juggle, since it is easy to counterplay and punish. Gotta respect his punish way more and di out ,  especially at high percent. Use float to pressure platform from the side rather than from beneath, because they can shield drop and punish. This guy was really good about using the platforms to avoid me, I need to become more comfortable on platforms.			More ISF Nair	
+12/4/2024		979	Fleet	W	OO-	993	Mephiles	1041	Forsburn	Julesvale	2	Fire Capital	3			Not sure why this guy SD'd 3 times on purpose game 2. Grabbing ledge seems to be a really good option against forsburn since his recovery is a teleport with some lag afterwards.				
+12/4/2024		993	Fleet	L	XX-	980	Red the Demon Fox	938	Zetterburn	Godai Delta	-2	Julesvale	-1			This guy is super fast and I need to focus on my punishes. He is running in circles around me on the platforms. ISF nair is a good grb follo up. This one played too fast for me, very defensively. I need to slow myself down better instead of running into stupid stuff.				
+12/4/2024		980	Fleet	L	XX-	969	AloneCubone	995	Maypul	Godai Delta	-2	Godai Delta	-2			I can't keep up with maypul. this one was really good at the down air, so I need to be more careful with my recoveries.				
+12/4/2024		969	Fleet	L	XX-	958	rat girl	1001	Loxodont	Godai Delta	-1	Julesvale	-1			I had game 2 in the bag but I got edgehogged at 10% when he was at 100+ on last stock because I went too aggressive offstage. Unfortunate. Game 2 went way better than game 1 with trying to slow down neutral and focus on punish.				
+12/4/2024		958	Fleet	L	XX-	945	Captain Caine	926	Forsburn	Godai Delta	-1	Aetherean Forest	-1			I did not win game 1 because I was focusing on doing more ISF nair, BUT I did a ton of them and it worked really well. Feel good about it. Gotta figure out where to work it in now. Same with game 2.				
+12/4/2024		945	Fleet	L	OXX	934	danielmowi	974	Fleet	Godai Delta	1	Julesvale	-1	Aetherean Forest	-1	Made it to last stock last hit. Maypul is so fast i do not enjoy playing against her. This is not an insightful comment	Maypul	Maypul		
+12/4/2024		934	Fleet	W	OO-	944	V1ctoria Just1ce	889	Zetterburn	Godai Delta	1	Godai Delta	1			Getting a better feel for ISF nair and also when I am really thinking about neutral it works really well				
+12/4/2024		944	Fleet	W	OXO	956	Darwin Watterson	950	Clairen	Aetherean Forest	1	Godai Delta	-1	Julesvale	1	Parrying after an opponent whiffs an attack is good because they will often attack again. Especially clairen after cross up on shield. I got a lot of mileage off of parrying clairens thing. Want to get better at edgeguards.				
+12/4/2024		956	Fleet	L	XX-	943	Richard and Blaziken	908	Ranno	Julesvale	-1	Godai Delta	-1			This guy is using his double jump every single time to come  down on me, I wish I had better anti air options. Next game I will try to dashback and then punish with ISF nair. Campy play really is my bane.				
+12/4/2024		943	Fleet	L	XX-	932	Ender	963	Clairen	Godai Delta	-1	Godai Delta	-1			Getting good mileage off of parries. Need to try to figure out better punishes from them, but that will come in timme.				
+12/4/2024		932	Fleet	W	OXO	944	hex	943	Clairen	Julesvale	1	Hodojo	-1	Godai Delta	1	I got lucky and he essentially SD'd game 1 last stock. He is playing very patiently, but I am doing better with ISF nair punishes. Gotta keep working at those. Game 2 blew a 1 stock lead by playing impatient neutral fishing for the last kill. Need to be patient. Won the last game off of a parry. Nice job Sam.				
+12/4/2024		944	Fleet	L	XX-	933	B 0 A T	966	Kragg	Godai Delta	-2	Julesvale	-2			SD'd last stock. I was not in a good mental space for this.				
+12/7/2024	0:15	933	Fleet	W	XOO	944	Society???	915	Loxodont	Godai Delta	-2	Aetherean Forest	1	Aetherean Forest	1	Just had to play more patiently. Had some good parries in the last game too. 			More parries and ISF nair	
+12/7/2024	1:43	944	Fleet	L	OXX	932	Nandez21	920	Ranno	Aetherean Forest	1	Aetherean Forest	-1	Godai Delta	-2	I blew a huge lead game 2 getting cheesed twice with low percentage double fair spikes, which I need to be more prepared for and DI out on. then got tilted by him taunting and the loss and ran in way too much game 3 and got destroyed. I can;t let the tilt get the better of me				
+12/7/2024	1:56	932	Fleet	L	XX-	921	roobyrebs243	962	Maypul	Godai Delta	-1	Aetherean Forest	-1			Maypul is too fast to try to play aggressively. I need to shield more and try to box out with fairs maybe? Feels a little too fast to get parries. Her smash attacks are huge! wtf				
+12/7/2024	2:06	921	Fleet	W	XOO	933	kihunter	937	Forsburn	Godai Delta	-2	Aetherean Forest	2	Fire Capital	2	He played a really campy games 1 and 2, but I managed to slow myself down, so then when he counterpicked me to Fire Capital I had it in the bag. Really good slowing down of neutral				
+12/7/2024	21:32	933				920										I had to forfeit because my controller was drifting like crazy and unplugging the adapter and controller didn't help anything. needed to restart game				
+12/7/2024	21:34	920	Fleet	W	OO-	932	CliffE	932	Fleet	Aetherean Forest	1	Aetherean Forest	1			Got a good edge hog. I think I need to spot dodge more with how good grabs are in this game.				
+12/7/2024	22:12	932	Fleet	W	OO-	946	spezius	990	Loxodont	Aetherean Forest	2	Tempest Peak	1			Feeling more comfortable in this matchup. I need to first focus on neutral, then punish, and not overextend. Gotta start parrying the up b				
+12/7/2024	10:24:52 PM	946	Fleet	L	OXX	935	Sappy	980	Kragg	Julesvale	1	Merchant Port	-1	Hodojo	-2	Blew a lead on game 2, this guy is such a cheeser with the  pillar; always trying to get stuff off of it. I am reacting with a nair which he is now shielding.  Gotta think more about parrying the down b spikes. Hodojo is not a good stage for fleet in this matchup. I approached too much. Need to figure out where to go when they ban the small stages				
+12/7/2024	10:39:34 PM	935	Fleet	L	OXX	927	Gecko	1036	Clairen	Godai Delta	1	Tempest Peak	-1	Aetherean Forest	-1	I should stay grounded more so that i can parry the double jump dair. Also probably should ban tempest peak.				
+12/8/2024	12:07:43 AM	927	Fleet	W	XOO	937	Krilliam	886	Kragg	Aetherean Forest	-1	Julesvale	2	Hyperborean Harbor	1	:(				
+12/8/2024	10:44:26 PM	937	Fleet	L	XOX	927	faheath	985	Zetterburn	Godai Delta	-2	Aetherean Forest	1	Merchant Port	-1	Just barely squeaked out game 2. Need to play more passively in neutral. Parries are my friend. Jump offtage immediately for edgeguards, or stay on stage to threaten. Don't wait then go, because my moves lose to firefox unless it's from the side. Hard matchup.				
+12/8/2024	11:05:01 PM	927	Fleet	L	XX-	916	Joepamine_ttv	955	Clairen	Aetherean Forest	-2	Julesvale	-2			I hate this matchup. This guy is doing nothing but dash attacking which is a good burst movement option, and double jump dairing on me. I can't play aggressively at all because I am simply too slow. Clairen is too fast for me. When I am playing against someone too fast I need to not get flustered and throw out bad attacks.			Slow down neutral, ISF Nair, Parries	
+12/8/2024	11:12:28 PM	916	Fleet	W	XOO	928	mega pint	915	Forsburn	Julesvale	-1	Julesvale	1	Rock Wall	1					
+12/8/2024	11:29:15 PM	928	Fleet	L	XOX	918	Sundae	972	Maypul	Godai Delta	1	Julesvale	1	Aetherean Forest	-1	ISF nair is really good here because of how small she is. Parry works wornders, and shield is good against her dumb fast dash attack			ISF nair	
+12/8/2024	11:44:10 PM	918	Fleet	W	OXO	932	SB4LIFE_Curb	980	Zetterburn	Godai Delta	1	Tempest Peak	-1	Julesvale	1	ISF nair is so good holy cow. SD'd at the end of game 2 but i was also getting outplayed. When he runs backwards, I need to expect him to come right back in with an attack. Using fair on firefox is seeming better and better. Almost blew a really big lead game three last stock when he started platform camping me but we got there. ISF is so good wow wow wow wow			ISF nair	
+12/9/2024	2:00:42 PM	932	Fleet	L	XX-	920	Lord Fuquad	906	Loxodont	Julesvale	-1	Aetherean Forest	-1			using fair while recovering to hit away the magma balls is something i should do more, like against kragg. need to parry more when he is attacking multiple times in a row on shield			Isf nair, 	
+12/9/2024	2:11:14 PM	920	Fleet	W	OO-	932	Stoic	919	Loxodont	Julesvale	1	Tempest Peak	1			ISF nair is so good. he tried to counterpick zetterburn and overwhelm me with movement and speed, but his punish game was clearly not there. this guy was the fastest lox i've seen, in terms of movement. very scary but nair is my friend	Zetterburn		Isf nair	
+12/9/2024	2:22:24 PM	932	Fleet	L	OO-	920	Sea Dog	913	Clairen	Godai Delta	-2	Julesvale	-1			Need to wait for the side-b before trying to edgeguard, because they always throw this out and it is not reactable, and i will eitther die or get punished for trying to hit it				
+12/9/2024	2:33:05 PM	920	Fleet	W	XOO	929	KnightRush	845	Loxodont	Julesvale	-2	Julesvale	2	Godai Delta	1	I got off to a good start game 1, then took an early kill from a stray f smash at 50 and got salty and started running in. need to stick to my gameplan and di out as well. nair is really nice nair is really nice nair is really nice stop dash attacking			ISF Nair	
+12/9/2024	4:24:39 PM	929	Fleet	W	XOO	942	Cxntra	975	Forsburn	Julesvale	-2	Julesvale	1	Fire Capital	1	Down throw upsmash is still a confirm??? tasty.				
+12/9/2024	4:38:19 PM	942	Fleet	L	XX-	932	Panionator	997	Loxodont	Godai Delta	-2	Julesvale	-1			I have to play respectfully. And I hate this character				
+12/9/2024	4:46:51 PM	932	Fleet	L	XOX	920	Spidermango	929	Loxodont	Julesvale	-2	Godai Delta	-3	Aetherean Forest	-2					
+12/9/2024	4:57:55 PM	920	Fleet	L	XX-	910	Child	956	Kragg	Godai Delta	-1	Godai Delta	-1			Had to afk at the end of the match game 1. Game 2 blew a big lead fishing for kills.DONT FISH FOR KILSS				
+12/9/2024	5:04:51 PM	910	Fleet	W	OO-	921	paradigm	889	Ranno	Godai Delta	1	Godai Delta	1							
+12/9/2024	5:15:46 PM	921	Fleet	L	OXX	909	DoubleJazz	900	Orcane	Godai Delta	1	Rock Wall	-1	Julesvale	-1					
+12/9/2024	5:28:33 PM	909	Fleet	W	OO-	923	Oyfgefuntsht	969	Clairen	Julesvale	2	Godai Delta	2			This guy moved too fast for his own good. I have learned from the fleet discord that the answer to this matchup is staying on the ground and they are absolutely  right				
+12/9/2024	5:52:04 PM	923	Fleet	W	OO-	935	kaiyedy	927	Loxodont	Julesvale	1	Fire Capital	1							
+12/9/2024	6:01:50 PM	935	Fleet	L	XX-	925	Minkus	988	Forsburn	Godai Delta	-1	Julesvale	-1							
+12/9/2024	6:20:52 PM	925	Fleet	L	XX-	912	Erih	901	Loxodont	Godai Delta	-1	Julesvale	-1			Blew a big lead as always.				
+12/9/2024	6:28:59 PM	912	Fleet	W	XOO	923	Syraxus	887	Clairen	Godai Delta	-1	Julesvale	1	Hodojo	2	Playing slow and steady really do pay off				
+12/9/2024	7:34:37 PM	923	Fleet	W	OXO	935	Russ3ll	934	Kragg	Godai Delta	2	Merchant Port	-1	Aetherean Forest	1	Ban merchant port against kragg. Almost blew the lead game 3 andd lost but we held it together. Continuing to play patiently will never not be good				
+12/9/2024	7:46:38 PM	935	Fleet	L	XOO	921	Chrisred3000	885	Clairen	Julesvale	1	Aetherean Forest	-2	Godai Delta	-1	He's very impatient already so i am going to make him mad before game 1 even starts by waiting out all of the clocks. Game 2 I did not respect clairen, and ran in too much. I need to take a step back, grab more, play more reactively. This clairen is a weiner and i can out-weiner him. get more mileage off of edgeguards and nairs. dont use as much sid e b in neutral. 				
+12/9/2024	8:05:53 PM	921	Fleet	W	XOO	930	the rarest produce	845	Orcane	Aetherean Forest	-1	Godai Delta	1	Julesvale	2	STOP TRYING TO CHARGE ATTACKS WHEN ORCANE IS AT LEDGE				
+12/10/2024	10:17:54 PM	930	Fleet	L	XX-	917	illiterate.bean	888	Forsburn	Julesvale	-1	Air Armada	-1			SD'd on the last game, and picked a terrible stage, but at least I have data for it now				
+12/10/2024	10:33:43 PM	917	Fleet	W	OXO	928	Sti11Evolving	900	Orcane	Julesvale	1	Aetherean Forest	-1	Godai Delta	1					
+12/10/2024	10:51:16 PM	928	Fleet	L	XX-	917	Totodile	957	Kragg	Merchant Port	-2	Julesvale	-1							
+12/10/2024	11:00:46 PM	917	Fleet	W	OXO	933	YasuoTheKing421	1051	Clairen	Hodojo	1	Hodojo	-1	Julesvale	1		Maypul	Maypul		
+12/11/2024	18:45:17	933	Fleet	L	XOX	921	Bb	932	Wrastor	Julesvale	-2	Julesvale	1	Hyperborean Harbor	-1	got the last game to 150% each. this is a really unfun matchup because at the end it feels like im just looking for raw parry to close it out. bummed i lost. Down smash wouldve been better to look for more against the wrastor, especially as a parry punish, since it kills earlier off the top				
+12/11/2024	10:34:09 PM	921	Fleet	L	OXX	909	Jiac	924	Clairen	Godai Delta	2	Julesvale	-1	Julesvale	-2					
+12/11/2024	10:50:35 PM	909		W		921										they forfeitted before the match started				
+12/11/2024	10:52:03 PM	921	Fleet	W	OO-	934	thouxanbanbrodie	943	Zetterburn	Julesvale	2	Hodojo	1							
+12/11/2024	11:01:13 PM	934	Fleet	W	XOO	947	toxikgreens	957	Ranno	Merchant Port	-1	Godai Delta	2	Hyperborean Harbor	1	This stage is so unfun for me (merchant port) i got camped to high heaven and the platforms are at really crappy places. lived the last stock til 200% and almost won with a dbz. Godai delta went much better. I am able to play slow and focus on punish > I am able to win. Hyperborean harbor went better and the other guy got cheesed off of his own counterpick. he played really campy but i was able to hold it down and got the W				
+12/12/2024	10:29:28 PM	947	Fleet	L	XX-	934	DangerPanther	927	Clairen	Julesvale	-1	Hodojo	-2			Definitely not going to counterpick hodojo anymore				
+12/12/2024	10:38:48 PM	934	Fleet	L	XOX	922	Jesterx64	922	Kragg	Aetherean Forest	-2	Air Armada	1	Fire Capital	-1	This guy has one trick and it is side b rock roll into upsmash. So if i can parry the first one i should be good. need to play more passively.				
+12/12/2024	10:51:55 PM	922	Fleet	L	XX-	909	Wave	900	Clairen	Godai Delta	-1	Julesvale								
+12/12/2024	11:03:30 PM	909	Fleet	L	XX-	902	havent rendered in yet	1057	Kragg	Julesvale	-2	Julesvale	-1							
+12/12/2024	11:10:27 PM	902	Fleet	L	OXX	890	Bright	899	Orcane	Julesvale	1	Julesvale	-1	Godai Delta	-1					
+12/12/2024	11:33:46 PM	890	Fleet	W	OXO	902	VectorGun25	881	Forsburn	Godai Delta	1	Fire Capital	-1	Julesvale	2					
+12/13/2024	12:29:01 PM	902	Fleet	L	XX-	892	gabromero18	957	Zetterburn	Julesvale	-1	Tempest Peak	-2							
+12/13/2024	12:38:28 PM	892	Fleet	W	OO-	903	Toto	858	Clairen	Julesvale	2	Fire Capital	3			He forfeited game 2 after counterpicking me to the biggest stage. what a dork				
+12/13/2024	12:44:37 PM	903	Fleet	W	OO-	915	jvarg1990	911	Loxodont	Aetherean Forest	1	Fire Capital	1			Only dorks counterpick me to fire capital				
+12/13/2024	12:53:51 PM	915	Fleet	W	OO-	929	Debis	976	Maypul	Julesvale	2	Hodojo	1							
+12/13/2024	1:00:37 PM	929	Fleet	W	OO-	942	jason	966	Ranno	Godai Delta	2	Hyperborean Harbor	1							
+12/13/2024	1:55:12 PM	942	Fleet	L	OXX	930	LUA	937	Clairen	Julesvale	1	Godai Delta	-2	Hodojo	-2	two SD's in the last game by fastfalling through the ledge. ugh.				
+12/13/2024	2:10:55 PM	930	Fleet	W	XOO	940	ttv/OmenNJ	889	Loxodont	Aetherean Forest	-1	Julesvale	2	Fire Capital	2					
+12/13/2024	3:57:40 PM	940	Fleet	L	XX-	926	Don Ross	878	Zetterburn	Aetherean Forest	-1	Julesvale	-1			Blew a lead game 1. Gotta work on pressuring him offstage more, and keeping him above me. Parry the fireballs more				
+12/13/2024	4:06:05 PM	926	Fleet	W	OXO	939	Atok	960	Maypul	Julesvale	1	Julesvale	-2	Hyperborean Harbor	1	Get absolutely destroyed idiot				
+12/13/2024	4:34:32 PM	939	Fleet	W	OO-	951	shady	936	Clairen	Godai Delta	2	Fire Capital	1				Loxodont			
+12/13/2024	11:56:35 PM	951	Fleet	L	XX-	936	Rohan.n333	850	Wrastor	Godai Delta	-2	Julesvale	-1			Wow this guy is garbage, i am getting hit by like 9 noob dash attacks in a row. not fun. need to try to predict what he's doing and slow down my game. It's unfortunate that i was not able to work out his cheese strategy by the end of game 2. it was clear his gameplan was very minimal but i kept not expecting him to go for the same scrub option so many times that i got beat by it. I guess that makes me the scrub				
+12/14/2024	12:06:46 AM	936	Fleet	W	XOO	948	Tinarkii	949	Ranno	Aetherean Forest	-2	Hodojo	1	Tempest Peak	2	He kept taunting me game 1 and i let it be the fire under my feet				
+12/14/2024	12:22:00 AM	948	Fleet	W	OXO	958	Tyvan98	903	Kragg	Hodojo	2	Hyperborean Harbor	-1	Julesvale	3	I have indeed been cheesed by hyperborean harbor. WOOOOOOOOOOOOOOOOOOOOOOO				
+12/14/2024	3:57:31 PM	958	Fleet	W	OO-	970	White-[Box]	980	Orcane	Julesvale	1	Hyperborean Harbor	2							
+12/14/2024	6:12:10 PM	970	Fleet	L	XOX	957	minty	932	Clairen	Julesvale	-1	Julesvale	1	Aetherean Forest	-2	dogwater matchup				
+12/14/2024	6:28:49 PM	957	Fleet	W	OO-	968	Ohwow	943	Orcane	Julesvale	1	Tempest Peak	1			almost blew a big lead game 1 fishing for a kill. i need more discipline				
+12/14/2024	7:06:39 PM	968	Fleet	L	XOO	955	deltacubes	932	Zetterburn	Julesvale	1	Tempest Peak	-2	Aetherean Forest	-2	NONE OF MY MOVES ACTUALLY COMBO 				
+12/14/2024	7:19:39 PM	955	Fleet	L	OO-	942	Pheyiyo	937	Fleet	Godai Delta	-1	Julesvale	-2							
+12/14/2024	7:29:58 PM	942	Fleet	W	OXO	955	COMB	958	Ranno	Julesvale	1	Julesvale	-2	Hyperborean Harbor	1	time to take a break				
+12/14/2024	9:59:19 PM	955	Fleet	W	OO-	967	ceppy3	953	Kragg	Aetherean Forest	1	Fire Capital	2							
+12/14/2024	11:57:38 PM	967	Fleet	L	XX-	957	hello everypony	1022	Maypul	Julesvale	-1	Tempest Peak	-2							
+12/15/2024	12:06:48 AM	957	Fleet	L	XX-	945	apsara	958	Ranno	Godai Delta	-1	Aetherean Forest	-2							
+12/15/2024	12:15:07 AM	945	Fleet	W	XOO	955	West African Boner Wizard	912	Ranno	Godai Delta	-1	Hyperborean Harbor	1	Hyperborean Harbor	1					
+12/15/2024	12:29:30 AM	955	Fleet	L	XX-	944	Squirreltail	976	Maypul	Julesvale	-1	Hyperborean Harbor	-1							
+12/15/2024	12:38:55 AM	944	Fleet	W	OO-	953	Theceuhs	974	Ranno	Hodojo	2	Rock Wall	1							
+12/15/2024	2:37:55 PM	953	Fleet	L	XX-	943	NeosporinITC	1002	Loxodont	Merchant Port	-2	Fire Capital	-1			Merchant port is still not a good stage but I need to get at least one win here! we can do this.				
+12/15/2024	2:48:57 PM	943	Fleet	L	XOX	932	angykimchi	972	Ranno	Hodojo	-2	Hyperborean Harbor	2	Tempest Peak	-2					
+12/15/2024	3:03:13 PM	932	Fleet	L	XOX	919	mooni	893	Maypul	Julesvale	-2	Hyperborean Harbor	3	Hodojo	-2					
+12/15/2024	3:13:20 PM	919	Fleet	W	OXO	933	ShinyEspeon	988	Maypul	Julesvale	1	Godai Delta	-1	Hyperborean Harbor	1	gonna try to nair in place more and see what happens. did a good job of getting him offstage this game, this guy seems to not be that comfortable recovering and just dash dances around without actually putting much thought inot it. blew a lead when he started playing much more passively and camping with his fast movement. i'm not sure what to do here but throwing out more projectiles does not seem to be the right approach				
+12/15/2024	4:48:03 PM	933	Fleet	L	XOX	920	Giggle Bag	914	Loxodont	Hodojo	-1	Tempest Peak	1	Godai Delta	-1					
+12/15/2024	5:00:19 PM	920	Fleet	W	OXO	932	ScareCrowSamson	921	Forsburn	Julesvale	2	Aetherean Forest	-1	Fire Capital	1					
+12/15/2024	5:20:36 PM	932	Fleet	L	XX-	921	Pistallion	939	Wrastor	Hodojo	-2	Aetherean Forest	-2							
+12/15/2024	5:29:02 PM	921	Fleet	W	OO-	934	FlavorText	946	Fleet	Hodojo	2	Aetherean Forest	1							
+12/15/2024	7:55:55 PM	934	Fleet	L	XX-	924	Chamomileon	1001	Maypul	Julesvale	-1	Rock Wall	-2			2 SDs game 1 below 30% was very unfortunate. This maypul definitely knows to edgehog me. sticking to my edgeguards and punish game, and playing defensively on the ground will be the key to success				
+12/15/2024	10:11:33 PM	924	Fleet	L	XX-	915	breadbomb1	1003	Forsburn	Aetherean Forest	-1	Merchant Port	-1							
+12/15/2024	10:22:10 PM	915	Fleet	W	OO-	927	Coke© Fiend	926	Orcane	Julesvale	1	Aetherean Forest	1							
+12/15/2024	10:32:51 PM	927	Fleet	W	OO-	938	Darkfirecat	918	Zetterburn	Julesvale	1	Air Armada	2							
+12/15/2024	10:40:10 PM	938	Fleet	W	OO-	948	Plu	887	Maypul	Julesvale	2	Julesvale	1							
+12/15/2024	10:49:13 PM	948	Fleet	W	OO-	959	Mega	928	Clairen	Julesvale	1	Hodojo	2							
+12/15/2024	10:59:39 PM	959	Fleet	L	XX-	952	matthewbrumbeloe1	1098	Clairen	Julesvale	-1	Tempest Peak	-1							
+12/15/2024	11:11:01 PM	952	Fleet	W	XOO	969	Rat	1108	Zetterburn	Julesvale	-1	Merchant Port	1	Godai Delta	2					
+12/16/2024	10:21:41 PM	969	Fleet	W	XOO	982	jBoneX	1011	Kragg	Aetherean Forest	-1	Aetherean Forest	2	Rock Wall	3					
+12/16/2024	10:31:15 PM	982	Fleet	W	OXO	994	Lull	1000	Loxodont	Aetherean Forest	1	Rock Wall	-2	Julesvale	1					
+12/17/2024	11:09:05 PM	994	Fleet	W	OO-	1007	DeMeloM24	1016	Loxodont	Aetherean Forest	2	Julesvale	1							
+12/18/2024	6:01:30 PM	1007	Fleet	W	XOO	1016	Joey Maypulgione	907	Orcane	Merchant Port	-1	Julesvale	1	Godai Delta	1					
+12/19/2024	6:51:49 PM	1016	Fleet	L	OXX	1001	KG	939	Ranno	Hodojo	1	Merchant Port	-2	Hyperborean Harbor	-1					
+12/19/2024	7:20:20 PM	1001	Fleet	W	OXO	1010	Syrathos	921	Clairen	Hodojo	2	Tempest Peak	-2	Julesvale	2					
+12/19/2024	8:23:08 PM	1010	Fleet	L	XX-	999	SteveMasterson	1014	Kragg	Aetherean Forest	-1	Julesvale	-2			SD in both games. kragg is cheesy				
+12/19/2024	8:29:50 PM	999	Fleet	W	OO-	1010	JelloBerry Jam	968	Forsburn	Aetherean Forest	-2	Julesvale	2	Merchant Port	2					
+12/19/2024	8:41:27 PM	1010	Fleet	L	XOX	997	Battlesoul	975	Loxodont	Aetherean Forest	-1	Julesvale	1	Hodojo	-1	I can do this. Yes I can. No I can't. SD'd the last stock. So sad. He was up anyway. I shouldn';t have gotten to last stock. I NEED TO GRAB MORE				
+12/19/2024	8:55:05 PM	997	Fleet	L	XX-	986	Sonar	1039	Zetterburn	Julesvale	-2	Julesvale	-2							
+12/19/2024	9:01:41 PM	986	Fleet	W	OO-	999	Domino	1021	Ranno	Julesvale	2	Hodojo	1							
+12/19/2024	9:09:18 PM	999	Fleet	L	XOX	988	Steppogger	1007	Clairen	Julesvale	-1	Julesvale	2	Rock Wall	-1	almost did it last hit game 1.				
+12/19/2024	9:26:59 PM	988	Fleet	W	OXO	998	iso_indra	918	Loxodont	Julesvale	1	Aetherean Forest	-1	Hyperborean Harbor	1					
+12/19/2024	9:42:52 PM	998	Fleet	W	OXO	1010	Sant~J	1023	Fleet	Aetherean Forest	1	Rock Wall	-2	Julesvale	2		Clairen	Clairen		
+12/19/2024	9:54:47 PM	1010	Fleet	W	OXO	1020	Kurtxan	958	Kragg	Godai Delta	2	Aetherean Forest	-1	Julesvale	2		Fleet	Fleet		
+12/19/2024	10:12:09 PM	1020	Fleet	L	XOX	1008	SavvyVII	1015	Ranno	Julesvale	-2	Hodojo	-3	Hyperborean Harbor	-2		Wrastor	Zetterburn		
+12/19/2024	10:29:22 PM	1008	Fleet	W	XOO	1021	mega pint		Forsburn	Aetherean Forest	-1	Julesvale	-1	Fire Capital	-1		Loxodont			
+12/20/2024	12:02:43 AM	1021	Fleet	W	OO-	1030	HTLRS RIGHT HAND MAN	946	Ranno	Julesvale	1	Hodojo	1							
+12/20/2024	11:01:15 PM	1030	Fleet	L	XX-	1018	Lu1znr1k3	1027	Zetterburn	Julesvale	-2	Aetherean Forest	-1							
+12/20/2024	11:10:28 PM	1018	Fleet	W	XOO	1033	[+] JayDootz	1093	Kragg	Julesvale	-1	Julesvale	1	Air Armada	2					
+12/20/2024	11:42:50 PM	1033	Fleet	W	OXO	1044	Rolly	1010	Clairen	Aetherean Forest	1	Aetherean Forest	-2	Julesvale	1					
+12/21/2024	12:45:39 AM	1044	Fleet	W	XOO	1056	Bop It!	1057	Loxodont	Aetherean Forest	-1	Julesvale	2	Rock Wall	2					
+12/21/2024	10:59:57 PM	1056	Fleet	L	OXX	1040	TheSt0ve	926	Loxodont	Julesvale	1	Julesvale	-2	Hodojo	-1					
+12/21/2024	11:11:21 PM	1040	Fleet	W	XOO	1050	Lizard	986	Wrastor	Julesvale	-1	Aetherean Forest	1	Air Armada	2					
+12/21/2024	11:26:19 PM	1050	Fleet	L	XX-	1038	aerith	1043	Fleet	Julesvale	-1	Aetherean Forest	-2							
+12/21/2024	11:36:40 PM	1038	Fleet	L	XX-	1024	nick @ nite	988	Clairen	Julesvale	-1	Julesvale	-2							
+12/21/2024	11:46:04 PM	1024	Fleet	L	XX-	1012	SaucyForsburn	1017	Forsburn	Godai Delta	-2	Julesvale	-1							
+12/22/2024	12:03:49 AM	1012	Fleet	W	OO-	1024	defu	1012	Orcane	Aetherean Forest	1	Merchant Port	1							
+12/22/2024	11:43:13 PM	1024	Fleet	L	XX-	1012	Yunman	1010	Kragg	Aetherean Forest	-1	Julesvale	-1							
+12/22/2024	11:53:49 PM	1012	Fleet	W	OO-	1024	The Peak GG	1021	Zetterburn	Aetherean Forest	1	Aetherean Forest	1							
+12/23/2024	12:04:22 AM	1024	Fleet	W	OXO	1037	swagbon	1054	Loxodont	Godai Delta	1	Godai Delta	-1	Aetherean Forest	1					
+12/23/2024	12:17:07 AM	1037	Fleet	W	OO-	1049	Uieo	1044	Maypul	Julesvale	2	Merchant Port	2							
+12/23/2024	12:37:09 AM	1049	Fleet	W	OO-	1057	morasebastian2134	936	Maypul	Julesvale	1	Hodojo	2							
+12/23/2024	10:10:37 AM	1057	Fleet	L	XX-	1053	Mr. Daring Dapper	1347	Wrastor	Aetherean Forest	-1	Hodojo	-2							
+12/23/2024	10:19:30 AM	1053	Fleet	L	XX-	1044	Newo	1119	Zetterburn	Godai Delta	-1	Julesvale	-1							
+12/23/2024	10:27:42 AM	1044	Fleet	L	XOX	1034	WAHrio!	1109	Ranno	Julesvale	-1	Julesvale	1	Hodojo	-1					
+12/23/2024	10:43:50 AM	1034	Fleet	L	XX-	1026	Balfasaur	1168	Ranno	Aetherean Forest	-2	Julesvale	-1							
+12/23/2024	11:33:41 AM	1026	Fleet	W	OXO	1035	KateCore	947	Zetterburn	Aetherean Forest	2	Tempest Peak	-1	Julesvale	2			Fleet		
+12/23/2024	1:25:31 PM	1035	Fleet	L	XX-	1022	Panionator	1003	Loxodont	Godai Delta	-2	Julesvale	-2							
+12/23/2024	1:33:16 PM	1022	Fleet	W	XOO	1036	MercelAlfaro	1070	Orcane	Godai Delta	-2	Tempest Peak	1	Julesvale	1					
+12/23/2024	1:49:58 PM	1036	Fleet	L	XX-	1028	that1coin	1145	Forsburn	Julesvale	-2	Aetherean Forest	-2							
+12/23/2024	1:56:20 PM	1028	Fleet	L	XX-	1014	JavlyNT	964	Ranno	Aetherean Forest	-2	Julesvale	-2							
+12/23/2024	2:04:35 PM	1014	Fleet	L	OXX	1003	COIN	1035	Forsburn	Julesvale	1	Aetherean Forest	-3	Fire Capital	-1	Just barely lost game 3 last stock. i gave up a big lead in the last stock. I need to quit playing while im unhappy with the game. that was not fun.				
+12/23/2024	2:18:57 PM	1003		L		996										Had a bug where i couldnt use my controller, only the keyboard, so I had to forfeit before game 1 started				
+12/23/2024	2:21:40 PM	996	Fleet	L	OXX	982	Mag	940	Clairen	Julesvale	2	Julesvale	-1	Aetherean Forest	-1					
+12/23/2024	2:35:11 PM	982	Fleet	L	OXO	993	Toogis	954	Forsburn	Godai Delta	1	Tempest Peak	-1	Julesvale	1					
+12/23/2024	2:48:30 PM	993	Fleet	W	OO-	1008	Re Evolution	1088	Kragg	Aetherean Forest	1	Tempest Peak	1							
+12/23/2024	3:06:17 PM	1008	Fleet	W	OO-	1018	ledgerdamayn	943	Zetterburn	Godai Delta	1	Merchant Port	2							
+12/23/2024	11:07:36 PM	1018	Fleet	L	XX-	1007	Batkiller	1061	Maypul	Julesvale	-2	Aetherean Forest	-2							
+12/23/2024	11:17:01 PM	1007	Fleet	L	OXX	996	MechaCheeto	1032	Forsburn	Julesvale	1	Hyperborean Harbor	-1	Godai Delta	-2					
+12/23/2024	11:31:15 PM	996	Fleet	W	OO-	1006	TOADIE	937	Loxodont	Godai Delta	1	Hodojo	2				Zetterburn			
+12/23/2024	11:40:39 PM	1006	Fleet	L	XX-	993	drewedish	949	Ranno	Godai Delta	-1	Aetherean Forest	-1							
+12/23/2024	11:51:32 PM	993	Fleet	W	OXO	1004	Ray Tin	951	Clairen	Aetherean Forest	1	Aetherean Forest	-1	Julesvale	2					
+12/24/2024	12:06:36 AM	1004	Fleet	W	OXO	1014	Pastor	943	Clairen	Godai Delta	1	Hodojo	-1	Merchant Port	1	I threw game 2 so many times. it was last hit and i had so many opportunities to end it but i hate this matchup and that's the end				
+12/24/2024	12:27:31 AM	1014	Fleet	W	XOO	1028	Bobbles	1075	Ranno	Godai Delta	-1	Julesvale	1	Tempest Peak	1					
+12/24/2024	12:40:31 AM	1028	Fleet	W	OO-	1036	jawny	920	Ranno	Hodojo	1	Tempest Peak	3							
+12/27/2024	12:02:20 AM	1036	Fleet	W	OO-	1044	goHans	939	Loxodont	Julesvale	1	Julesvale	2							
+12/27/2024	12:12:37 AM	1044	Fleet	L	XX-	1035	SHAMAN	1133	Wrastor	Godai Delta	-1	Julesvale	-1			Super sad SD game 1! so sad i wouldve won				
+12/27/2024	12:23:56 AM	1035	Fleet	L	XOX	1022	dude-cricut etch-a-sketch	1000	Orcane	Aetherean Forest	-1	Julesvale	1	Hodojo	-1					
+12/27/2024	12:39:59 AM	1022	Fleet	L	XX-	1008	Nini_bats	949	Zetterburn	Merchant Port	-2	Rock Wall	-1							
+12/27/2024	12:47:57 AM	1008	Fleet	W	XOO	1015	Totodile	870	Loxodont	Julesvale	-1	Julesvale	1	Fire Capital	1	blew a massive lead game 1. gotta play more reactively and use isf nair. spot dodge is good for grab spammers				
+12/27/2024	1:02:59 AM	1015	Fleet	L	XX-	1004	help	1025	Zetterburn	Julesvale	-2	Aetherean Forest	-2			sad SD game 2. still got way outplayed				
+12/27/2024	1:11:36 AM	1004	Fleet	W	OO-	1013	Accf	934	Maypul	Julesvale	1	Julesvale	1							
+12/27/2024	4:16:51 PM	1013	Fleet	W	XOO	1024	Kiri	977	Zetterburn	Julesvale	-1	Aetherean Forest	1	Tempest Peak	1	He's moving much faster than me. I need to try to stay grounded to parry the fireballs, or wait for my aerial attack to attack through them.Moving more will be good and focusing on punishing and edgeguards.				
+12/27/2024	4:32:28 PM	1024	Fleet	L	XX-	1013	Yunman	1037	Kragg	Julesvale	-1	Aetherean Forest	-1							
+12/27/2024	4:40:46 PM	1013	Fleet	W	OO-	1022	Kasadeem	936	Kragg	Julesvale	2	Air Armada	1				Orcane			
+12/27/2024	4:49:16 PM	1022	Fleet	W	OXO	1031	boi_jiro	935	Zetterburn	Julesvale	1	Hodojo	-1	Aetherean Forest	1					
+12/29/2024	12:15:43 AM	1031	Fleet	L	XX-	1021	taco	1091	Zetterburn	Julesvale	-2	Julesvale	-1							
+12/29/2024	12:32:36 AM	1021	Fleet	L	XX-	1010	swagbon	1042	Loxodont	Aetherean Forest	-1	Julesvale	-1							
+12/29/2024	12:50:17 AM	1010	Fleet	L	XX-	998	BEST GARF MAIN NA	1004	Fleet	Julesvale	-2	Julesvale	-1							
+12/29/2024	12:58:01 AM	998	Fleet	L	XX-	987	cal	1013	Zetterburn	Aetherean Forest	-3	Julesvale	-1							
+12/29/2024	12:59:01 AM	987	Fleet	L	XX-	976	GoFastFun	1011	Zetterburn	Julesvale	-1	Julesvale	-1							
+12/29/2024	1:10:06 AM	976	Fleet	L	OXX	964	Saturn		Clairen	Julesvale	1	Godai Delta	-1	Aetherean Forest	-2					
+12/29/2024	1:23:17 AM	964	Fleet	L	XX-	952	jeffdaboss	955	Fleet	Godai Delta	-1	Julesvale	-1				Loxodont			
+12/29/2024	1:34:32 AM	952	Fleet	L	XOX	943	Nandez21	1047	Ranno	Aetherean Forest	-1	Julesvale	2	Tempest Peak	-1					
+12/29/2024	1:47:19 AM	943	Fleet	L	XX-	931	Real dude RP	950	Kragg	Aetherean Forest	-2	Julesvale	-1							
+12/29/2024	1:55:12 AM	931	Fleet	W	XOO	940	Rorschach	835	Ranno	Julesvale	-1	Julesvale	1	Hodojo	1					
+1/1/2025	10:20:40 PM	940	Fleet	L	XOX	928	Xzavier	931	Kragg	Julesvale	-2	Julesvale	1	Hyperborean Harbor	-1	blew a 2 stock lead game 3, im such a dingus				
+1/1/2025	10:34:12 PM	928	Fleet	L	XOX	915	Applebees Fan 37	895	Loxodont	Julesvale	-1	Julesvale	1	Hodojo	-1	game 1 i lost all 3 stocks to charged smash attacks. i need to play more defensively and use movement to get around his slow moves				
+1/1/2025	10:46:25 PM	915	Fleet	W	OO-	929	TheNumbers	966	Kragg	Julesvale	1	Julesvale	1							
+1/1/2025	10:55:31 PM	929	Fleet	L	OXX	916	funnyman	885	Ranno	Julesvale	2	Hodojo	-1	Aetherean Forest	-3					
+1/1/2025	11:09:16 PM	916	Fleet	L	OXX	905	imoochie	953	Wrastor	Aetherean Forest	-1	Hodojo	-1	Julesvale	-1					
+1/1/2025	11:25:39 PM	905	Fleet	W	OO-	918	Tales	933	Fleet	Aetherean Forest	2	Hodojo	1							
+1/1/2025	11:36:15 PM	918	Fleet	L	OXX	909	Zing	993	Maypul	Aetherean Forest	1	Aetherean Forest	-1	Julesvale	-1					
+1/1/2025	11:48:20 PM	909	Fleet	L	OXX	899	imoochie	961	Wrastor	Julesvale	2	Aetherean Forest	-1							
+1/6/2025	11:34:12 AM	899	Fleet	W	OO-	912	Reverend Green	935	Kragg	Aetherean Forest	1	Aetherean Forest	1							
+1/6/2025	2:50:36 PM	912	Fleet	W	OXO	942	PEPSI	924	Ranno	Julesvale	2	Aetherean Forest	-1	Aetherean Forest	1	unfortunate SD around 0 game 2, but I played calm and brought it home game 3				
+1/6/2025	3:06:13 PM	942	Fleet	W	OXO	931	Y e v v i.	780	Zetterburn	Julesvale	2	Julesvale	-1	Aetherean Forest	3					
+1/6/2025	10:32:42 PM	931	Fleet	W	OO-	943	miDFielder	936	Maypul	Julesvale	1	Hyperborean Harbor	2							
+1/6/2025	10:42:37 PM	943	Fleet	W	OXO	955	EridanAmpora	949	Maypul	Julesvale	1	Godai Delta	-1	Aetherean Forest	1	maypul is so carried lol, and clairen in this mathcup		Clairen		
+1/6/2025	10:56:13 PM	955	Fleet	L	XX-	949	Stu Pendas	1046	Clairen	Aetherean Forest	-2	Julesvale	-1							
+1/6/2025	11:03:16 PM	949	Fleet	L	XOX		yukitrey	1006	Clairen	Aetherean Forest	-1	Julesvale	1	Hodojo	-1					
+1/6/2025	11:20:42 PM		Fleet	L	OXX	923	TehNoobFarm	896	Ranno	Godai Delta	1	Fire Capital	-1	Hodojo	-2					
+1/6/2025	11:33:51 PM	923	Fleet	W	XOO	932	sixzerothree	836	Ranno	Godai Delta	-2	Julesvale	1	Aetherean Forest	1					
+1/7/2025	6:15:45 PM	932	Fleet	L	XOX	921	Linkraft	955	Zetterburn	Aetherean Forest	-2	Aetherean Forest	1	Godai Delta	-2					
+1/7/2025	6:37:23 PM	921	Fleet	W	OO-	930	Samuraiguy	855	Kragg	Julesvale	2	Tempest Peak	2							
+1/7/2025	6:46:16 PM	930	Fleet	W	XOO	944	Linkraft	975	Zetterburn	Julesvale	-2	Aetherean Forest	1	Aetherean Forest	1					
+1/7/2025	7:34:03 PM	944	Fleet	L	OXX	932	Matt	955	Clairen	Aetherean Forest	1	Air Armada	-1	Julesvale	-2					
+1/7/2025	7:45:24 PM	932	Fleet	L	OXX	919	swagemite282	897	Clairen	Julesvale	1	Tempest Peak	-1	Aetherean Forest	-1					
+1/7/2025	8:07:00 PM	919	Fleet	L	OXX	908	Zander	945	Ranno	Aetherean Forest	2	Rock Wall	-1	Hyperborean Harbor	-1	blew a massive lead game 2. need to play patient even when I have a lead				
+1/7/2025	8:23:24 PM	908	Fleet	L	OXX	897	reLaxB	947	Kragg	Aetherean Forest	1	Aetherean Forest	-1	Julesvale	-1					
+1/7/2025	8:37:21 PM	897	Fleet	W	OO-	904	gyattatouille	757	Ranno	Aetherean Forest	2	Merchant Port	1							
+1/7/2025	8:45:44 PM	904	Zetterburn	W	OO-	917	pyri	940	Zetterburn	Julesvale	1	Air Armada	1							
+1/7/2025	8:55:51 PM	917	Zetterburn	W	OO-	929	Oatsman	933	Loxodont	Julesvale	1	Tempest Peak	1							
+1/7/2025	9:06:35 PM	929	Zetterburn	L	XX-	917	Nixyro	941	Wrastor	Aetherean Forest	-1	Julesvale	-1							
+1/7/2025	9:14:54 PM	917	Zetterburn	L	OO-	907	Loof	971	Loxodont	Aetherean Forest	-1	Julesvale	-2							
+1/7/2025	9:23:04 PM	907	Zetterburn	L	XX-	898	EJF	998	Loxodont	Julesvale	-1	Julesvale	-2							
+1/7/2025	9:31:42 PM	898	Zetterburn	L	XOX	884	mews	852	Orcane	Julesvale	-1	Godai Delta	2	Merchant Port	-2					
+1/7/2025	11:03:57 PM	884	Fleet	W	OO-	893	eegee	815	Fleet	Julesvale	1	Aetherean Forest	1							
+1/7/2025	11:11:37 PM	893	Zetterburn	W	OXO	904	The Swinster	862	Clairen	Aetherean Forest	1	Aetherean Forest	-1	Julesvale	1		Zetterburn	Zetterburn		
+1/7/2025	11:26:17 PM	904	Zetterburn	L	XX-	894	JayMD	941	Ranno	Godai Delta	-1	Godai Delta	-1			This guy played like a dick and teabagged constantly				
+1/7/2025	11:36:51 PM	894	Zetterburn	W	OXO	908	CoryD-	981	Zetterburn	Godai Delta	2	Godai Delta	-2	Aetherean Forest	1					
+1/7/2025	11:52:21 PM	908	Zetterburn	L	XX-	901	Cul0	1048	Wrastor	Julesvale	-2	Aetherean Forest	-2							
+1/7/2025	11:59:24 PM	901	Zetterburn	W	OXO	913	Theceuhs	900	Ranno	Godai Delta	2	Tempest Peak	-1	Julesvale	1					
+1/8/2025	6:42:47 PM	913	Zetterburn	W	OO-	925	Neutral	916	Forsburn	Julesvale	1	Fire Capital	1							
+1/8/2025	6:51:06 PM	925	Zetterburn	W	OO-	938	ami5454	941	Zetterburn	Julesvale	1	Aetherean Forest	2							
+1/8/2025	11:04:20 PM	938	Zetterburn	L	XOX	927	Jocko	957	Zetterburn	Godai Delta	-1	Julesvale	1	Hodojo	-1					
+1/8/2025	11:17:13 PM	927	Zetterburn	L	XX-	917	FreshFoods	985	Orcane	Godai Delta	-1	Aetherean Forest	-2							
+1/8/2025	11:29:32 PM	917	Zetterburn	L	XX-	904	ButtaDawg	886	Zetterburn	Hodojo	-2	Godai Delta	-3							
+1/8/2025	11:36:56 PM	904	Zetterburn	W	OO-	916	Lyra	909	Fleet	Aetherean Forest	1	Hyperborean Harbor	1							
+1/8/2025	11:49:17 PM	916	Zetterburn	L	XOX	904	ericochoa85	916	Forsburn	Godai Delta	-2	Julesvale	1	Julesvale	-1					
+1/9/2025	12:01:57 AM	904	Zetterburn	W	XOO	915	Cal	878	Orcane	Julesvale	-1	Julesvale	1	Aetherean Forest	1	got hit by a zero to death while he was at 130 on the last stock. cant keep fishing for kills				
+1/9/2025	1:42:02 PM	915	Zetterburn	L	XX-	904	Samity	945	Forsburn	Godai Delta	-2	Julesvale	-2			blew a big lead game 2 with an sd . im dumb				
+1/9/2025	1:52:49 PM	904	Zetterburn	L	XX-	893	ErikThe	919	Maypul	Julesvale	-2	Hodojo	-2							
+1/9/2025	1:58:16 PM	893	Zetterburn	L	XX-	881	CpzRizzle	876	Zetterburn	Aetherean Forest	-1	Julesvale	-2							
+1/9/2025	2:05:42 PM	881	Fleet	L	XOX	870	CpzRizzle	889	Zetterburn	Aetherean Forest	-1	Julesvale	1	Godai Delta	-1	i really do know how to blow a lead				
+1/9/2025	3:15:40 PM	870	Zetterburn	W	OO-	879	TED	799	Clairen	Godai Delta	2	Julesvale	3							
+1/9/2025	3:21:27 PM	879	Zetterburn	L	XX-	872	Aeris	1011	Clairen	Aetherean Forest	-2	Julesvale	-2							
+1/9/2025	3:29:43 PM	872	Zetterburn	W	XOO	885	UwU xD i'm quirky!!! *rawr*	890	Wrastor	Aetherean Forest	-1	Godai Delta	1		-3	i stay blowing leads gotta try to recover high more to respect his stupid uptilt and spike. also how to learn to tech the dumb down throw cheese. he ragequit and forfeit after game 2				
+1/9/2025	3:39:58 PM	885	Zetterburn	W	OO-	896	-Wall-e-	856	Kragg	Aetherean Forest	2	Godai Delta	1				Loxodont			
+1/9/2025	3:47:53 PM	896	Zetterburn	L	XX-	884	Rowboat	898	Kragg	Godai Delta	-1	Aetherean Forest	-1							
+1/9/2025	3:55:39 PM	884	Zetterburn	W	XOO	898	BoyinClam	932	Orcane	Julesvale	-1	Godai Delta	2	Air Armada	1					
+1/9/2025	4:58:31 PM	898	Zetterburn	L	XX-	888	WorldClass_	939	Ranno	Godai Delta	-2	Aetherean Forest	-2							
+1/9/2025	5:12:51 PM	888	Zetterburn	L	OXX	878	Pixelsmasher42	923	Wrastor	Aetherean Forest	2	Air Armada	-2	Godai Delta	-2					
+1/10/2025	10:09:06 AM	878	Zetterburn	W	OO-	888	CJplz	822	Ranno	Godai Delta	1	Julesvale	2							
+1/10/2025	10:22:14 AM	888	Zetterburn	W	OO-	898	Laundee	831	Maypul	Julesvale	1	Tempest Peak	-2	Godai Delta	1					
+1/10/2025	12:55:20 PM	898	Zetterburn	L	XX-	886	Jinto Reedwine	895	Ranno	Godai Delta	-2	Julesvale	-2							
+1/10/2025	1:01:25 PM	886	Zetterburn	L	XX-	876	Lev	934	Clairen	Julesvale	-1	Hyperborean Harbor	-1							
+1/10/2025	2:05:34 PM	876	Zetterburn	L	OXX	866	[TFG] PuppyBurgers	926	Kragg	Julesvale	2	Tempest Peak	-1	Godai Delta	-1					
+1/10/2025	2:19:03 PM	866	Zetterburn	W	OO-	876	fromatoe	825	Clairen	Aetherean Forest	1	Hyperborean Harbor	2							
+1/10/2025	2:27:13 PM	876	Zetterburn	W	OO-	884	figswimmer	762	Clairen	Hodojo	2	Julesvale	3							
+1/10/2025	2:35:41 PM	884	Zetterburn	W	OO-	893	Tony Tobacco	814	Maypul	Godai Delta	3	Godai Delta	1							
+1/10/2025	2:43:24 PM	893	Zetterburn	W	XOO	903	Chrometiger24	857	Forsburn	Merchant Port	-1	Hyperborean Harbor	1	Hodojo	1					
+1/10/2025	3:42:56 PM	903	Zetterburn	W	OO-	915	SOUL	902	Zetterburn	Godai Delta	1	Merchant Port	2							
+1/10/2025	3:51:49 PM	915	Zetterburn	W	OO-	929	Nobody	981	Wrastor	Aetherean Forest	1	Godai Delta	1							
+1/11/2025	1:00:32 PM	929	Zetterburn	L	XX-	915	sfada10	844	Loxodont	Aetherean Forest	-1	Godai Delta	-1							
+1/11/2025	1:09:57 PM	915	Zetterburn	W	OO-	924	leis	834	Wrastor	Godai Delta	2	Hyperborean Harbor	2							
+1/11/2025	1:18:16 PM	924	Zetterburn	W	OO-	933	leis	825	Wrastor	Aetherean Forest	1	Merchant Port	2							
+1/11/2025	1:25:19 PM	933	Zetterburn	W	OXO	943	Koopert	874	Clairen	Julesvale	1	Godai Delta	-1	Hyperborean Harbor	2					
+1/11/2025	11:55:46 PM	943	Zetterburn	L	XX-	931	Chastity the Celibate	933	Zetterburn	Godai Delta	-3	Julesvale	-2							
+1/12/2025	12:01:41 AM	931	Zetterburn	W	OXO	944	Kuro	954	Ranno	Godai Delta	1	Fire Capital	-1	Julesvale	1					
+1/12/2025	12:14:30 AM	944	Zetterburn	L	XX-	932	EnZo	928	Forsburn	Godai Delta	-1	Aetherean Forest	-1							
+1/12/2025	12:22:25 AM	932	Zetterburn	L	XX-	920	EliTheBeeli	945	Orcane	Godai Delta	-2	Aetherean Forest	-2							
+1/12/2025	12:29:23 AM	920	Zetterburn	L	XOX	910	Zen	967	Fleet	Godai Delta	-1	Aetherean Forest	2	Aetherean Forest	-2				Fleet	Fleet
+1/12/2025	12:41:34 AM	910	Fleet	L	OXX	898	WholesomeScoops	907	Zetterburn	Aetherean Forest	1	Rock Wall	-1	Merchant Port	-1					
+1/12/2025	12:57:54 AM	898	Fleet	W	OO-	908	Jocko	850	Zetterburn	Aetherean Forest	1	Hyperborean Harbor	1							
+1/12/2025	1:05:38 AM	908	Fleet	W	OO-	920	KarloGee	915	Kragg	Julesvale	2	Godai Delta	1					Clairen		
+1/12/2025	1:17:41 AM	920	Fleet	L	OXX	905	Its_Just_Bob	813	Kragg	Julesvale	2	Godai Delta	-1	Aetherean Forest	-1	i fucking hate heavies				
+1/12/2025	1:28:50 AM	905	Fleet	W	OO-	918	MEGAMA	942	Loxodont	Aetherean Forest	1	Merchant Port	2							
+1/12/2025	1:38:21 AM	918	Fleet	W	OO-	930	El_Mariachi	921	Orcane	Julesvale	3	Air Armada	1				Kragg			
+1/12/2025	1:47:51 AM	930	Fleet	W	OO-	944	AldorCrap	999	Zetterburn	Godai Delta	2	Hodojo	1							
+1/12/2025	2:35:44 PM	944	Fleet	W	OO-	955	Yokizamy	939	Orcane	Aetherean Forest	1	Aetherean Forest	2							
+1/12/2025	2:46:10 PM	955	Fleet	L	XX-	939	Dumgum	835	Loxodont	Aetherean Forest	-2	Julesvale	-2							
+1/12/2025	2:54:27 PM	939	Fleet	L	OXX	932	Antifalcon	1087	Loxodont	Aetherean Forest	1	Merchant Port	-1	Julesvale	-1					
+1/12/2025	8:22:26 PM	932	Fleet	W	OO-	943	Krynn	924	Loxodont	Julesvale	2	Aetherean Forest	1							
+1/12/2025	11:17:53 PM	943	Fleet	L	XOX	933	Ants	1014	Zetterburn	Godai Delta	-1	Julesvale	1	Rock Wall	-2					
+1/12/2025	11:30:58 PM	933	Fleet	W	OXO	944	saldelmar	899	Orcane	Julesvale	2	Hyperborean Harbor	-1	Aetherean Forest	3					
+1/12/2025	11:42:58 PM	944	Fleet	W	OXO	953	Apple Woods	855	Maypul	Aetherean Forest	2	Rock Wall	-1	Godai Delta	1					
+1/12/2025	11:54:48 PM	953	Fleet	L	XX-	943	Coom Raider	997	Loxodont	Julesvale	-2	Aetherean Forest	-1							
+1/13/2025	12:01:52 AM	943	Fleet	L	XOX	930	AudibleParrot2	888	Wrastor	Godai Delta	-1	Julesvale	1	Tempest Peak	-1					
+1/13/2025	12:18:37 AM	930	Zetterburn	L	OXX	917	Zostro	901	Ranno	Julesvale	3	Julesvale	-1	Julesvale	-1					
+1/13/2025	12:30:47 AM	917	Zetterburn	W	OXO	931	Derpeon	1002	Wrastor	Julesvale	1	Air Armada	-1	Aetherean Forest	1					
+1/13/2025	12:46:08 AM	931	Zetterburn	W	XOO	944	Pixelsmasher42	949	Wrastor	Aetherean Forest	-2	Aetherean Forest	2	Godai Delta	1					
+1/13/2025	12:59:58 AM	944	Zetterburn	L	XX-	931	tanbeezi	1004	Maypul	Aetherean Forest	-1	Julesvale	-1							
+1/13/2025	1:08:32 AM	931	Fleet	W	XOO	944	Krynn	949	Loxodont	Aetherean Forest	-2	Julesvale	1	Hodojo	1					
+1/13/2025	11:28:30 AM	944	Fleet	W	OO-	955	HeadReever	907	Kragg	Aetherean Forest	1	Fire Capital	1							
+1/13/2025	11:36:26 AM	955	Zetterburn	L	XOX	946	KrayetonTTV- Come Say Hi :)	1042	Fleet	Aetherean Forest	-2	Julesvale	1	Hodojo	-1	He was at 104% and i was at zero on the last sstock. i got hard outplayed and it felt bad. i need to figure out how to better play last stock situations, and not just fish for dumb strong moves. and di out when im in disadvantage			Fleet	Fleet
+1/13/2025	11:49:46 AM	946	Fleet	L	XX-	938	KrayetonTTV- Come Say Hi :)	1051	Fleet	Aetherean Forest	-1	Julesvale	-1			better player alert				
+1/13/2025	11:58:24 AM	938	Fleet	W	OO-	949	zzz	917	Kragg	Julesvale	2	Godai Delta	3				Fleet			
+1/13/2025	12:05:55 PM	949	Fleet	L	XX-	946	JJROCKETS	1304	Loxodont	Julesvale	-1	Julesvale	-2							
+1/13/2025	12:14:23 PM	946	Fleet	W	OXO	957	Keernin	937	Ranno	Julesvale	1	Julesvale	-2	Aetherean Forest	2		Zetterburn	Zetterburn		
+1/13/2025	1:43:48 PM	957	Zetterburn	L	OXX	940	CJplz	797	Forsburn	Godai Delta	1	Rock Wall	-1	Julesvale	-1					
+1/13/2025	1:55:48 PM	940	Fleet	W	XOO	951	steakeeda	913	Ranno	Julesvale	-1	Aetherean Forest	1	Hodojo	1					
+1/13/2025	2:35:11 PM	951	Fleet	L	XOX	938	Anime Ferb	918	Loxodont	Julesvale	-2	Julesvale	1	Hodojo	-1					
+1/13/2025	2:48:18 PM	938	Fleet	L	XOX	926	on_ho	923	Kragg	Julesvale	-1	Julesvale	2	Rock Wall	-1	forgot to ban rock wall you moron				
+1/13/2025	2:58:32 PM	926	Fleet	W	OXO	940	Flex	994	Kragg	Godai Delta	1	Merchant Port	-1	Julesvale	2	he keeps doing side b up smash. so i need to parry the side b so that i can punish. also i hate rock.probably also should poarry it				
+1/13/2025	4:41:04 PM	940	Fleet	W	OO-	952	Mehzah	927	Ranno	Julesvale	2	Godai Delta	1							
+1/13/2025	4:49:07 PM	952	Fleet	L	XOO	935	Radioamnesiac	771	Orcane	Aetherean Forest	2	Merchant Port	-1	Julesvale	-2	merced by the fucking newark servers. game 2 i was playing in a powerpointr slideshow with my moves coming out 2 seconds later. this newark server is garbage i will try to add it to my no list.				
+1/13/2025	5:04:36 PM	935	Fleet	L	XOX	921	Cornbread	868	Ranno	Julesvale	-1	Julesvale	1	Merchant Port	-3	my internet is completely fucked and i am drunk				
+1/14/2025	12:04:26 PM	921	Fleet	W	XOO	933	Masier	910	Loxodont	Godai Delta	-1	Julesvale	1	Hodojo	1	big Sd at the end of game 1. i can do this though. keep playing patiently and punishing his attacks. forward airs are my friend. he really got outplayed enought that he went fleet for game 3. going to stick to my guns and try to outplkay		Fleet		
+1/14/2025	12:18:48 PM	933	Fleet	W	OXO	943	TheGreatRepetition	874	Loxodont	Julesvale	3	Hodojo	-2	Aetherean Forest	1	holy cow the cheese. this guy just knows how to do side b > smash. i need to respect his dumb cheese options.				
+1/14/2025	1:11:40 PM	943	Fleet	L	XX-	934	BDs Charmeleon	1034	Kragg	Aetherean Forest	-2	Julesvale	-2							
+1/14/2025	1:16:54 PM	934	Zetterburn	W	OO-	943	BurdenedSceptile	853	Maypul	Julesvale	1	Air Armada	1							
+1/14/2025	1:27:02 PM	943	Zetterburn	W	OO-	955	bigcheez	959	Zetterburn	Julesvale	2	Julesvale	1							
+1/14/2025	2:30:27 PM	955	Zetterburn	L	XX-	943	10inchflinch800	932	Wrastor	Godai Delta	-1	Godai Delta	-1							
+1/14/2025	2:46:59 PM	943	Zetterburn	L	XX-	933	Trick Guy	992	Wrastor	Godai Delta	-1	Aetherean Forest	-1							
+1/14/2025	2:54:58 PM	933	Zetterburn	L	XX-	918	Hakumei Tenshi	859	Clairen	Julesvale	-1	Julesvale	-1							
+1/14/2025	3:03:06 PM	918	Fleet	L	XX-	930	Datguyamir		Loxodont							Forfeit				
+1/14/2025	3:04:50 PM	930	Zetterburn	W	OO-	942	Zane Zandell	931	Maypul	Aetherean Forest	2	Rock Wall	1							
+1/14/2025	3:12:36 PM	942	Zetterburn	W	OO-	949	Thicccsation	779	Kragg	Julesvale	1	Rock Wall	1							
+1/14/2025	3:24:36 PM	949	Fleet	W	OO-	961	jishywashy	964	Clairen	Julesvale	2	Aetherean Forest	2							
+1/14/2025	3:47:06 PM	961	Zetterburn	W	OXO	972	Grenz	957	Zetterburn	Julesvale	2	Godai Delta	-1	Merchant Port	1					
+1/14/2025	4:00:08 PM	972	Zetterburn	L	OXX	962	hermit	1028	Clairen	Aetherean Forest	1	Aetherean Forest	-1	Julesvale	-1					
+1/14/2025	4:10:42 PM	962	Zetterburn	L	XX-	953	Trueninja01	1066	Loxodont	Julesvale	-2	Julesvale	-2			Going fleet. better player alert			Fleet	
+1/14/2025	4:16:55 PM	953	Fleet	L	XOX	943	RZ-214	1002	Clairen	Aetherean Forest	-3	Julesvale	2	Hodojo	-1	SD at the end. so sad. i think i couldve won this			Zetterburn	Zetterburn
+1/14/2025	4:28:58 PM	943	Zetterburn	L	XOX	934	hermit	1022	Clairen	Aetherean Forest	-1	Julesvale	1	Godai Delta	-1					
+1/14/2025	4:43:02 PM	934	Zetterburn	L	XX-	923	304	971	Loxodont	Aetherean Forest	-1	Julesvale	-1							
+1/14/2025	4:51:40 PM	923	Zetterburn	L	XX-	912	TyFuse	938	Clairen	Godai Delta	-2	Julesvale	-1							
+1/14/2025	4:59:46 PM	912	Zetterburn	L	XX-	903	TheIronGiant	1013	Ranno	Aetherean Forest	2	Aetherean Forest	-2	Julesvale	-2					
+1/14/2025	5:10:53 PM	903	Fleet	W	OO-	914	Yinto	863	Clairen	Julesvale	1	Julesvale	2							
+1/14/2025	5:19:09 PM	914	Fleet	L	XX-	907	Vaquitamarinah	1057	Kragg	Aetherean Forest	-2	Julesvale	-1							
+1/14/2025	5:26:22 PM	907	Fleet	W	OO-	920	worm	943	Loxodont	Julesvale	1	Tempest Peak	1							
+1/14/2025	5:41:58 PM	920	Fleet	L	XOX	910	UwU xD i'm quirky!!! *rawr*	954	Wrastor	Godai Delta	-1	Julesvale	3	Hodojo	-1					
+1/14/2025	5:57:24 PM	910	Zetterburn	W	OO-	922	CandycaneRay/TTVM1st1cgg	906	Zetterburn	Aetherean Forest	1	Aetherean Forest	1							
+1/14/2025	9:46:32 PM	922	Zetterburn	L	OXX	909	openmesideways	894	Ranno	Julesvale	2	Rock Wall	-1			oh my god this guy is such a wanker. needle camping doucewad				
+1/14/2025	10:01:59 PM	909	Zetterburn	W	OXO	921	lolo.exe	918	Kragg	Julesvale	1	Julesvale	-2	Aetherean Forest	1					Fleet
+1/14/2025	10:13:34 PM	921	Zetterburn	L	XX-	911	ChetMcLovin	961	Clairen	Merchant Port	-2	Julesvale	-1							
+1/14/2025	10:23:52 PM	911	Zetterburn	W	OO-	920	Sez	826	Clairen	Julesvale	3	Hyperborean Harbor	1							
+1/14/2025	10:32:56 PM	920	Fleet	W	OXO	930	Brain	887	Loxodont	Julesvale	1	Aetherean Forest	-1	Aetherean Forest	1					
+1/14/2025	10:47:25 PM	930	Zetterburn	L	XX-	922	Iscir (TOES)	1038	Zetterburn	Aetherean Forest	-2	Julesvale	-2							
+1/14/2025	10:58:06 PM	922	Fleet	L	XX-	914	Kage the Warrior	1021	Loxodont	Aetherean Forest	-1	Aetherean Forest	-1							
+1/14/2025	11:06:25 PM	914	Fleet	W	OO-	925	Fleetcat	887	Maypul	Aetherean Forest	1	Tempest Peak	1							
+1/14/2025	11:15:50 PM	925	Fleet	L	OXX	916	Harico	1029	Orcane	Aetherean Forest	2	Aetherean Forest	-1	Julesvale	-1					
+1/14/2025	11:28:19 PM	916	Fleet	L	OXX	905	AngelicHorsey	931	Orcane	Aetherean Forest	1	Fire Capital	-1	Julesvale	-1	campy ass dweeb				
+1/14/2025	11:44:08 PM	905	Fleet	W	OO-	912	pinkydink	764	Zetterburn	Godai Delta	3	Hodojo	2							
+1/15/2025	2:56:23 PM	912	Zetterburn	L	XOX	901	FragzIzHere	920	Forsburn	Julesvale	-2	Godai Delta	1	Air Armada	-1	pussy ass camping hoe				
+1/15/2025	3:08:07 PM	901	Fleet	L	XX-	892	juniperberry	992	Clairen	Aetherean Forest	-1	Julesvale	-2			this game is a crummy spam fest				
+1/15/2025	3:17:20 PM	892	Zetterburn	W	OO-	903	lelize	857	Wrastor	Aetherean Forest	1	Hodojo	3							
+1/15/2025	3:24:59 PM	903	Zetterburn	W	OO-	911	moemoe708	778	Clairen	Julesvale	2	Aetherean Forest	2							
+1/15/2025	3:32:40 PM	911	Zetterburn	W	OO-	918	moemoe708	770	Clairen	Aetherean Forest	2	Hodojo	1							
+1/15/2025	3:41:03 PM	918	Zetterburn	W	OO-	929		891	Orcane	Godai Delta	1	Air Armada	1				Kragg			
+1/15/2025	3:50:40 PM	929	Zetterburn	L	XX-	915	TheSleepbringer	864	Clairen	Aetherean Forest	-1	Julesvale	-2							
+1/15/2025	3:59:53 PM	915	Zetterburn	W	OO-	927	swagemite282	915	Clairen	Godai Delta	2	Tempest Peak	2							
+1/15/2025	4:12:54 PM	927	Zetterburn	W	OO-	937	Lizzy	872	Zetterburn	Aetherean Forest	1	Godai Delta	2				Forsburn			
+1/15/2025	8:41:33 PM	937	Zetterburn	W	OXX	951	Mr. Spikes	985	Clairen	Godai Delta	-2					opponent forfeited after game 1 ?				
+1/15/2025	8:46:47 PM	951	Zetterburn	W	OO-	963	EDKILL201	963	Loxodont	Julesvale	1	Godai Delta	1			opponent had 130 ping. playing slow and dash dancing is not my style but it does pay off.	Kragg			
+1/15/2025	8:58:50 PM	963	Zetterburn	W	OXO	973	Yinto	901	Clairen	Aetherean Forest	1	Tempest Peak	-1	Julesvale	1	he likes to neutral pummel alot. doesnt know how to edgeguard, just uses neutral b or fsmash. unfortunate sd game 2 at the end with going straight out with up b. need to slow my game down but remember that clairens range is enormous when dashdancing. really loves to spam cc dtilt, what a marth. need to figure out how to edgeguard clairen better.				
+1/15/2025	9:11:49 PM	973	Zetterburn	L	XX-	963	Giggle Bag	1036	Loxodont	Aetherean Forest	-1	Julesvale	-1							
+1/15/2025	9:20:26 PM	963	Zetterburn	W	OXO	975	Gonzo	966	Maypul	Julesvale	1	Godai Delta	-2	Aetherean Forest	1					
+1/16/2025	11:47:58 AM	975	Zetterburn	L	XX-	965	ashe!	1021	Clairen	Aetherean Forest	-2	Julesvale	-2							
+1/16/2025	11:55:09 AM	965	Zetterburn	L	XOX	954	Drill	992	Kragg	Julesvale	-1	Julesvale	2	Fire Capital	-2			Maypul	Fleet	
+1/16/2025	12:09:31 PM	954	Fleet	W	OO-	967	Tae smurf	989	Forsburn	Aetherean Forest	1					he forfeit after game 1				
+1/16/2025	12:16:03 PM	967	Fleet	L	XOX	962	Glarkon	1174	Orcane	Aetherean Forest	-1	Julesvale	2	Hodojo	-2	SD at the end. gotta remember how bad my up b is now. this guy does not seem like an orcane main. need to try to cover side b to ledge with down tilt to punish it, there are punishable frames. yep i was right he was a zetter main. and was very oppressive. i need to learn to somehow not be intimidated by dash dancing		Zetterburn		
+1/16/2025	12:29:06 PM	962	Fleet	W	XOO	974	Grimmz	974	Ranno	Merchant Port	-1	Julesvale	2	Godai Delta	1	all the SDs on up b. this guy is using a bunch of empty hops to try to bait my shield grabs. ranno is easily able to camp with needles and back airs. not fun.				
+1/16/2025	2:45:03 PM	974	Zetterburn	W	OO-	986	CactusPearGamer	970	Maypul	Julesvale	1	Tempest Peak	1							
+1/16/2025	3:47:03 PM	986	Fleet	W	OO-	997	Dual	950	Loxodont	Godai Delta	2	Aetherean Forest	2							
+1/16/2025	3:55:50 PM	997	Fleet	W	XOO	1011	Heartman	1049	Kragg	Julesvale	-1	Julesvale	2	Tempest Peak	1	jv 3 on game 2. slowing down my game was so successful. kragg is bad but i cant mindlesly approach him.				
+1/17/2025	10:00:49 AM	1011	Zetterburn	L	XX-	999	LumeKnight	1015	Clairen	Julesvale	-1	Julesvale	-2							
+1/17/2025	10:08:53 AM	999	Zetterburn	W	OO-	1008	LowELOTechSpam	914	Zetterburn	Aetherean Forest	2	Merchant Port	1			Emphasis on low elo tech spam. this guy is schmoving but just throwing out mindless fast hitboxes and doing predictable ledge options. easy parries.				
+1/17/2025	10:17:26 AM	1008	Zetterburn	W	OXO	1018	Zeetrr	966	Loxodont	Julesvale	3	Aetherean Forest	-1	Aetherean Forest	1					
+1/17/2025	11:29:16 AM	1018	Zetterburn	L	OXX	1008	Power	1088	Zetterburn	Aetherean Forest	1	Hodojo	-2	Julesvale	-1					Fleet
+1/17/2025	11:41:21 AM	1008	Fleet	L	XX-	1002	DarkShifterGG	1176	Zetterburn	Aetherean Forest	-2	Aetherean Forest	-1							
+1/17/2025	11:49:22 AM	1002	Fleet	L	XX-	990	SteveMasterson	1002	Kragg	Godai Delta	-1	Julesvale	-2			I am playing too impatiently. holding in and di-ing in. this kragg loves to forward smash, i think all 3 of my deaths were from getting forward smashed off the ledge when i was trying to fair. need to mix up my ledge options. getting camped with rocks. i was playing too aggressively still.  				
+1/17/2025	11:58:46 AM	990	Fleet	W	OXO	998	tarikk	858	Zetterburn	Julesvale	2	Julesvale	-1	Aetherean Forest	1					
+1/17/2025	1:17:46 PM	998	Fleet	W	XOO	1010	Flex	984	Kragg	Julesvale	-2	Julesvale	1	Hyperborean Harbor	1					
+1/17/2025	2:08:56 PM	1010	Fleet	L	XX-	1000	Miller	1078	Clairen	Julesvale	-1	Julesvale	-1						Zetterburn	
+1/17/2025	2:17:48 PM	1000	Zetterburn	L	XX-	992	jweezy	1134	Forsburn	Julesvale	-1	Julesvale	-1							
+1/17/2025	2:26:16 PM	992	Zetterburn	W	XOO	1004	AmporphousAmalgamation	984	Kragg	Julesvale	-1	Godai Delta	1	Fire Capital	2					
+1/17/2025	2:40:29 PM	1004	Zetterburn	L	XOX	991	Shays	975	Clairen	Hodojo	-1	Julesvale	2	Tempest Peak	-2					
+1/17/2025	2:52:44 PM	991	Zetterburn	W	OO-	997	negro-arc	804	Zetterburn	Julesvale	1	Merchant Port	2							
+1/17/2025	3:02:05 PM	997	Zetterburn	L	XX-	983	Cinnonpoi	938	Forsburn	Julesvale	-1	Hyperborean Harbor	-1							
+1/17/2025	3:11:41 PM	983	Zetterburn	W	OO-	996	Kangg	1028	Loxodont	Julesvale	2	Julesvale	1							
+1/17/2025	4:30:55 PM	996	Zetterburn	L	XX-	986	Tr3c3	1058	Loxodont	Hodojo	-1	Fire Capital	-1				Kragg			
+1/17/2025	4:42:23 PM	986	Zetterburn	L	XX-	978	Schnurb	1103	Ranno	Godai Delta	-1	Julesvale	-1							
+1/17/2025	4:52:58 PM	978	Zetterburn	W	OO-	986	Skullkid	842	Forsburn	Aetherean Forest	2	Aetherean Forest	1				Loxodont			
+1/17/2025	5:02:17 PM	986	Zetterburn	W	OO-	999	Zepic5	1030	Clairen	Julesvale	1	Tempest Peak	2							
+1/17/2025	5:16:58 PM	999	Zetterburn	L	XX-	989	Silvermoon1k	1068	Maypul	Hodojo	-3	Merchant Port	-1			blew a full stock lead on game 2. maypul is just so fast				
+1/17/2025	5:28:08 PM	989	Zetterburn	L	XX-	976	Dancho	950	Zetterburn	Julesvale	-1	Rock Wall	-1			blew a full stock lead game 1. need to respect kragg and his big dumb hitboxes. 				
+1/17/2025	5:37:36 PM	976	Fleet	W	OO-	988	Krynn	986	Loxodont	Julesvale	1	Tempest Peak	1							
+1/18/2025	4:37:09 PM	988	Zetterburn	W	OXO	1001	RZ-214	1015	Zetterburn	Aetherean Forest	1	Tempest Peak	-1	Hodojo	1					
+1/18/2025	4:50:27 PM	1001	Zetterburn	L	XOX	988	Boomer285	969	Ranno	Godai Delta	-1	Fire Capital	1	Tempest Peak	-1					
+1/18/2025	5:12:34 PM	988	Zetterburn	W	OXO	998	Azr 	938	Ranno	Hodojo	1	Hyperborean Harbor	-2	Merchant Port	2					
+1/18/2025	11:14:01 PM	998	Fleet	W	OXO	1011	juk3bug	1045	Zetterburn	Godai Delta	1	Hyperborean Harbor	-2	Merchant Port	1					
+1/18/2025	11:28:27 PM	1011	Fleet	W	OO-	1020	Nini_bats	911	Zetterburn	Merchant Port	1	Merchant Port	1			this guy only wanted to approach with full hop dair and fair. i walled him out with my fair and it went very well!				
+1/19/2025	1:23:28 AM	1020	Zetterburn	L	XX-	1010	Kurukato	1077	Loxodont	Aetherean Forest	-2	Rock Wall	-1			all he wanted to do was camp in the corner and throw his dumb meatballs. i need to hold center and figure out a way to deal with him. also edgeguarding him is maybe even trickier than clairen. need to figure out what to do.				
+1/19/2025	1:33:15 AM	1010	Zetterburn	W	OXO	1020	Orpheus	966	Zetterburn	Aetherean Forest	1	Hodojo	-1	Godai Delta	2	getting hit with a lot of run off fireball back onto stage. shielding this or reading it with ftilt was very nice. still getting alot of that. he also likes to ledge hop onto the platform. perhaps i could read that more. reading his fireball off ledge was so helpful, it really pushed me over the edge.				
+1/19/2025	1:25:55 PM	1020	Zetterburn	L	OXX	1006	WorldClass_	973	Forsburn	Merchant Port	1	Hyperborean Harbor	-1	Fire Capital	-3	he is really overusing full hop fade back bairs to try to bait me into approaching. that and run back forward smash. the range on that move is ridiculous! game 3 i randomed to fire capital  which was really unlucky. the last thing he needed was more space to camp me out. he spent the whole game running away and teabagging, really obnoxious. I don't have patience. really unfortunate SD at the end of game 3.				
+1/19/2025	1:42:44 PM	1006	Zetterburn	W	XOO	1019	TheWisestGiraffe	1055	Orcane	Julesvale	-1	Hyperborean Harbor	1	Aetherean Forest	1	got game 1 all the way to 150% each last stock. i couldn't really tell any specific habits this guy had.				
+1/19/2025	2:00:49 PM	1019	Fleet	W	OXO	1031	MundoJelly	1027	Fleet	Julesvale	1	Aetherean Forest	-1	Godai Delta	1	need to not di in. play more patient. this set was completely decided on shield grabs. both of us were doing dumb stuff on shield.				
+1/19/2025	9:00:22 PM	1031	Fleet	L	XOX	1020	Xen	1050	Ranno	Aetherean Forest	-1	Fire Capital	1	Godai Delta	-1	half of his neutral was run backwards and use the tongue command grab. it was harder to counter than it should be. but if i can predict it and spot dodge or parry it i should be good. oh my god what a loser he did like 20 taunts in game 3 it was really frustrating. yeah buddy your command grabs and forward smashes are really technical and you should be so proud				
+1/19/2025	9:15:09 PM	1020	Fleet	W	OO-	1028	vZAXT	919	Clairen	Aetherean Forest	2	Merchant Port	1							
+1/20/2025	3:57:51 AM	1028	Zetterburn	W	OO-	1032	Arcansyte	758	Fleet	Julesvale	2	Julesvale	1							
+1/20/2025	4:07:38 AM	1032	Zetterburn	L	XX-	1021	Lizard	1049	Wrastor	Godai Delta	-2	Hyperborean Harbor	-2							
+1/20/2025	4:13:15 AM	1021	Zetterburn	W	OO-	1032	Hibari Xanxus	990	Maypul	Merchant Port	2	Aetherean Forest	1							
+1/20/2025	5:35:06 PM	1032	Zetterburn	L	XX-	1020	NJ	1005	Ranno	Hodojo	-1	Air Armada	-1							
+1/20/2025	5:44:15 PM	1020	Zetterburn	W	XOO	1029	Real dude RP	919	Kragg	Godai Delta	-2	Merchant Port	1	Merchant Port	1	all homie wants to do is run away. this game is annoying. oh my god the incessant teabagging game 3 was so annoying but i beat him anyway. wanker.			Fleet	Fleet
+1/20/2025	9:54:38 PM	1029	Fleet	W	OO-	1040	fourKings	1005	Orcane	Godai Delta	1	Hyperborean Harbor	1			all i do is get grabbed, but all my grabs whiff.				
+1/20/2025	10:06:18 PM	1040	Fleet	L	XX-	1032	fini!!	1167	Clairen	Julesvale	-2	Tempest Peak	-1			terrible matchup! this guy outclassed me but also the matchup is not fun				
+1/20/2025	10:24:29 PM	1032	Fleet	W	OXO	1043	MrN829	998	Zetterburn	Godai Delta	1	Hodojo	-1	Fire Capital	3					
+1/20/2025	10:43:42 PM	1043	Fleet	L	OXX	1033	Red Eye	1089	Forsburn	Julesvale	1	Air Armada	-1	Tempest Peak	-2					
+1/21/2025	10:34:16 AM	1033	Fleet	W	OO-	1046	BigAppaFan	1090	Clairen	Julesvale	1	Julesvale	1			trying to fish for kills is so hard; i'm up against a clairen with two fresh stocks and he's last stock at 70. i have an sd at 0 and 				
+1/21/2025	10:53:23 AM	1046	Fleet	L	XX-	1040	My Balls Hurt	1230	Orcane	Hodojo	-1	Godai Delta	-2			got game 1 to last hit but orcane is so slippery. i need to spot dodge more, or use movement to avoid grabs. he goes for so many grabs and im not getting any. really unfortunate sd game 2 but i dont think i would have won. this guy was slippery and his punish was better and his neutral was fast. need to spot dodge the grabs when i get in disadvantage instead of just shielding automatically				
+1/21/2025	11:03:52 AM	1040	Fleet	L	XX-	1032	jweezy	1165	Forsburn	Aetherean Forest	-2	Rock Wall	-1			parrying forsburn clone seems like a good option. i need to figure out my grab follow ups.				
+1/21/2025	11:14:32 AM	1032	Fleet	W	OO-	1044	Jimmy_MDC	1043	Ranno	Aetherean Forest	1	Fire Capital	2			grabbing ledge worked nicely. it let him not abuse tongue at ledge and i was able to punish. im not sure why he picked fire capital game 2 and then kept approaching but it was helpful. need to figure out how to di the low percent combos because they felt quite oppressive.				
+1/21/2025	3:48:04 PM	1044	Fleet	W	OO-	1053	Warden of the North	959	Etalus	Julesvale	2	Aetherean Forest	2			i do not like etalus. his armor is dumb and he moves fast. i dread playing one that actually knows what he's doing.				
+1/21/2025	4:41:39 PM	1053	Fleet	L	OXX	1038	Mioweg	973	Kragg	Godai Delta	1	Hyperborean Harbor	-3	Merchant Port	-1	getting hit by a lot of rock cheese and falling under the stage on hyperborean. this guy is really campy so i need to play even slower and not overextend.				
+1/21/2025	4:53:16 PM	1038	Fleet	W	OXO	1052	NShadow	1119	Etalus	Godai Delta	3	Julesvale	-1	Aetherean Forest	1	his armor makes me mad and his jiggle physics make me uncomfortable				
+1/21/2025	5:37:18 PM	1052	Fleet	L	XX-	1043	Hades	1140	Kragg	Julesvale	-2	Hyperborean Harbor	-1			Why is this heavy so fast! I need to not get psyched out by fast movement and fadeback aerials. got it to last hit but got cheesed but the silly stage. i know i counterpicked but am using rng. no excuse tho.				
+1/21/2025	5:47:08 PM	1043	Fleet	W	OO-	1057	Tax Fraud Tien	1110	Etalus	Julesvale	2	Julesvale	2			Gotta be ready for his projectiles esp. when he's offstage. im assuming i can parry them for invincibility?				
+1/21/2025	5:59:21 PM	1057	Fleet	W	OO-	1069	Pilo	1061	Maypul	Godai Delta	1	Fire Capital	1							
+1/21/2025	6:19:31 PM	1069	Fleet	L	XX-	1057	Knifey	1068	Clairen	Godai Delta	-1	Hodojo	-2			managed to lose a pretty big lead game 1. gotta play neutral slow, hold my ground, and work on getting more grabs on platforms. game 2 was worse. clairen can really box me out; should probably use more defensive options like parries and stay grounded except for retreating float fairs				
+1/21/2025	6:29:48 PM	1057	Zetterburn	L	XX-	1046	Puffin	1096	Loxodont	Godai Delta	-2	Tempest Peak	-2			wow his sword is so big i think i can not be the one approaching in this matchup				
+1/21/2025	6:36:02 PM	1046	Zetterburn	W	OO-	1058	PladMan	1043	Etalus	Godai Delta	2	Air Armada	3			this guy did not know what he was doing but also I was cooking				
+1/21/2025	6:43:54 PM	1058	Zetterburn	W	OO-	1068	Sergeant Long Nuts	1014	Etalus	Merchant Port	3	Hyperborean Harbor	3			definitely not an etalus player either				
+1/21/2025	6:50:35 PM	1068	Zetterburn	W	XOO	1076	LEGENDAIRY	972	Clairen	Hodojo	-1	Rock Wall	2	Merchant Port	1	okay i blew a huge lead game 1 and this schmuck taunted after every stock. gotta play the lead better and be patient. also clairen is dumb. yeah he is not very good and just likes to taunt. holding my space and focusing on not running in worked great.				
+1/21/2025	7:04:49 PM	1076	Zetterburn	L	XX-	1064	Echo	1061	Forsburn	Hodojo	-1	Merchant Port	-2			had it to last hit game 1. playing around this guy's range is tough but i think if i use more fireballs and then approach with dairs that will be helpful. also try to get more grab follow ups instead of just fthrow. I did not do a good job of using movement and not approaching. oops				
+1/21/2025	7:13:33 PM	1064	Zetterburn	L	XX-	1052	Jestre	1068	Maypul	Julesvale	-1	Fire Capital	-1			remember to just shield against these dumb maypuls and their dumb dash attacks. almost brought game 1 back with just shielding. not good enough. the dash attack is too good.				
+1/21/2025	7:26:25 PM	1052	Zetterburn	L	XX-	1043	isaacam9	1145	Zetterburn	Julesvale	-1	Hyperborean Harbor	-1			both games were last hit but he was more clutch than me. gotta work on shine combos and edgeguards				
+1/21/2025	7:36:57 PM	1043	Zetterburn	W	XOO	1053	.	981	Etalus	Godai Delta	-1	Hodojo	1	Julesvale	2	his recovery is insane and i don't think i can contest him offstage. 				
+1/22/2025	1:21:55 PM	1053	Fleet	L	XX-	1042	Luc Money	1073	Zetterburn	Hodojo	-1	Godai Delta	-2							
+1/27/2025	12:24:53 PM	1042	Zetterburn	W	XOO	1051	CottonCandyVacuumCleaner	954	Kragg	Aetherean Forest	-3	Julesvale	1	Julesvale	1			Fleet	Fleet	Fleet
+1/27/2025	1:59:03 PM	1051	Fleet	L	OXO	1040	NJ	1072	Clairen	Godai Delta	-1	Aetherean Forest	1	Merchant Port	-2		Ranno	Ranno	Zetterburn	
+1/27/2025	2:14:03 PM	1040	Fleet	L	XX-	1030	Wassabi	1085	Ranno	Hodojo	-1	Julesvale	-2			unfortunate sd at the end of game 2. ranno is just really fast and all of his buttons are so good. makes me sad.				
+1/27/2025	2:22:45 PM	1030	Fleet	L	XX-	1020	friend	1084	Etalus	Aetherean Forest	1	Merchant Port	-1	Godai Delta	-1		Kragg	Kragg		
+1/27/2025	2:37:15 PM	1020	Fleet	L	XX-	1011	friend	1094	Kragg	Merchant Port	-1	Air Armada	-2							
+1/27/2025	2:44:37 PM	1011	Fleet	W	XOO	1022	Double	996	Zetterburn	Hodojo	-2	Merchant Port	1	Rock Wall	1					
+1/27/2025	4:58:56 PM	1022	Fleet	L	XX-	1009	Double	996	Zetterburn	Aetherean Forest	-3	Merchant Port	-2							
+1/27/2025	5:06:37 PM	1009	Fleet	L	XX-	998	cooksbrain	1032	Clairen	Julesvale	-1	Hodojo	-1			crazy sd game 2 at the end. i absolutely had it in the bag.			Zetterburn	
+1/27/2025	5:15:16 PM	998	Zetterburn	L	XX-	986	DaNinjaHuey		Wrastor	Julesvale	-1	Godai Delta	-2							
+1/27/2025	5:23:27 PM	986	Zetterburn	L	XX-	978	Giant	1111	Loxodont	Hodojo	-1	Rock Wall	-1							
+1/27/2025	5:33:13 PM	978	Zetterburn	L	XX-	967	cherokee	1000	Etalus	Godai Delta	-2	Hodojo	-2							
+1/27/2025	5:41:54 PM	967	Zetterburn	L	XOX	956	Double	985	Zetterburn	Merchant Port	-2	Godai Delta	2	Hodojo	-1	sd'D twice				
+1/27/2025	5:53:03 PM	956	Zetterburn	W	OO-	965	thomas.freking	876	Ranno	Hodojo	3	Julesvale	1							
+1/27/2025	5:59:46 PM	965	Zetterburn	W	XOO	979	killeraidan	1029	Kragg	Godai Delta	-1	Merchant Port	1	Aetherean Forest	1				Fleet	Fleet
+1/27/2025	8:41:11 PM	979	Zetterburn	W	OXO	994	blakedristau	1074	Zetterburn	Hodojo	1	Fire Capital	-2	Merchant Port	1					
+2/2/2025	3:32:12 PM	994	Zetterburn	L	XX-	981	b1ue$	948	Zetterburn	Godai Delta	-1	Aetherean Forest	-1						Fleet	
+2/2/2025	3:42:01 PM	981	Fleet	W	OO-	991	4gecc0_o	924	Clairen	Aetherean Forest	1	Tempest Peak	2							
+2/2/2025	3:52:25 PM	991	Fleet	W	OO-	999	Dorf	868	Clairen	Godai Delta	1	Tempest Peak	2			this is one of the "charge neutral b every time they get offstage" kind of clairens. really annoying				
+2/2/2025	4:11:55 PM	999	Fleet	W	OO-	1011	Strifent	985	Zetterburn	Aetherean Forest	2	Merchant Port	1			loxodont is really scary at all percents. you get blown up so fast	Loxodont			
+2/2/2025	5:14:05 PM	1011	Fleet	W	XOO	1023	GreenSpiral	1004	Fleet	Hodojo	-1	Godai Delta	1	Fire Capital	1	people who counterpick fire capital in this matchup are dorks				
+2/2/2025	5:38:19 PM	1023	Fleet	W	OO-	1031	HoodRatRasta	915	Maypul	Godai Delta	1	Aetherean Forest	2							
+2/2/2025	11:23:16 PM	1031	Fleet	L	XX-	1022	Aggrivated5hark	1106	Kragg	Merchant Port	-2	Tempest Peak	-2			kragg is way too fast for how heavy he is				
+2/2/2025	11:31:44 PM	1022	Fleet	L	XOX	1013	Rheeb	1116	Zetterburn	Aetherean Forest	-1	Tempest Peak	1	Rock Wall	-1	two SD's game 1. i absolutely should have had this. oh well. why is up b so hard to b reverse				
+2/2/2025	11:45:26 PM	1013	Fleet	L	OXX	999	myrh	943	Loxodont	Julesvale	1	Tempest Peak	-1	Merchant Port	-3	wow he is annnoyting before i have even picked my character he is spamming buttons. game 1 was way too close for comfort. i need to try to focus on getting him offstage and edgeguarding instead of vertical combos which don't last too long because he is so floaty. i hate loxodont				
+2/3/2025	12:01:15 AM	999	Fleet	L	XOX	987	mathl33t	990	Zetterburn	Julesvale	-2	Aetherean Forest	1	Fire Capital	-1	he is abusing his movement and aerial > dashback against me, goiung to try zetter. it worked way better. blew a stock lead game 3 but it was close. oh well.			Zetterburn	Zetterburn
+2/3/2025	12:15:14 AM	987	Zetterburn	L	XX-	974	Agorix	964	Loxodont	Hodojo	-2	Julesvale	-1			i hate loxodont				
+2/3/2025	12:23:34 AM	974	Zetterburn	W	OXO	981	YellowJello	829	Loxodont	Julesvale	2	Tempest Peak	-1	Merchant Port	1	his fsmash has such an absurd range. dumb champ. thank god i won this game. time to go to bed.				
+2/3/2025	11:53:27 AM	981	Zetterburn	L	XX-	974	DollarFiftySlice	1144	Maypul	Julesvale	-2	Godai Delta	-2							
+2/3/2025	11:59:59 AM	974	Zetterburn	W	XOO	982	leechinobut	870	Loxodont	Hodojo	-1	Godai Delta	1	Tempest Peak	1	died game 1 to the stupid lingering hitbox from trying to punish his dumb magma charged fsmash. i was robbed. brought game 2 back from a full stock deficit. i can do this. loxodont is so dumb. game 3 was the same way. still think he's dumb.				
+2/3/2025	4:26:14 PM	982	Zetterburn	W	OXO	992	Rhinosauruss	934	Wrastor	Hodojo	2	Hyperborean Harbor	-1	Tempest Peak	1	blew a big lead game 2 to his dumb stuff. kept taunting and teabagging and it got in my head.	Orcane	Orcane		
+2/3/2025	4:41:08 PM	992	Zetterburn	W	OO-	1001	Dale Weasley	911	Ranno	Aetherean Forest	1	Hodojo	2							
+2/3/2025	4:50:30 PM	1001	Zetterburn	W	OO-	1011	Obama	949	Clairen	Aetherean Forest	2	Tempest Peak	2							
+2/3/2025	5:38:39 PM	1011	Zetterburn	L	XOX	997	KokesMcgotes	932	Clairen	Julesvale	-2	Hyperborean Harbor	2	Godai Delta	-1			Ranno		
+2/3/2025	5:50:39 PM	997	Zetterburn	L	XX-	984	KrayetonTTV- Come Say Hi :)	978	Clairen	Julesvale	-1	Tempest Peak	-1							
+2/3/2025	6:01:25 PM	984	Zetterburn	W	OO-	995	Jay Lee	969	Maypul	Merchant Port	2	Merchant Port	1							
+2/3/2025	10:41:52 PM	995	Zetterburn	L	OXX	983	JohnJake	989	Zetterburn	Godai Delta	2	Air Armada	-2	Aetherean Forest	-2					
+2/3/2025	10:52:04 PM	983	Fleet	W	OO-	995	Mad Weird	996	Zetterburn	Aetherean Forest	1	Hodojo	1							
+2/4/2025	12:01:57 PM	995	Fleet	L	OXX	985	this cat is so me	1046	Etalus	Godai Delta	2	Godai Delta	-1	Aetherean Forest	-1	Ranno is so pea-brained it hurts.	Ranno	Ranno		
+2/4/2025	12:14:22 PM	985	Fleet	W	OO-	990	YungSlugg3r	740	Zetterburn	Julesvale	1	Godai Delta	2							
+2/4/2025	12:24:07 PM	990	Fleet	W	OO-	999	bplabaw	911	Ranno	Hodojo	1	Hodojo	1			this game was a lot closer than it should have been. he is abusing platforms and just running away, but it's mostly meaningless. i need to not get weirded out by movement.				
+2/4/2025	4:02:32 PM	999	Fleet	W	OO-	1015	EridanAmpora	1126	Maypul	Merchant Port	1	Godai Delta	1							
+2/4/2025	10:07:17 PM	1015	Fleet	L	OXX	1005	stones	1072	Forsburn	Hodojo	3	Hodojo	-1	Air Armada	-1	sadness				
+2/4/2025	10:21:21 PM	1005	Fleet	L	XOX	995	stones	1069	Forsburn	Aetherean Forest	-1	Tempest Peak	1	Hodojo	-1	forsburn is so insane to me with how many of his moves are completely safe on shield			Zetterburn	
+2/4/2025	10:34:58 PM	995	Zetterburn	L	XOX	986	TjFoD4ddy	1088	Kragg	Julesvale	-1	Aetherean Forest	1	Air Armada	-2					
+2/4/2025	10:45:37 PM	986	Zetterburn	W	XOO	1000	Tales	1033	Clairen	Julesvale	-1					Forfeit?				
+2/4/2025	10:51:20 PM	1000	Zetterburn	L	XX-	989	Tales	1020	Clairen	Hodojo	-1	Aetherean Forest	-2							
+2/4/2025	10:58:59 PM	989	Fleet	W	XOO	1001	AetherealProcyon	1002	Maypul	Merchant Port	-2	Godai Delta	1	Fire Capital	1	dork				
+2/5/2025	12:37:38 PM	1001	Fleet	W	OO-	1007	CloudshyWolfTTV	827	Forsburn	Julesvale	1	Aetherean Forest	2							
+2/5/2025	12:53:34 PM	1007	Fleet	L	OXX	997	Faint	894	Wrastor	Aetherean Forest	1	Aetherean Forest	-1	Hyperborean Harbor	-2	he doesn't know his recovery mixups very well, so dair spikes and nairs is going well at the ledge. need to b reverse my up b every time.				Zetterburn
+2/5/2025	1:05:00 PM	997	Fleet	L	XX-	978	Kasadeem	968	Orcane	Godai Delta	-2	Air Armada	-2			he is playing crazy campy. i think i can win but i need to not approach, and be ready for his platform fair bubble butt thing. parry should help here. so campy and taunting incessantly. unfun to play against.				
+2/5/2025	1:16:08 PM	978	Fleet	W	OO-	986	Rolydown	849	Loxodont	Hodojo	2	Tempest Peak	1							
+2/5/2025	6:19:07 PM	986	Fleet	L	XOX	974	Dopemon	972	Maypul	Julesvale	-1	Fire Capital	1	Aetherean Forest	-1	brought back game 2 despite an sd at zero. i can do this matchup.  what a farce.				
+2/5/2025	6:33:05 PM	974	Fleet	W	OO-	988	Xiaohonkshu	1047	Etalus	Hodojo	3	Aetherean Forest	2							
+2/5/2025	6:39:24 PM	988	Fleet	L	XOX	978	Hispanic@TheDisco	1041	Etalus	Aetherean Forest	2	Hyperborean Harbor	-1	Air Armada	-1	got a call from abby at the end that lost my focus of game 2. should be winable still. giga cheesed. blew a mega lead and lost to his stupid armored smash attacks				
+2/5/2025	10:57:09 PM	978	Fleet	W	OO-	990	Ami	977	Maypul	Merchant Port	1	Merchant Port	1							
+2/5/2025	11:07:04 PM	990	Fleet	L	OXX	977	biggest daddy	948	Zetterburn	Hodojo	1	Hodojo	-2	Godai Delta	-1	he is airdodging every time he gets offstage. i need to try to read this and punish it. lost the last game last hit. i was up for so long but lost it. I really need to learn to close out stocks i guess.				
+2/5/2025	11:21:39 PM	977	Fleet	L	XX-	971	Hodan Waiting Room	1144	Kragg	Aetherean Forest	-1	Air Armada	-2			died twice to rock throw down at ledge cheese. i think i should be able to beat this. kragg runs away with stocks so fast. i need to be better about DI out.				
+2/5/2025	11:30:13 PM	971	Fleet	W	OXO	983	Luka S.	972	Forsburn	Godai Delta	2	Merchant Port	-1	Aetherean Forest	1	i had game 2 in the bag but couldn't close out the stock. this guy is taunting incesssantly. so annoying. he taunted all the way through game 3 as well but i took it handily with a jv2. 	Zetterburn	Zetterburn		
+2/6/2025	7:46:59 AM	983	Fleet	W	OO-	987	Nito MH	696	Loxodont	Julesvale	3	Godai Delta	3							
+2/6/2025	7:54:27 AM	987	Fleet	L	XX-	974	mitchel.crosby	943	Ranno	Hodojo	-1	Rock Wall	-1			screwed up my recovery last stock but it was last hit. this guy is all button cheese. died twice to safe aerial on shield >dashback > fsmash. gross.				
+2/6/2025	8:04:42 AM	974	Fleet	L	OXX	962	mitchel.crosby	957	Ranno	Julesvale	1	Hyperborean Harbor	-2	Godai Delta	-1	almost blew a 2 stock lead here. playing patient and using nairs during edgeguarding was super effective. need to di out his stuff. SD'd stock 2 of game 2 at like 20% but he was also just outplaying me. he moves so fast and punsihes so fast. my projectiles feel useful; i'm not really sure what to do.				
+2/6/2025	8:21:22 AM	962	Fleet	L	XOX	946	Chef boyardon't	814	Etalus	Aetherean Forest	-1	Godai Delta	2	Tempest Peak	-1					
+2/6/2025	8:32:45 AM	946	Fleet	L	XX-	941	Ryoko	1193	Clairen	Godai Delta	-1	Julesvale	-1							
+2/6/2025	8:44:26 AM	941	Fleet	W	OXO	947	Scarlet Momiji -	764	Clairen	Merchant Port	2	Air Armada	-1	Julesvale	1	SD game 2. he is so campy. i hate this game.				
+2/6/2025	10:22:13 PM	947	Zetterburn	W	XOO	960	JayHo_6	973	Maypul	Godai Delta	-2	Air Armada	1	Tempest Peak	1				Fleet	Fleet
+2/7/2025	9:26:53 AM	960	Fleet	L	OXX	953	Keernin	1100	Ranno	Hodojo	1	Hodojo	-1	Fire Capital	-1	almost had game 2. he is getting so salty. running to the other side of the stage and spamming up tilt because i guess he thought i was using it too much? dork. blew a whole stock lead game 3. he was insanely campy. not fun to play against.	Zetterburn	Zetterburn		
+2/7/2025	9:39:21 AM	953	Fleet	L	XOX	945	Iamblue4you	1058	Maypul	Hodojo	-1	Rock Wall	2	Rock Wall	-2	I can do this. not sure how to di out of her up air chains, it just felt free. died two very early deaths game 3 due to bad recovery. unfortunate.				
+2/7/2025	1:08:31 PM	945	Fleet	W	OXO	956	SmashGizmo	941	Loxodont	Julesvale	2	Aetherean Forest	-3	Fire Capital	1	holy cow the cheese. game 2 was miserable and over way too fast. an sd at zero stock 2 and a cheesy back throw dair for stock 3 to die at 30%. sad. was able to win game 3 pretty okay. im ready for this to be a solid matchup for me instead of one i dread.				
+2/7/2025	1:30:10 PM	956	Fleet	L	XX-	947	WaveBashing	1042	Fleet	Merchant Port	-1	Aetherean Forest	-1			close games but i ultimately got outplayed. they were a good fleet.				
+2/7/2025	2:45:24 PM	947	Fleet	W	OO-	958	Its_Just_Bob	933	Kragg	Godai Delta	1	Rock Wall	2			game 1 was last stock but i sealed it out. this matchup is so hard because i need to respect kragg like crazy, and edgeguarding is close to nonexistent. i got this though. game 2 i destroyed him. just gotta play smart.				
+2/7/2025	2:54:53 PM	958	Fleet	W	OO-	970	treb clef	966	Clairen	Julesvale	2	Godai Delta	1							
+2/7/2025	3:48:20 PM	970	Fleet	L	XX-	957	Femboy	910	Maypul	Hodojo	-2	Air Armada	-2			had a analog stick drift problem both games where i couldn't stop rolling to the left every time i hit shield. I thought unplugging would help but it did not.				
+2/7/2025	3:56:32 PM	957	Fleet	L	XX-	947	Aphly	1011	Orcane	Merchant Port	-1	Aetherean Forest	-1							
+2/8/2025	12:51:22 AM	947	Fleet	W	OXO	956	Cinna	862	Ranno	Godai Delta	2	Rock Wall	-1	Aetherean Forest	1	got an insane clip game 2 then blew a massive 2 stock lead. ranno is able to play way too campy, and I DI'd in and played lazily thinking i had the game in the bag. 				
+2/8/2025	2:09:17 AM	956	Fleet	L	XX-	944	Runnin from the Ops	966	Ranno	Godai Delta	-2	Tempest Peak	-1			he got a two stock lead and then spent the rest of game one wavedashing around and not attacking just to be obnoxious. then game 2 he went fleet and just ran away and forward smash arrowed me the whole game. dork.	Fleet			
+2/8/2025	2:19:54 AM	944	Fleet	W	OO-	958	CR_Burgundy	1010	Etalus	Godai Delta	2	Fire Capital	1							
+2/8/2025	1:27:46 PM	958	Fleet	L	OXX	945	mafi	922	Zetterburn	Merchant Port	1	Rock Wall	-1	Hyperborean Harbor	-1	I have a really bad problem of DI'ing in when my opponent is at high percent. i had a big lead that i blew game 2 and 3 because i am mindlessly holding in hoping for a stray hit that never comes.				
+2/8/2025	2:39:08 PM	945	Fleet	W	OXO	958	miDFielder	988	Maypul	Aetherean Forest	2	Air Armada	-1	Hyperborean Harbor	1					
+2/8/2025	6:08:18 PM	958	Fleet	L	XOX	947	ChaseTheEnd	997	Maypul	Aetherean Forest	-1	Julesvale	1	Rock Wall	-1					
+2/8/2025	6:23:20 PM	947	Fleet	L	XX-	939	Gentrify Neighborhoods	1055	Orcane	Merchant Port	-2	Rock Wall	-1							
+2/8/2025	6:31:03 PM	939	Fleet	L	XX-	928	TheSt0ve	960	Clairen	Julesvale	-1	Fire Capital	-1							
+2/8/2025	6:42:59 PM	928	Fleet	L	XOX	916	catpuff	942	Orcane	Aetherean Forest	-1	Julesvale	1	Rock  Wall 	-1					
+2/8/2025	6:56:56 PM	916	Fleet	W	OO-	925	2ndserve	849	Loxodont	Merchant Port	1	Hodojo	1				Zetterburn			
+2/9/2025	12:57:59 AM	925	Fleet	L	XX-	913	Cinna 	917	Ranno	Merchant Port	-2	Tempest Peak	-2			he is camping really hard with movement. i'm not having fun. SD'd at 0 game 2 after taking the first stock, but it was more of the same. I don't like this character.				
+2/9/2025	1:07:02 AM	913	Fleet	W	OO-	922	SnoopySnap	841	Clairen	Julesvale	1	Julesvale	2							
+2/9/2025	1:16:21 AM	922	Fleet	W	OO-	933	Dark Moon	896	Ranno	Godai Delta	2	Godai Delta	1							
+2/9/2025	1:26:02 AM	933	Fleet	W	OO-	944	PikachuRTM	914	Fleet	Julesvale	2	Julesvale	1				Clairen			
+2/9/2025	1:46:33 PM	944	Fleet	W		956	theswaggyturtle		Etalus							forfeit before game 1				
+2/9/2025	1:47:32 PM	956	Fleet	W	OXO	968	DigitalPelican	964	Loxodont	Hodojo	1	Aetherean Forest	-2	Hyperborean Harbor	1					
+2/9/2025	2:43:39 PM	968	Fleet	L	XOX	956	UwU xD i'm quirky!!! *rawr*	948		Aetherean Forest	-1	Godai Delta	3	Rock Wall	-1					
+2/9/2025	2:54:23 PM	956	Zetterburn	W	OO-	966	luyeteir	887	Ranno	Godai Delta	1	Aetherean Forest	2							
+2/10/2025	1:38:25 AM	966	Zetterburn	L	XX-	956	SteveReen	1017	Orcane	Godai Delta	-2	Godai Delta	-2			a dash dance spammer in it's finest. i am garbage. this set was exhausting and not enjoyable at all.				
+2/10/2025	1:47:52 AM	956	Zetterburn	W	OXO	965	McKreedy	867	Loxodont	Julesvale	1	Tempest Peak	-2	Godai Delta	1					
+2/10/2025	1:59:50 AM	965	Zetterburn	L	XOX	950	chim	861	Orcane	Godai Delta	-1	Godai Delta	1	Merchant Port	-2					
+2/10/2025	2:13:22 AM	950	Zetterburn	L	OXX	943	chaingrabber	1089	Clairen	Julesvale	1	Hodojo	-3	Fire Capital	-2	literally just standing still and down tilting and jabbing. i can't beat this because i'm garbage.				
+2/10/2025	2:24:54 AM	943	Fleet	L	XOX	935	Clairen	1071	Fleet	Hodojo	-1	Hyperborean Harbor	1	Rock Wall	-1	actually had a lead for part of game 1. game 3 i was playing so well and it was last stock but of course lost to shield grab -> special pummel -? back throw -> forward smash. yippee.				
+2/10/2025	2:39:40 AM	935	Fleet	L	OXX	924	[TTV]TheWheezingYeen	950	Etalus	Aetherean Forest	1	Julesvale	-1	Merchant Port	-1	taunting between every stock. what a dick. dick.				
+2/10/2025	2:53:22 AM	924	Fleet	L	XOX	914	[TTV]TheWheezingYeen	931	Etalus	Aetherean Forest	-1	Merchant Port	1	Julesvale	-1	again with the taunts. dick.				
+2/10/2025	3:06:16 AM	914	Fleet	W	OXO	928	[TTV]TheWheezingYeen	972	Etalus	Julesvale	1	Aetherean Forest	-3	Air Armada	1	get destroyed idiot				
+2/11/2025	11:37:51 PM	928	Fleet	W	XOO	936	Chris	808	Zetterburn	Julesvale	-1	Tempest Peak	3	Aetherean Forest	1					
+2/12/2025	4:40:59 PM	936	Fleet	W	OXO	948	samiam.mcclure	930	Zetterburn	Aetherean Forest	1	Rock Wall	-1	Hyperborean Harbor	2					
+2/12/2025	4:55:24 PM	948	Fleet	W	XOO	959	Vasko21	920	Kragg	Aetherean Forest	-1	Julesvale	2	Hyperborean Harbor	1					
+2/12/2025	5:52:17 PM	959	Fleet	W	OO-	968	pqRachel	878	Maypul	Merchant Port	2	Rock Wall	2							
+2/12/2025	6:02:25 PM	968	Fleet	W	OO-	981	AtDank	1018	Kragg	Godai Delta	2	Rock Wall	1							
+2/12/2025	6:12:32 PM	981	Fleet	L	XX-	970	Obama	998	Clairen	Julesvale	-1	Fire Capital	-1							
+2/12/2025	7:06:09 PM	970	Fleet	L	XX-	961	Solidsnake1171	1040	Kragg	Julesvale	-1	Fire Capital	-1							
+2/12/2025	7:17:34 PM	961	Fleet	L	XX-	947	Spence709	899	Ranno	Aetherean Forest	-1	Hodojo	-1							
+2/12/2025	10:03:52 PM	947	Fleet	L	XX-	936	Stoooz	972	Etalus	Aetherean Forest	-1	Hyperborean Harbor	-1							
+2/12/2025	10:11:02 PM	936	Fleet	L	XX-	927	Wedran	1021	Etalus	Godai Delta	-2	Rock Wall	-1							
+2/12/2025	10:21:05 PM	927	Fleet	W	XOO	938	TheBadLagMan	904	Kragg	Godai Delta	-1	Merchant Port	3	Air Armada	2	dork				
+2/15/2025	11:44:47 AM	938	Fleet	W	OXO	951	Waffles	990	Fleet	Julesvale	1	Julesvale	-2	Hodojo	1					
+2/15/2025	12:08:43 PM	951	Fleet	W	OXO	965	Stealth Bird	1018	Forsburn	Aetherean Forest	2	Rock Wall	-1	Air Armada	2					
+2/15/2025	12:58:03 PM	965	Fleet	W	OO-	975	DJ Backwards	908	Ranno	Merchant Port	1	Godai Delta	3			gotta learn to di against ranno				
+2/15/2025	5:14:52 PM	975	Fleet	W	OO-	990	ryanrapido	1077	Loxodont	Julesvale	1	Aetherean Forest	1							
+2/17/2025	11:23:52 AM	990	Fleet	L	OXX	981	Goat?	1070	Loxodont	Hodojo	1	Aetherean Forest	-1	Godai Delta	-1	I hate loxodont				
+2/17/2025	11:38:10 AM	981	Fleet	L	XOX	968	ZafroTTV	952	Loxodont	Aetherean Forest	-1	Godai Delta	1	Godai Delta	-1	I hate loxodont				
+2/17/2025	11:49:04 AM	968	Fleet	L	X	955	Cornbread	914	Ranno	Godai Delta	-1					my computer crashed part way through game 1				
+2/17/2025	11:56:12 AM	955	Fleet	L	O	943	Nerd the Nerd		Ranno	Godai Delta	2	Godai Delta				computer crashed again	Loxodont			
+2/17/2025	12:35:47 PM	943	Fleet	L	OO-	949	medium oof	737	Orcane	Merchant Port	2	Fire Capital	2							
+2/17/2025	12:46:09 PM	949	Fleet	W	OO-	966	John Dusty	1107	Etalus	Aetherean Forest	1	Godai Delta	2							
+2/17/2025	12:58:02 PM	966	Fleet	W	XOO	978	The WiiKai	965	Clairen	Godai Delta	-2	Rock Wall	1	Tempest Peak	1					
+2/17/2025	1:10:01 PM	978	Fleet	L	XOX	970	MOsSFLoweR	1085	Loxodont	Hodojo	-1	Godai Delta	2	Merchant Port	-2					
+2/17/2025	11:13:14 PM	970	Fleet	W	OO-	973	jusosc	914	Loxodont	Hodojo	2	Fire Capital	2							
+2/18/2025	11:10:30 PM	973	Fleet	L	XX-	963	G RAT	1022	Forsburn	Hodojo	-1	Godai Delta	-1			both games last hit. i think i could do it if i had better di				
+2/18/2025	11:27:21 PM	963	Fleet	W	OO-	974	TheManOfSteelix	933	Ranno	Julesvale	1	Godai Delta	2							
+2/18/2025	11:33:02 PM	974	Fleet	W	OO-	984	Ice Cold Refreshment	934	Wrastor	Aetherean Forest	2	Hyperborean Harbor	1							
+2/18/2025	11:50:35 PM	984	Fleet	W	OO-	993	murr squid game	919	Zetterburn	Hodojo	1	Air Armada	2							
+2/19/2025	12:02:05 AM	993	Fleet	L	XX-	983	DragonTamerN	1054	Orcane	Hodojo	-2	Hyperborean Harbor	-1			literally 3 SDs game 1				
+2/19/2025	12:10:04 AM	983	Fleet	W	OXO	998	Serb	1073	Forsburn	Julesvale	2	Godai Delta	-1	Hodojo	1					
+2/19/2025	11:22:43 AM	998	Fleet	W		1004	LAW343									they forfiet before the match started?				
+2/19/2025	11:23:54 AM	1004	Fleet	W	XOO	1014	LazyJapas	952	Forsburn	Merchant Port	-1	Air Armada	2	Air Armada	1			Kragg		
+2/19/2025	2:15:10 PM	1014	Fleet	W	OXO	1026	Bity	1022	Maypul	Godai Delta	1	Godai Delta	-2	Hodojo	1					
+2/19/2025	5:34:02 PM	1026	Fleet	W	OO-	1033	Max227	861	Forsburn	Godai Delta	1	Godai Delta	3							
+2/19/2025	5:46:55 PM	1033	Fleet	W	OXO	1041	juansolopie	933	Clairen	Hodojo	2	Fire Capital	-1	Merchant Port	2					
+2/19/2025	10:24:59 PM	1041	Fleet	W	OXO	1050	subzero	938	Ranno	Godai Delta	-2	Fire Capital	2							
+2/22/2025	10:37:32 AM	1050	Fleet	W	XOO	1061	Not Funny Person	1036	Etalus	Godai Delta	-2	Julesvale	1	Hyperborean Harbor	1					
+2/23/2025	3:07:50 PM	1061	Fleet	L	OXX	1069	Auglur	1069	Orcane	Aetherean Forest	1	Rock Wall	-2	Air Armada	-1		Ranno	Ranno		
+2/23/2025	3:23:22 PM	1069	Fleet	L	OXX	1036	Mad Weird	990	Zetterburn	Aetherean Forest	2	Rock Wall	-1	Merchant Port	-1					
+2/23/2025	3:36:30 PM	1036	Fleet	L	OXX	1024	BlastStar45	1035	Fleet	Julesvale	2	Rock Wall	-2	Fire Capital	-1					
+2/23/2025	3:49:10 PM	1024	Fleet	L	XX-	1015	ToasterFridge	1104	Clairen	Hodojo	-2	Julesvale	-1							
+2/23/2025	3:56:48 PM	1015	Fleet	L	XX-	1006	ketah	1089	Clairen	Aetherean Forest	-2	Hodojo	-2							
+2/23/2025	4:03:14 PM	1006	Fleet	L	XX-	994	Sensei	1005	Orcane	Merchant Port	-1	Godai Delta	-1							
+2/25/2025	10:32:20 PM	994	Fleet	W	OO-	1002	ActiveAura951	895	Maypul	Godai Delta	3	Rock Wall	2							
+2/25/2025	10:45:38 PM	1002	Fleet	L	OXX	889	Big Poppa Pump	955	Clairen	Hodojo	2	Rock Wall	-2	Godai Delta	-2					
+2/25/2025	10:57:53 PM	889	Fleet	L	OXX	978	Clairen Uchiha	997	Kragg	Aetherean Forest	3	Aetherean Forest	-1	Julesvale	-1		Clairen			
+2/25/2025	11:10:02 PM	978	Loxodont	W	OO-	988	Roguelike Q	905	Kragg	Godai Delta	1	Tempest Peak	1							
+2/25/2025	11:21:32 PM	988	Fleet	W	OO-	1000	skunket	997	Zetterburn	Godai Delta	1	Air Armada	2			dork				
+3/3/2025	5:48:53 PM	1000	Fleet	L	XX-	986	Cornbread	954	Ranno	Godai Delta	-1	Merchant Port	-1							
+3/3/2025	5:58:31 PM	986	Fleet	W	OO-	994	quals	889	Fleet	Godai Delta	2	Godai Delta	1							
+3/3/2025	6:08:09 PM	994	Fleet	W	OXO	1002	MyFullLegalName	859	Loxodont	Julesvale	-1	Godai Delta	2	Aetherean Forest	1					
+3/3/2025	6:23:51 PM	1002	Fleet	L	XOX	990	FOOLY	995	Maypul	Aetherean Forest	-1	Hodojo	1	Tempest Peak	-2					
+3/3/2025	6:35:32 PM	990	Fleet	L	OXX	977	Flindo	945	Orcane	Julesvale	1	Godai Delta	-1	Rock Wall	-2	cheesy ass champ	Etalus	Etalus		
+3/3/2025	6:50:00 PM	977	Fleet	W	OXO	987	mafi	930	Fleet	Godai Delta	2	Rock Wall	-1	Air Armada	2					
+3/5/2025	7:16:46 PM	987	Fleet	L	XX-	979	TheFrozenCavern	1093	Forsburn	Godai Delta	-2	Aetherean Forest	-2							
+3/5/2025	7:33:43 PM	979	Fleet	L	OXX	967	HAPPY	971	Kragg	Merchant Port	1	Merchant Port	-1	Godai Delta	-1		Clairen	Clairen		
+3/5/2025	7:49:07 PM	967	Fleet	W	OXO	976	BTO	881	Fleet	Godai Delta	1	Rock Wall	-1	Hyperborean Harbor	1					
+3/7/2025	11:21:11 PM	976	Fleet	W	OXO	988	JHavok	964	Wrastor	Julesvale	1	Julesvale	-1	Godai Delta	2					
+3/7/2025	11:40:54 PM	988	Fleet	W	OO-	999	Zeph the Blue	949	Loxodont	Godai Delta	2	Tempest Peak	1							
+3/7/2025	11:47:24 PM	999	Fleet	L	XX-	988	discord.me/etalus	1014	Etalus	Godai Delta	-1	Fire Capital	-1							
+3/7/2025	11:58:35 PM	988	Fleet	L	OXX		IVE Rei	917	Zetterburn	Merchant Port	2	Fire Capital	-1	Tempest Peak	-1	SDs				
+3/31/2025	14:34	1038	Fleet	W	XOO	1053	d4nace	1155	Maypul	Hodojo	-1	Godai Delta	1	Tempest Peak	1	sorry dan				
+3/31/2025	6:18:46 PM	1053	Fleet	L	XX-	1040	maximousraj	1036	Loxodont	Godai Delta	-1	Tempest Peak	-1							
+3/31/2025	6:31:51 PM	1040	Fleet	L	XX-	1028	jakestemmet	1036	Ranno	Merchant Port	-1	Tempest Peak	-2							
+3/31/2025	6:40:21 PM	1028	Fleet	L	XX-	1017	jakestemmet	1048	Ranno	Aetherean Forest	-2	Julesvale	-1							
+3/31/2025	7:06:57 PM	1017	Fleet	W	OO-	1026	danyboyy_	933	Kragg	Julesvale	2	Rock Wall	2							
+3/31/2025	7:13:25 PM	1026	Fleet	L	XX-	1013	Wuz	988	Clairen	Julesvale	-1	Hodojo	-1							
+3/31/2025	7:22:05 PM	1013	Fleet	W	OXO	1023	rosie	978	Zetterburn	Aetherean Forest	2	Aetherean Forest	-1	Rock Wall	2					
+4/2/2025	5:59:51 PM		Fleet	L	XX-		funny	937	Zetterburn	Hodojo	-2	Merchant Port	-1			played like a weiner				
+4/2/2025	6:08:06 PM		Fleet	W	OO-		Airboysteel TTV		Olympia	Aetherean Forest	3	Godai Delta	2							
+4/2/2025	6:20:54 PM		Fleet	W	OO-		CineTurbo		Kragg	Godai Delta	2	Merchant Port	2				Clairen			
+4/2/2025	6:30:55 PM		Fleet	W	OO-		Shaggy'sWaifu		Olympia	Godai Delta	3	Tempest Peak	2							
+4/2/2025	6:39:37 PM		Fleet	W	OO-	1006	ChicoSolvl100		Olympia	Godai Delta	1	Hyperborean Harbor	2							
+4/6/2025	7:20:22 PM	1006	Fleet	L	XX-	987	NeoSxlvr	1016	Olympia	Godai Delta	-1	Rock Wall	-2							
+4/6/2025	7:28:10 PM	987	Fleet	L	OXX	969	u cant hold zekan	1010	Olympia	Aetherean Forest	1	Julesvale	-1	Hodojo	-1					
+4/6/2025	7:39:53 PM	969	Fleet	W	XOO	990	FingerStripes	996	Etalus	Julesvale	-1	Hyperborean Harbor	1							
+4/7/2025	6:45:39 PM	990	Fleet	L	OXX	972	Caskan	1024	Olympia	Aetherean Forest	2	Aetherean Forest	-1	Merchant Port	-1					
+4/7/2025	7:08:49 PM	972	Fleet	W	OXO	993	SkunkleSK	992	Olympia	Aetherean Forest	2	Rock Wall	-2	Hyperborean Harbor	1					
+4/7/2025	7:35:51 PM	993	Fleet	W	OO-	1016	omegafalconpunch	1046	Orcane	Julesvale	1	Julesvale	1							
+4/8/2025	3:24:58 PM	1016	Fleet	L	XX-	1001	MOsSFLoweR	1095	Loxodont	Aetherean Forest	-2	Air Armada	-1							
+4/8/2025	3:36:17 PM	1001	Fleet	W	OO-	1018	ozorozzie	962	Clairen	Hodojo	1	Rock Wall	2							
+4/8/2025	3:45:36 PM	1018	Fleet	L	XX-	998	marbs	1022	Loxodont	Aetherean Forest	-2	Air Armada	-1							
+4/8/2025	3:52:24 PM	998	Fleet	L	XX-	977	piuspius711	985	Wrastor	Hodojo	-1	Fire Capital	-2							
+4/8/2025	4:05:17 PM	977	Fleet	L	XOX	958	piuspius711	989	Wrastor	Godai Delta	-2	Aetherean Forest	2	Tempest Peak	-1					
+4/8/2025	4:18:17 PM	958	Fleet	W	OXO	981	good	1037	Olympia	Godai Delta	2	Godai Delta	-1	Rock Wall	1					
+4/8/2025	4:38:03 PM	981	Fleet	W	OO-	999	einnoj131b1	923	Kragg	Hodojo	1	Tempest Peak	2				Zetterburn			
+4/8/2025	5:10:00 PM	999	Fleet	W	OXO	1021	Dramattix	1013	Olympia	Aetherean Forest	2	Aetherean Forest	-2	Hodojo	1					
+4/8/2025	5:29:54 PM	1021	Fleet	W	OXO	1041	JayBlaze	983	Olympia	Julesvale	1	Fire Capital	-1	Godai Delta	3					
+4/8/2025	8:59:02 PM	1041	Fleet	W	OO-	1066	ihop union buster	1101	Olympia	Aetherean Forest	1	Hodojo	1							
+4/8/2025	9:19:35 PM	1066	Fleet	W	OO-	1087	Captain CaKe	1046	Olympia	Aetherean Forest	1	Rock Wall	1							
+4/8/2025	9:34:26 PM	1087	Fleet	L	XX-	1066	aj	1055	Forsburn	Hodojo	-1	Godai Delta	-1							
+4/8/2025	9:42:00 PM	1066	Fleet	W	OO-	1087	GrumbleOfPugz	1104	Fleet	Aetherean Forest	2	Aetherean Forest	1							
+4/8/2025	9:51:14 PM	1087	Fleet	L	OXX	1075	LOXOBROS	1079	Loxodont	Julesvale	1	Fire Capital	-1	Merchant Port	-2					
+4/8/2025	10:01:39 PM	1075	Fleet	L	XX-	1064	CreamBup	1095	Olympia	Godai Delta	-1	Aetherean Forest	-1							
+4/8/2025	10:11:43 PM	1064	Fleet	L	OXX	1055	Mox	1156	Zetterburn	Godai Delta	1	Rock Wall	-2	Merchant Port	-1					
+4/15/2025	11:12:07 AM	1055	Fleet	W	OO-	1063	Kikoloki	932	Wrastor	Julesvale	1	Aetherean Forest	1							
+4/15/2025	11:21:29 AM	1063	Fleet	W	OO-	1072	FrostyTheSlime	927	Olympia	Merchant Port	2	Rock Wall	-1	Julesvale	2					
+4/15/2025	11:34:47 AM	1072	Fleet	L	OXX	1059	SabdierZ	1028	Olympia	Aetherean Forest	1	Rock Wall	-1	Fire Capital	-2					
+4/15/2025	11:46:52 AM	1059	Fleet	W	OO-	1070	SabdierZ	1043	Olympia	Hodojo	1	Rock Wall	1							
+4/15/2025	11:56:52 AM	1070	Fleet	W	OO-	1081	Existent0	1005	Clairen	Godai Delta	1	Aetherean Forest	1							
+4/16/2025	8:24:09 PM	1081	Fleet	L	OXX	1073	gavo	1192	Maypul	Godai Delta	1	Hyperborean Harbor	-1	Hodojo	-1					
+4/16/2025	8:38:48 PM	1073	Fleet	W	OO-	1084	iitzRai	1070	Forsburn	Julesvale	2	Aetherean Forest	2				Olympia			
+4/16/2025	10:33:16 PM	1084	Fleet	L	OXX	1070	Enetick	1035	Olympia	Godai Delta	3	Godai Delta	-1	Aetherean Forest	-2					
+4/16/2025	10:46:49 PM	1070	Fleet	W	OO-	1077	mayo	917	Loxodont	Julesvale	3	Tempest Peak	1							
+4/16/2025	10:56:23 PM	1077	Fleet	W	OO-	1085	Lanky Howard	934	Olympia	Hodojo	1	Hodojo	2							
+4/17/2025	6:01:56 PM	1085	Fleet	W	OO-	1098	Menace13	1086	Olympia	Godai Delta	2	Hyperborean Harbor	1				Fleet			
+4/17/2025	6:39:35 PM	1098	Fleet	L	XX-	1086	Major	1095	Fleet	Godai Delta	-1	Julesvale	-1							
+4/17/2025	8:31:12 PM	1086	Fleet	W	OO-	1096	Red, White, and Blueland	1048	Zetterburn	Godai Delta	1	Rock Wall	1							
+4/17/2025	8:39:44 PM	1096	Fleet	W	OO-	1107	DG	1034	Fleet	Julesvale	1	Julesvale	1							
+4/18/2025	7:28:51 PM	1107	Fleet	L	XX-	1098	gellythehelly	1182	Kragg	Aetherean Forest	-2	Godai Delta	-2							
+4/18/2025	7:36:10 PM	1098	Fleet	W	OO-	1107	MrBlaxican	1022	Olympia	Hodojo	1	Rock Wall	1							
+4/18/2025	7:51:14 PM	1107	Fleet	L	XX-	1097	alertas36	1152	Fleet	Godai Delta	-2	Hodojo	-1							
+4/18/2025	8:04:45 PM	1097	Fleet	L	XX-	1087	milk	1158	Forsburn	Julesvale	-2	Aetherean Forest	-1							
+4/18/2025	8:14:33 PM	1087	Fleet	W	XX-	1073	AetherealProcyon	1035	Maypul	Hodojo	-1	Rock Wall	-2							
+4/20/2025	9:35:07 PM	1073	Fleet	W	OO-	1080	WaKkA	929	Loxodont	Julesvale	1	Hodojo	1							
+4/20/2025	9:49:15 PM	1080	Fleet	L	XX-	1075	Benoit	1290	Zetterburn	Godai Delta	-1	Aetherean Forest	-3							
+4/20/2025	9:56:06 PM	1075	Fleet	W	OO-	1084	LUA	986	Olympia	Julesvale	1	Aetherean Forest	1							
+4/20/2025	10:04:51 PM	1084	Fleet	L	XX-	1073	Frozenpyro	1114	Clairen	Julesvale	-1	Rock Wall	1	Tempest Peak	-1					
+4/20/2025	10:21:34 PM	1073	Fleet	W	OO-	1083	aj	1021	Forsburn	Hodojo	1	Hodojo	1							
+4/20/2025	10:31:23 PM	1083	Fleet	L	XOX	1072	Frozenpyro	1113	Clairen	Hodojo	-1	Tempest Peak	1	Julesvale	-1					
+4/20/2025	10:45:38 PM	1072	Fleet	L	XOX	1061	kezzup	1064	Loxodont	Hodojo	-1	Tempest Peak	1	Julesvale	-3					
+4/20/2025	10:59:44 PM	1061	Fleet	L	XX-	1049	PrettiestGirlinSchool	1103	Maypul	Merchant Port	-1	Rock Wall	-1							
+4/20/2025	11:07:10 PM	1049	Fleet	W	OO-	1060	Opdi	1007	Clairen	Hodojo	2	Hyperborean Harbor	2				Fleet			
+4/23/2025	7:44:50 PM	1060	Fleet	L	XX-	1047	TheWisestGiraffe	1039	Orcane	Julesvale	-1	Aetherean Forest	-2							
+4/23/2025	7:58:23 PM	1047	Fleet	L	OXX	1034	magentassbu	1025	Zetterburn	Julesvale	2	Hyperborean Harbor	-2	Merchant Port	-2	SD'd at 0 on first stock game 3 				
+4/23/2025	8:14:08 PM	1034	Fleet	W	OXO	1045	MechaGV	1011	Loxodont	Hodojo	1	Hodojo	-2	Rock Wall	1					
+4/27/2025	1:27:09 PM	1045	Fleet	L	XX-	1038	Hasty...?	1196	Clairen	Hodojo	-2	Godai Delta	-2							
+4/27/2025	1:35:28 PM	1038	Fleet	W	OO-	1042	appleMechanicist	750	Zetterburn	Julesvale	3	Godai Delta	2						Zetterburn	
+4/27/2025	1:44:09 PM	1042	Fleet	W	OO-	1051	CrypTiC	918	Olympia	Aetherean Forest	2	Julesvale	1							
+4/27/2025	1:51:47 PM	1051	Fleet	W	OO-	1059	justblaze	902	Ranno	Godai Delta	2	Hodojo	1							
+4/27/2025	2:06:59 PM	1059	Fleet	W	XOO	1074	FourString	1091	Orcane	Julesvale	-1	Tempest Peak	1	Rock Wall	1					
+4/28/2025	1:38:27 PM	1074	Fleet	W	OXO	1087	ttv/Aerotailz_	1039	Clairen	Godai Delta	2	Fire Capital	-2	Aetherean Forest						
+4/28/2025	2:02:21 PM	1087	Fleet	W	OO-	1094	plusAlpha	856	Olympia	Aetherean Forest	2	Rock Wall	2							
+4/28/2025	3:49:53 PM	1094	Fleet	W	OXO	1111	Aphly	1099	Orcane	Godai Delta	1	Merchant Port	-1	Rock Wall	1					
+4/29/2025	8:36:23 PM	1111	Fleet	L	XX-	1101	Derp	1169	Ranno	Julesvale	-2	Godai Delta	-1							
+4/29/2025	8:47:26 PM	1101	Fleet	L	XX-	1088	Tone	1059	Clairen	Julesvale	-1	Merchant Port	-1							
+4/29/2025	8:56:54 PM	1088	Fleet	L	XX-	1075	Lychee	1053	Fleet	Hodojo	-1	Julesvale	-1							
+4/29/2025	9:10:35 PM	1075	Fleet	L	XX-	1062	Double	1048	Zetterburn	Aetherean Forest	-2	Tempest Peak	-2							
+4/29/2025	9:18:58 PM	1062	Fleet	W	OO-	1070	Mr. Aladdin Sir	957	Olympia	Aetherean Forest	2	Aetherean Forest	1							
+4/30/2025	5:31:37 PM	1070	Fleet	W	OO-	1083	Dacenater	1081	Olympia	Hodojo	1	Rock Wall	1							
+4/30/2025	5:37:58 PM	1083	Fleet	W	OO-	1096	Debis	1093	Maypul	Julesvale	1	Aetherean Forest	3							
+4/30/2025	5:51:13 PM	1096	Fleet	W	XOO	1106	ManNeeTee12	1013	Loxodont	Julesvale	-1	Aetherean Forest	1	Hodojo	1					
+5/2/2025	9:16:08 AM	1106	Fleet	L	OXX	1089	Mehzah	948	Olympia	Julesvale	2	Godai Delta	-2	Rock Wall	-1		Ranno	Ranno		
+5/2/2025	9:28:12 AM	1089	Fleet	W	OO-	1099	Drifty	1020	Olympia	Hodojo	2	Aetherean Forest	2							
+5/2/2025	9:35:34 AM	1099	Fleet	W	OO-	1103	Bois | Dae	828	Maypul	Hodojo	2	Fire Capital	2							
+5/2/2025	9:47:57 AM	1103	Fleet	L	XOX	1093	Vanerac	1175	Forsburn	Merchant Port	-2	Fire Capital	1	Julesvale	-1					
+5/2/2025	10:54:01 AM	1093	Fleet	W	OXO	1102	laurent.p.jeu	1004	Clairen	Hodojo	1	Hyperborean Harbor	-1	Air Armada	2		Kragg			
+5/2/2025	1:01:01 PM	1102	Fleet	W	OO-	1117	KrayetonTTV / Come say Hi :)	1164	Kragg	Merchant Port	3									
+5/2/2025	1:05:23 PM	1117	Fleet	L	XX-	1111	Newbage	1293	Loxodont	Hodojo	-2	Fire Capital	-2							
+5/2/2025	1:11:27 PM	1111	Fleet	W	OO-	1125	Whiskey	1161	Etalus	Aetherean Forest	2	Hyperborean Harbor	1							
+5/5/2025	12:00:33 PM	1125	Fleet	L	XX-	1114	DeMeloM24	1144	Olympia	Hodojo	-2	Merchant Port	-2							
+5/5/2025	12:08:12 PM	1114	Fleet			1102	WaveBashing	1103	Fleet	Aetherean Forest	-1	Tempest Peak	1			lost connection to server after game 2? no elo lost. APPARENTLY I STILL LOST ELO?				
+5/5/2025	12:20:46 PM	1102	Fleet	W	OO-	1110	killeraidan	987	Orcane	Godai Delta	1	Godai Delta	1							
+5/5/2025	2:18:31 PM	1110	Fleet	W	OO-	1118	killeraidan	979	Orcane	Hodojo	2	Godai Delta	-2							
+5/5/2025	2:25:36 PM	1118	Fleet	W	OO-	1123	Aorak	902	Fleet	Aetherean Forest	2	Aetherean Forest	2							
+5/5/2025	2:35:43 PM	1123	Fleet	L	OXX	1116	Cubeable	1275	Ranno	Aetherean Forest	2	Hodojo	-3	Merchant Port	-2					
+5/5/2025	7:11:45 PM	1116	Fleet	L	XX-	1108	Randy Quench Volunteer Fireman	1237	Ranno	Julesvale	-1	Tempest Peak	-1							
+5/5/2025	7:19:45 PM	1108	Fleet	W	OXO	1119	DayunKnight	1085	Zetterburn	Julesvale	3	Aetherean Forest	-2	Godai Delta	1					
+5/5/2025	7:29:15 PM	1119	Fleet	L	OXX	1108	treblizzard	1143	Zetterburn	Hodojo	1	Hodojo	-2	Aetherean Forest	-1					
+5/5/2025	7:41:09 PM	1108	Fleet	L	XOX	1097	FunkyPants	1125	Forsburn	Aetherean Forest	-1	Julesvale	1	Rock Wall	-1					
+5/5/2025	7:56:14 PM	1097	Fleet	L	OXX	1084	eeeeebz	1078	Zetterburn	Hodojo	1	Rock Wall	-1	Julesvale	-1					
+5/5/2025	8:48:42 PM	1084	Fleet	L	XX-	1071	Tohfoo	1046	Ranno	Godai Delta	-1	Hodojo	-1							
+5/5/2025	9:08:23 PM	1071	Fleet	L	XX-	1063	HairyBeast	1185	Orcane	Merchant Port	-1	Godai Delta	-2							
+5/5/2025	9:19:24 PM	1063	Fleet	L	XX-	1052	Durstoyer	1100	Orcane	Aetherean Forest	-2	Rock Wall	-3							
+5/5/2025	9:26:48 PM	1052	Fleet	W	OO-	1062	ooflewoofle	1012	Maypul	Godai Delta	2	Julesvale	1							
+5/5/2025	9:34:02 PM	1062	Fleet	W	OO-	1072	Lutewyn	979	Clairen	Godai Delta	-1	Tempest Peak	2							
+5/6/2025	6:10:56 PM	1072	Fleet	W	OO-	1084	Bear	1042	Etalus	Aetherean Forest	1	Aetherean Forest	3							
+5/6/2025	6:29:36 PM	1084	Fleet	L	XX-	1075	ellisonmagikmainseven	1167	Forsburn	Julesvale	1	Fire Capital	-1	Rock Wall	-1					
+5/7/2025	5:39:51 PM	1075	Fleet	W	OO-	1083	Moe	967	Zetterburn	Aetherean Forest	2	Hyperborean Harbor	1							
+5/7/2025	5:47:10 PM	1083	Fleet	W	OXO	1092	kruffz	971	Maypul	Hodojo	2	Julesvale	-2	Fire Capital	1					
+5/7/2025	5:59:18 PM	1092	Fleet	L	XX-	1089	RenektonDoesntCare	1429	Olympia	Aetherean Forest	-2	Tempest Peak	-1							
+5/7/2025	6:05:48 PM	1089	Fleet	L	OXX	1072	blargo	936	Maypul	Godai Delta	2	Air Armada	-2	Julesvale	-1					
+5/7/2025	6:20:06 PM	1072	Fleet	L	XOX	1060	Hockey Hands	1058	Zetterburn	Merchant Port	-1	Air Armada	1	Rock Wall	-2					
+5/7/2025	7:54:57 PM	1060	Fleet	W	XOO	1071	SavvyVII	1053	Zetterburn	Julesvale	-1	Godai Delta	1	Rock Wall	2			Olympia		
+5/7/2025	11:16:21 PM	1071	Fleet	W	OXO	1083	st0rm0	1074	Forsburn	Aetherean Forest	1	Hyperborean Harbor	-1	Merchant Port	2					
+5/7/2025	11:32:16 PM	1083	Fleet	W	OO-	1091	Jacklyn/Jay	937	Olympia	Hodojo	2	Rock Wall	2							
+5/8/2025	5:47:40 PM	1091	Fleet	L	XX-	1079	Silverbud	1081	Ranno	Aetherean Forest	-1	Tempest Peak	-1							
+5/8/2025	5:55:31 PM	1079	Fleet	W	OO-	1090	ttv/Aerotailz_	1054	Clairen	Merchant Port	1	Fire Capital	2							
+5/9/2025	6:11:24 PM	1090	Fleet	W	OXO	1101	Lord	1017	Etalus	Merchant Port	1	Hyperborean Harbor	-1	Julesvale	1					
